@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\KotaController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +24,26 @@ use Illuminate\Support\Facades\Route;
 //     return view('admin.tes');
 // });
 Route::resource('admin',adminController::class);
-Route::resource('login', loginController::class);
+//Route::resource('login', loginController::class);
+Route::controller(LoginController::class)->group(function(){
+    Route::get('login','index')->name('login');
+    Route::post('login/process','process');
+    Route::get('logout','logout');
+});
+Route::group(['middleware'=>['auth']],function(){
+    Route::group(['middleware'=>['cekUserLogin:1']],function(){
+        Route::resource('admin',adminController::class);
+    });
 
+    Route::group(['middleware'=>['cekUserLogin:2']],function(){
+        Route::resource('kota',KotaController::class);
+    });
+
+    Route::group(['middleware'=>['cekUserLogin:3']],function(){
+        Route::resource('kecamatan',KecamatanController::class);
+    });
+
+    Route::group(['middleware'=>['cekUserLogin:4']],function(){
+        Route::resource('kelurahan',KelurahanController::class);
+    });
+});

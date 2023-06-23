@@ -26,53 +26,48 @@ class LoginController extends Controller
 
             return view('login.index');
         }
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+        public function process(Request $request){
+            $request->validate([
+                'username' => 'required',
+                'password' => 'required'
+            ],
+            [
+                'username.required' => 'username tidak boleh kososng'
+            ]
+        );
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $kredensial = $request->only('username','password');
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        if(Auth::attempt($kredensial)){
+            $request->session()->regenerate();
+            $user = Auth::user();
+            if($user->level == '1'){
+                return redirect()->intended('admin');
+            }elseif($user->level =='2'){
+                return redirect()->intended('kota');
+            }elseif($user->level == '3'){
+                return redirect()->intended('kecamatan');
+            }elseif($user->level == '4'){
+                return redirect()->intended('kelurahan');
+            }   
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+            return redirect()->intended('/');
+        }
+    
+            return back()-> withErrors([
+                'username' => 'Maaf username atau password anda salah'
+            ])->onlyInput('username');
+        }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+        public function logout(Request $request){
+            Auth::logout();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+            $request->session()->invalidate();
+
+            $request->session()->regenerateToken();
+
+            return redirect('/login');
+        }
+
     }
-}

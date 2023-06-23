@@ -23,8 +23,8 @@ class UserData extends Seeder
             ],
 
             [
-                'name'=>'Gubernur',
-                'username'=>'gubernur',
+                'name'=>'Walikota',
+                'username'=>'walikota',
                 'password'=>bcrypt('123456'),
                 'level'=>2,
                 'email'=>'gubernur@gmail.com'
@@ -36,6 +36,14 @@ class UserData extends Seeder
                 'password'=>bcrypt('123456'),
                 'level'=>3,
                 'email'=>'camat@gmail.com'
+            ],
+
+            [
+                'name'=>'Lurah',
+                'username'=>'lurah',
+                'password'=>bcrypt('123456'),
+                'level'=>4,
+                'email'=>'lurah@gmail.com'
             ],
            ];
 
