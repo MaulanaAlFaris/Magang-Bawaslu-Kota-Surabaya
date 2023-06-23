@@ -13,7 +13,7 @@ class adminController extends Controller
      */
     public function index()
     {
-        $data=admin::orderBy('username','desc')->paginate(2);
+        $data=admin::orderBy('username','desc')->paginate(10);
         return view('admin.index')->with('data',$data);
     }
 

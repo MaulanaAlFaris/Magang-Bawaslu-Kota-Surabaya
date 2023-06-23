@@ -4,7 +4,7 @@
 <form action='{{ url('admin') }}' method='post'>
 @csrf
     <div class="my-3 p-3 bg-body rounded shadow-sm">
-        <a href="{{ url('admin') }}" class="btn btn-secondary"><< Kembali</a>
+        <a href="{{ url('admin') }}" class="btn btn-secondary">Kembali</a>
         <div class="mb-3 row">
             <label for="username" class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">

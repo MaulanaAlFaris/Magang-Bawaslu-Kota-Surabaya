@@ -21,4 +21,5 @@ use Illuminate\Support\Facades\Route;
 //     return view('admin.tes');
 // });
 Route::resource('admin',adminController::class);
+Route::resource('login', loginController::class);
 
