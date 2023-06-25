@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/a', function () {
 //     return view('admin.tes');
 // });
+Route::get('/tes', function () {
+    return view('content.layouts.layouts');
+});
 Route::get('/', function () {
     return view('content.dashboard');
 });

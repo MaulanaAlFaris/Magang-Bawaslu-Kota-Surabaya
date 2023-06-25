@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class KotaController extends Controller
 {
     public function index(){
-        echo 'KONTOL';
+        return view('content.kota.index');
     }
 }
