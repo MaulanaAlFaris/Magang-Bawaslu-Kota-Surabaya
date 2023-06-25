@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/a', function () {
 //     return view('admin.tes');
 // });
+Route::get('/', function () {
+    return view('content.dashboard');
+});
 Route::resource('admin',adminController::class);
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){

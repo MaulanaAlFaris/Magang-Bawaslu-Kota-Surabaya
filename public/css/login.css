@@ -46,6 +46,10 @@ body{
     background-color: #FFC000;
     color: white;
 }
+.col-sm-10 button:hover{
+    background-color: #d6a512;
+    cursor: pointer;
+}
 .container{
     justify-content: center;
 }
