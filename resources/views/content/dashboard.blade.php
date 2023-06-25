@@ -18,7 +18,9 @@
                     </div>
                 </li>
                 <li>
-                    <button class="login-button"><a href="{{ url('login')}}">Login</a></button>
+                    <a href="{{ url('login') }}">
+                        <button class="login-button">Login</button>
+                    </a>
                 </li>
             </ul>
         </nav>
