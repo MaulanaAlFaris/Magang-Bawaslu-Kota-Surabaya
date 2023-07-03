@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\formController;
 use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\LoginController;
@@ -53,3 +54,4 @@ Route::group(['middleware'=>['auth']],function(){
         Route::resource('kelurahan',KelurahanController::class);
     });
 });
+Route::resource('form',formController::class);

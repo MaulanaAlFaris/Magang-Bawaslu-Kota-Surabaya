@@ -36,6 +36,9 @@ button:hover{
     background-color: #F2F2F2;
     height: 100%;
     width: 85%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .nav-list{
     justify-content: space-between;
