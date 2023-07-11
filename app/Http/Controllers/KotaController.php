@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\formBawaslu;
 
 class kotaController extends Controller
 {
@@ -19,7 +20,7 @@ class kotaController extends Controller
      */
     public function create()
     {
-        //
+        return view('content.kota.create');
     }
 
     /**

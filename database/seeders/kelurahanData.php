@@ -16,35 +16,35 @@ class kelurahanData extends Seeder
         $kelurahan = [
             [
                 'nama'=>'Kelurahan Bulak',
-                'id_kecamatan'=>2
+                'id_kecamatan'=>1
             ],
             [
                 'nama'=>'Kelurahan Kedung Cowek',
-                'id_kecamatan'=>2
+                'id_kecamatan'=>1
             ],
             [
                 'nama'=>'Kelurahan Kenjeran',
-                'id_kecamatan'=>2
+                'id_kecamatan'=>1
             ],
             [
                 'nama'=>'Kelurahan Sukolilo Baru',
-                'id_kecamatan'=>2
+                'id_kecamatan'=>1
             ],
             [
                 'nama'=>'Kelurahan Tanah Kali Kedinding',
-                'id_kecamatan'=>3
+                'id_kecamatan'=>2
             ],
             [
                 'nama'=>'Kelurahan Sidotopo Wetan',
-                'id_kecamatan'=>3
+                'id_kecamatan'=>2
             ],
             [
                 'nama'=>'Kelurahan Kelurahan Bulak Banteng',
-                'id_kecamatan'=>3
+                'id_kecamatan'=>2
             ],
             [
                 'nama'=>'Kelurahan Tambak Wedi',
-                'id_kecamatan'=>3
+                'id_kecamatan'=>2
             ],
         ];
         foreach ($kelurahan as $key => $value) {

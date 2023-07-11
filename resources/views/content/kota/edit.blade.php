@@ -6,9 +6,9 @@
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <a href="{{ url('form') }}" class="btn btn-secondary"> Kembali</a>
             <div class="mb-3 row">
-                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <label for="tahapan yang diawasi" class="col-sm-2 col-form-label">Tahapan yang diawasi</label>
                 <div class="col-sm-10">
-                    {{ $data->username }}
+                    {{ $data->tahapan }}
                 </div>
             </div>
             <div class="mb-3 row">

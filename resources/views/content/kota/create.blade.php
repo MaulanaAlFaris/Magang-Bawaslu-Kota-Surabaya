@@ -1,7 +1,7 @@
 @extends('content.layouts.layouts')
 
 @@section('content-main')
-<form action='{{ url('form') }}' method='post'>
+<form action='{{ url('admin') }}' method='post'>
     @csrf
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <a href="{{ url('form') }}" class="btn btn-secondary">Kembali</a>
@@ -10,6 +10,7 @@
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name='username' id="username" value="{{ Session::get('username') }}">
                 </div>
+                
             </div>
             <div class="mb-3 row">
                 <label for="password" class="col-sm-2 col-form-label">Password</label>

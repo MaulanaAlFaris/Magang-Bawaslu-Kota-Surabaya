@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\formBawasluController;
 use App\Http\Controllers\formController;
 use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\KotaController;
@@ -55,3 +56,4 @@ Route::group(['middleware'=>['auth']],function(){
     });
 });
 Route::resource('form',formController::class);
+Route::resource('formBawaslu',formBawasluController::class);

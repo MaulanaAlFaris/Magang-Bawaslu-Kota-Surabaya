@@ -40,6 +40,9 @@ button:hover{
     align-items: center;
     display: flex;
 }
+.navbar-background{
+    width: 100%;
+}
 .nav-list{
     justify-content: space-between;
     display: flex;
@@ -50,6 +53,9 @@ button:hover{
 }
 .nav-list li{
     display: flex;
+}
+.nav-list button{
+    border-radius: 50px;
 }
 header{
     background-color: white;

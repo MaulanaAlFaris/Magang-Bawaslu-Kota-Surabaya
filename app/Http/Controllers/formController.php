@@ -22,7 +22,7 @@ class formController extends Controller
      */
     public function create()
     {
-        //
+        return view('content.kota.create');
     }
 
     /**
@@ -106,7 +106,28 @@ class formController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        
+        $request->validate([
+            'nama pelaksana tugas pengawasan'=>'required',
+            'jabatan'=>'required',
+            'nomor surat perintah tugas'=>'required',
+            ''=>'',
+            ''=>'',         
+        ],[
+
+        ]);
+        $data=[
+            'nama pelaksana tugas pengawasan', $request->nama,
+            'jabatan', $request->jabatan,
+            'nomor surat perintah tugas', $request->nomor,
+            'alamat', $request->alamat,
+            'bentuk', $request->bentuk,
+            'tujuan', $request->tujuan,
+            'sasaran', $request->sasaran,
+            'waktu dan tempat', $request->waktu,
+            'uraian singkat hasil pengawasan', $request->uraian
+        ];
+        form::where('tahapan yang diawasi',$id)->update($data);
+        return redirect()->to('form')->with('success','berhasil mengupdate data');
     }
 
     /**
@@ -114,6 +135,7 @@ class formController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        form::where('tahapan yang diawasi',$id)->delete();
+        return redirect()->to('form')->with('succes','berhasil melakukan delet data');
     }
 }
