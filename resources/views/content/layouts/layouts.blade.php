@@ -32,6 +32,7 @@
             @yield('content-side')
         </div>
         <div class="main-content">
+            @include('komponen.pesan')
             @yield('content-main')
         </div>
     </div>

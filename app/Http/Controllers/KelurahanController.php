@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class KelurahanController extends Controller
 {
     public function index(){
-        echo 'MEMEK';
+        return 'HI';
     }
 }
