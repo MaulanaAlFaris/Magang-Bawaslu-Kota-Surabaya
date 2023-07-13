@@ -55,29 +55,29 @@ class kotaController extends Controller
             
         ],
         [
-            'tahapan.required'=>'tahapan wajib diisi',
-            'nama_pelaksana.required'=>'nama pelaksana wajib diisi',
-            'jabatan.required'=>'jabatan wajib diisi',
-            'nomor'=>'nomor surat perintah wajib diisi',
-            'alamat'=>'alamat wajib diisi',
-            'bentuk'=>'bentuk wajib diisi',
-            'tujuan'=>'tujuan wajib diisi',
-            'sasaran'=>'sasaran wajib diisi',
-            'waktu_dan_tempat'=>'waktu dan  tempat wajib diisi',
-            'uraian'=>'uraian singkat hasil pengawasan wajib diisi'
+            'tahapan.required'=>'Tahapan wajib diisi',
+            'nama_pelaksana.required'=>'Nama pelaksana wajib diisi',
+            'jabatan.required'=>'Jabatan wajib diisi',
+            'nomor.required'=>'Nomor surat perintah wajib diisi',
+            'alamat.required'=>'Alamat wajib diisi',
+            'bentuk.required'=>'Bentuk wajib diisi',
+            'tujuan.required'=>'Tujuan wajib diisi',
+            'sasaran.required'=>'Sasaran wajib diisi',
+            'waktu_dan_tempat.required'=>'Waktu dan  tempat wajib diisi',
+            'uraian.required'=>'Uraian singkat hasil pengawasan wajib diisi'
         ],
     );
         $data=[
             'tahapan'=>$request->tahapan,
-            'nama_pelaksana', $request->nama_pelaksana,
-            'jabatan', $request->jabatan,
-            'nomor', $request->nomor,
-            'alamat', $request->alamat,
-            'bentuk', $request->bentuk,
-            'tujuan', $request->tujuan,
-            'sasaran', $request->sasaran,
-            'waktu_dan_tempat', $request->waktu_dan_tempat,
-            'uraian', $request->uraian        
+            'nama_pelaksana'=>$request->nama_pelaksana,
+            'jabatan'=>$request->jabatan,
+            'nomor'=>$request->nomor,
+            'alamat'=>$request->alamat,
+            'bentuk'=>$request->bentuk,
+            'tujuan'=>$request->tujuan,
+            'sasaran'=>$request->sasaran,
+            'waktu_dan_tempat'=>$request->waktu_dan_tempat,
+            'uraian'=>$request->uraian        
 
         ];
         formBawaslu::create($data);
@@ -107,15 +107,37 @@ class kotaController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'password' => 'required',
-            'wilayah' => 'required'
+            'nama_pelaksana' => 'required',
+            'jabatan' => 'required',
+            'nomor' => 'required',
+            'alamat' => 'required',
+            'bentuk' => 'required',
+            'tujuan' => 'required',
+            'sasaran' => 'required',
+            'waktu_dan_tempat' => 'required',
+            'uraian' => 'required',
         ],[
-            'password.required'=>'password sudah terupdate',
-            'wilayah.required'=>'wilayah sudah terupdate'
+            'nama_pelaksana.required'=>'Nama pelaksana sudah terupdate',
+            'jabatan.required'=>'Jabatan sudah terupdate',
+            'nomor'=>'Nomor surat perintah sudah terupdate',
+            'alamat'=>'Alamat sudah terupdate',
+            'bentuk'=>'Bentuk sudah terupdate',
+            'tujuan'=>'Tujuan sudah terupdate',
+            'sasaran'=>'Sasaran sudah terupdate',
+            'waktu_dan_tempat'=>'Waktu dan  tempat sudah terupdate',
+            'uraian'=>'Uraian singkat hasil pengawasan sudah terupdate'
         ]);
         $data=[
-            'password'=> $request->password,
-            'wilayah'=> $request->wilayah,
+            'tahapan'=>$request->tahapan,
+            'nama_pelaksana'=>  $request->nama_pelaksana,
+            'jabatan'=>  $request->jabatan,
+            'nomor'=>  $request->nomor,
+            'alamat'=>  $request->alamat,
+            'bentuk'=>  $request->bentuk,
+            'tujuan'=>  $request->tujuan,
+            'sasaran'=>  $request->sasaran,
+            'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
+            'uraian'=>  $request->uraian   
         ];
         formBawaslu::where('tahapan',$id)->update($data);
         return redirect()->to('kota')->with('success','berhasil mengupdate data');
