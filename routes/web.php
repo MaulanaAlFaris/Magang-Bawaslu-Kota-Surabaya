@@ -4,6 +4,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\formBawasluController;
 use App\Http\Controllers\formController;
 use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,8 @@ Route::get('/', function () {
 });
 Route::resource('admin',adminController::class);
 Route::resource('kota',KotaController::class);
+Route::resource('kecamatan',KecamatanController::class);
+Route::resource('kelurahan',KelurahanController::class);
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
     Route::get('login','index')->name('login');
