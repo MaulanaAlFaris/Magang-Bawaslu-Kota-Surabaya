@@ -1,7 +1,6 @@
 @extends('content.layouts.layouts')
 
 @section('content-side')
-    <div class="sidebar-list">Menu Bar</div>
 @endsection
 
 @section('content-main')

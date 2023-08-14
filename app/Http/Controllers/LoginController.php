@@ -21,7 +21,15 @@ class LoginController extends Controller
                     return redirect()->intended('kecamatan');
                 }elseif($user->level == '4'){
                     return redirect()->intended('kelurahan');
-                }   
+                }elseif($user->level== '5'){
+                    return redirect()->intended('KotaSurabaya');
+                }elseif($user->level == '6'){
+                    return redirect()->intended('KecamatanDukuhPakis');
+                }elseif($user->level == '7'){
+                    return redirect()->intended('KecamatanGayungan');
+                }elseif($user->level == '8'){
+                    return redirect()->intended('KelurahanDukuhKupang');
+                }
             }
 
             return view('login.index');
@@ -50,7 +58,15 @@ class LoginController extends Controller
                 return redirect()->intended('kecamatan');
             }elseif($user->level == '4'){
                 return redirect()->intended('kelurahan');
-            }   
+            }elseif($user->level == '5'){
+                return redirect()->intended('KotaSurabaya');
+            }elseif($user->level == '6'){
+                return redirect()->intended('KecamatanDukuhPakis');
+            }elseif($user->level == '7'){
+                return redirect()->intended('KecamatanGayungan');
+            }elseif($user->level == '8'){
+                return redirect()->intended('KelurahanDukuhKupang');
+            }
 
             return redirect()->intended('/');
         }

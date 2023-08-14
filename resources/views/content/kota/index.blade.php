@@ -1,12 +1,10 @@
 @extends('content.layouts.layouts')
 
 @section('content-side')
-    <div class="sidebar-list">
         <li>
             <button  class="sidebar-button-list">Kecamatan</button>
             <button class="sidebar-button-list">Kelurahan</button>
         </li>
-    </div>
 @endsection
 
 @section('content-main')

@@ -1,7 +1,10 @@
 @extends('content.layouts.layouts')
 
 @section('content-side')
-    <button class="sidebar-button-list">Kelurahan</button>
+        <li>
+            <button  class="sidebar-button-list">Kecamatan</button>
+            <button class="sidebar-button-list">Kelurahan</button>
+        </li>
 @endsection
 
 @section('content-main')
@@ -9,7 +12,7 @@
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <!-- TOMBOL TAMBAH DATA -->
             <div class="pb-3">
-            <a href='{{ url('kecamatan/create') }}' class="btn btn-primary">+ Tambah Data</a>
+            <a href='{{ url('KotaSurabaya/create') }}' class="btn btn-primary">+ Tambah Data</a>
             </div>
     
             <table class="table table-striped">
@@ -31,8 +34,8 @@
                         <td>{{ $item->nomor }}</td>
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
-                            <a href='{{ url('kecamatan/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
-                            <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('kecamatan/'.$item->tahapan) }}" method="post">
+                            <a href='{{ url('KotaSurabaya/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KotaSurabaya/'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" name="submit" class="btn btn-danger btn-sm">Delete</button>

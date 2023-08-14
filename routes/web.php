@@ -4,8 +4,12 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\formBawasluController;
 use App\Http\Controllers\formController;
 use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\KecamatanDukuhPakisController;
+use App\Http\Controllers\KecamatanGayunganController;
 use App\Http\Controllers\KelurahanController;
+use App\Http\Controllers\KelurahanDukuhKupangController;
 use App\Http\Controllers\KotaController;
+use App\Http\Controllers\KotaSurabayaController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +40,10 @@ Route::resource('admin',adminController::class);
 Route::resource('kota',KotaController::class);
 Route::resource('kecamatan',KecamatanController::class);
 Route::resource('kelurahan',KelurahanController::class);
+Route::resource('KotaSurabaya',KotaSurabayaController::class);
+Route::resource('KecamatanDukuhPakis',KecamatanDukuhPakisController::class);
+Route::resource('KecamatanGayungan',KecamatanGayunganController::class);
+Route::resource('KelurahanDukuhKupang',KelurahanDukuhKupangController::class);
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
     Route::get('login','index')->name('login');
@@ -51,12 +59,28 @@ Route::group(['middleware'=>['auth']],function(){
         Route::resource('kota',KotaController::class);
     });
 
+    Route::group(['middleware'=>['cekUserLogin:5']],function(){
+        Route::resource('KotaSurabaya',KotaSurabayaController::class);
+    });
+
     Route::group(['middleware'=>['cekUserLogin:3']],function(){
         Route::resource('kecamatan',KecamatanController::class);
     });
 
+    Route::group(['middleware'=>['cekUserLogin:6']],function(){
+        Route::resource('KecamatanDukuhPakis',KecamatanDukuhPakisController::class);
+    });
+
+    Route::group(['middleware'=>['cekUserLogin:7']],function(){
+        Route::resource('KecamatanGayungan',KecamatanGayunganController::class);
+    });
+
     Route::group(['middleware'=>['cekUserLogin:4']],function(){
         Route::resource('kelurahan',KelurahanController::class);
+    });
+
+    Route::group(['middleware'=>['cekUserLogin:8']],function(){
+        Route::resource('KelurahanDukuhKupang',KelurahanDukuhKupangController::class);
     });
 });
 Route::resource('form',formController::class);

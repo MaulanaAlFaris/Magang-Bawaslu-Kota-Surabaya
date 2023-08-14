@@ -31,6 +31,14 @@ class UserData extends Seeder
             ],
 
             [
+                'name'=>'AdminKota',
+                'username'=>'AdminKota',
+                'password'=>bcrypt('123456'),
+                'level'=>5,
+                'email'=>'AdminKota@gmail.com'
+            ],
+
+            [
                 'name'=>'Camat',
                 'username'=>'camat',
                 'password'=>bcrypt('123456'),
@@ -39,11 +47,34 @@ class UserData extends Seeder
             ],
 
             [
+                'name'=>'AdminCamatDukuhPakis',
+                'username'=>'AdminCamatDukuhPakis',
+                'password'=>bcrypt('123456'),
+                'level'=>6,
+                'email'=>'AdminCamatDukuhPakis@gmail.com'
+            ],
+            [
+                'name'=>'AdminCamatGayungan',
+                'username'=>'AdminCamatGayungan',
+                'password'=>bcrypt('123456'),
+                'level'=>7,
+                'email'=>'AdminCamatGayungan@gmail.com'
+            ],
+
+            [
                 'name'=>'Lurah',
                 'username'=>'lurah',
                 'password'=>bcrypt('123456'),
                 'level'=>4,
                 'email'=>'lurah@gmail.com'
+            ],
+
+            [
+                'name'=>'AdminLurahDukuhKupang',
+                'username'=>'AdminLurahDukuhKupang',
+                'password'=>bcrypt('123456'),
+                'level'=>8,
+                'email'=>'AdminLurahDukuhKupang@gmail.com'
             ],
            ];
 
