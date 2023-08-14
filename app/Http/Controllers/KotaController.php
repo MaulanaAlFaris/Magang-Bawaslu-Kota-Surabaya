@@ -55,16 +55,16 @@ class kotaController extends Controller
             
         ],
         [
-            'tahapan.required'=>'Tahapan wajib diisi',
-            'nama_pelaksana.required'=>'Nama pelaksana wajib diisi',
+            'tahapan.required'=>'Tahapan yang diawasi wajib diisi',
+            'nama_pelaksana.required'=>'Nama pelaksana Tugas Pengawasan wajib diisi',
             'jabatan.required'=>'Jabatan wajib diisi',
-            'nomor.required'=>'Nomor surat perintah wajib diisi',
+            'nomor.required'=>'Nomor Surat Perintah Tugas wajib diisi',
             'alamat.required'=>'Alamat wajib diisi',
             'bentuk.required'=>'Bentuk wajib diisi',
             'tujuan.required'=>'Tujuan wajib diisi',
             'sasaran.required'=>'Sasaran wajib diisi',
-            'waktu_dan_tempat.required'=>'Waktu dan  tempat wajib diisi',
-            'uraian.required'=>'Uraian singkat hasil pengawasan wajib diisi'
+            'waktu_dan_tempat.required'=>'Waktu dan  Tempat wajib diisi',
+            'uraian.required'=>'Uraian Singkat Hasil Pengawasan wajib diisi'
         ],
     );
         $data=[
@@ -117,15 +117,15 @@ class kotaController extends Controller
             'waktu_dan_tempat' => 'required',
             'uraian' => 'required',
         ],[
-            'nama_pelaksana.required'=>'Nama pelaksana sudah terupdate',
+            'nama_pelaksana.required'=>'Nama pelaksana Tugas Pengawasan sudah terupdate',
             'jabatan.required'=>'Jabatan sudah terupdate',
-            'nomor'=>'Nomor surat perintah sudah terupdate',
+            'nomor'=>'Nomor Surat Perintah Tugas sudah terupdate',
             'alamat'=>'Alamat sudah terupdate',
             'bentuk'=>'Bentuk sudah terupdate',
             'tujuan'=>'Tujuan sudah terupdate',
             'sasaran'=>'Sasaran sudah terupdate',
-            'waktu_dan_tempat'=>'Waktu dan  tempat sudah terupdate',
-            'uraian'=>'Uraian singkat hasil pengawasan sudah terupdate'
+            'waktu_dan_tempat'=>'Waktu dan Tempat sudah terupdate',
+            'uraian'=>'Uraian Singkat Hasil Pengawasan sudah terupdate'
         ]);
         $data=[
             'tahapan'=>$request->tahapan,

@@ -92,3 +92,25 @@ footer{
 .footer-list li{
     font-size: 12px;
 }
+.sidebar-list{
+    justify-content: center;
+}
+.sidebar-button-list{
+    background-color: green;
+}
+.content-main-bg{
+    height: 100%;
+    width: 100%;
+}
+.content-main-create-bg{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.content-main-edit-bg{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
