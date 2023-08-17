@@ -14,7 +14,7 @@ class KelurahanDukuhSutorejoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_DukuhSutorejo_Form::orderBy('tahapan','desc')->paginate(110);
+        $data=Kelurahan_DukuhSutorejo_Form::orderBy('tahapan','desc')->paginate(10);
         return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Dukuh_Sutorejo.index')->with('data',$data);
     }
 

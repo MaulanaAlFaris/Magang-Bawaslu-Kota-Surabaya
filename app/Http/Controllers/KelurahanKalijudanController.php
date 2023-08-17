@@ -14,7 +14,7 @@ class KelurahanKalijudanController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kalijudan_Form::orderBy('tahapan','desc')->paginate(110);
+        $data=Kelurahan_Kalijudan_Form::orderBy('tahapan','desc')->paginate(10);
         return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalijudan.index')->with('data',$data);
     }
 

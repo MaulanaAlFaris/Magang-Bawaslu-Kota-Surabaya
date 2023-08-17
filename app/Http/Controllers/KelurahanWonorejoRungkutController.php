@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kelurahan_Kalisari_Form;
+use App\Models\Kelurahan_WonorejoRungkut_Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class KelurahanKalisariController extends Controller
+class KelurahanWonorejoRungkutController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data=Kelurahan_Kalisari_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.index')->with('data',$data);
+        $data=Kelurahan_WonorejoRungkut_Form::orderBy('tahapan','desc')->paginate(10);
+        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Wonorejo_Rungkut.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanKalisariController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.create');
+        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Wonorejo_Rungkut.create');
     }
 
     /**
@@ -81,8 +81,8 @@ class KelurahanKalisariController extends Controller
             'uraian'=>$request->uraian        
 
         ];
-        Kelurahan_Kalisari_Form::create($data);
-        return redirect()->to('KelurahanKalisari')->with('success','berhasil menambahkan data');
+        Kelurahan_WonorejoRungkut_Form::create($data);
+        return redirect()->to('KelurahanWonorejoRungkut')->with('success','berhasil menambahkan data');
     }
 
     /**
@@ -98,8 +98,8 @@ class KelurahanKalisariController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Kelurahan_Kalisari_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.edit')->with('data', $data);
+        $data = Kelurahan_WonorejoRungkut_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Wonorejo_Rungkut.edit')->with('data', $data);
     }
 
     /**
@@ -140,8 +140,8 @@ class KelurahanKalisariController extends Controller
             'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
             'uraian'=>  $request->uraian   
         ];
-        Kelurahan_Kalisari_Form::where('tahapan',$id)->update($data);
-        return redirect()->to('KelurahanKalisari')->with('success','berhasil mengupdate data');
+        Kelurahan_WonorejoRungkut_Form::where('tahapan',$id)->update($data);
+        return redirect()->to('KelurahanWonorejoRungkut')->with('success','berhasil mengupdate data');
     }
 
     /**
@@ -149,7 +149,7 @@ class KelurahanKalisariController extends Controller
      */
     public function destroy(string $id)
     {
-        Kelurahan_Kalisari_Form::where('tahapan',$id)->delete();
-        return redirect()->to('KelurahanKalisari')->with('succes','berhasil melakukan delete data');
+        Kelurahan_WonorejoRungkut_Form::where('tahapan',$id)->delete();
+        return redirect()->to('KelurahanWonorejoRungkut')->with('succes','berhasil melakukan delete data');
     }
 }

@@ -14,7 +14,7 @@ class KelurahanMulyorejoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Mulyorejo_Form::orderBy('tahapan','desc')->paginate(110);
+        $data=Kelurahan_Mulyorejo_Form::orderBy('tahapan','desc')->paginate(10);
         return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Mulyorejo.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanManyarSabranganController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_ManyarSabrangan_Form::orderBy('tahapan','desc')->paginate(110);
+        $data=Kelurahan_ManyarSabrangan_Form::orderBy('tahapan','desc')->paginate(10);
         return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Manyar_Sabrangan.index')->with('data',$data);
     }
 

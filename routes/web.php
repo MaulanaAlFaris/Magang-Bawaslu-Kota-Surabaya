@@ -57,11 +57,13 @@ use App\Http\Controllers\KelurahanJajarTunggalController;
 use App\Http\Controllers\KelurahanJambanganController;
 use App\Http\Controllers\KelurahanJemurWonosariController;
 use App\Http\Controllers\KelurahanKalijudanController;
+use App\Http\Controllers\KelurahanKalirungkutController;
 use App\Http\Controllers\KelurahanKalisariController;
 use App\Http\Controllers\KelurahanKarahController;
 use App\Http\Controllers\KelurahanKarangPilangController;
 use App\Http\Controllers\KelurahanKebonsariController;
 use App\Http\Controllers\KelurahanKebraonController;
+use App\Http\Controllers\KelurahanKedungBarukController;
 use App\Http\Controllers\KelurahanKedurusController;
 use App\Http\Controllers\KelurahanKejawanPutihTambakController;
 use App\Http\Controllers\KelurahanKertajayaController;
@@ -69,6 +71,7 @@ use App\Http\Controllers\KelurahanKetintangController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
 use App\Http\Controllers\KelurahanManyarSabranganController;
 use App\Http\Controllers\KelurahanMargorejoController;
+use App\Http\Controllers\KelurahanMedokanAyuController;
 use App\Http\Controllers\KelurahanMenanggalController;
 use App\Http\Controllers\KelurahanMojoController;
 use App\Http\Controllers\KelurahanMulyorejoController;
@@ -76,9 +79,11 @@ use App\Http\Controllers\KelurahanNgagelController;
 use App\Http\Controllers\KelurahanNgagelRejoController;
 use App\Http\Controllers\KelurahanPagesanganController;
 use App\Http\Controllers\KelurahanPakisController;
+use App\Http\Controllers\KelurahanPenjaringanSariController;
 use App\Http\Controllers\KelurahanPradahKalikendalController;
 use App\Http\Controllers\KelurahanPucangSewuController;
 use App\Http\Controllers\KelurahanPutatJayaController;
+use App\Http\Controllers\KelurahanRungkutKidulController;
 use App\Http\Controllers\KelurahanRungkutMenanggalController;
 use App\Http\Controllers\KelurahanRungkutTengahController;
 use App\Http\Controllers\KelurahanSawahanController;
@@ -88,6 +93,7 @@ use App\Http\Controllers\KelurahanSiwalankertoController;
 use App\Http\Controllers\KelurahanWaruGunungController;
 use App\Http\Controllers\KelurahanWiyungController;
 use App\Http\Controllers\KelurahanWonokromoController;
+use App\Http\Controllers\KelurahanWonorejoRungkutController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\KotaSurabayaController;
 use App\Http\Controllers\LoginController;
@@ -232,6 +238,13 @@ Route::resource('KelurahanKejawanPutihTambak',KelurahanKejawanPutihTambakControl
 Route::resource('KelurahanManyarSabrangan',KelurahanManyarSabranganController::class);
 Route::resource('KelurahanMulyorejo',KelurahanMulyorejoController::class);
 
+//Routingn Login Kecamatan 12 Untuk Kelurahan ini
+Route::resource('KelurahanKalirungkut',KelurahanKalirungkutController::class);
+Route::resource('KelurahanKedungBaruk',KelurahanKedungBarukController::class);
+Route::resource('KelurahanMedokanAyu',KelurahanMedokanAyuController::class);
+Route::resource('KelurahanPenjaringanSari',KelurahanPenjaringanSariController::class);
+Route::resource('KelurahanRungkutKidul',KelurahanRungkutKidulController::class);
+Route::resource('KelurahanWonorejoRungkut',KelurahanWonorejoRungkutController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -535,7 +548,26 @@ Route::group(['middleware'=>['auth']],function(){
     Route::group(['middleware'=>['cekUserLogin:85']],function(){
         Route::resource('KelurahanMulyorejo',KelurahanMulyorejoController::class);
     });
-    
+
+    //Routing Cek Login Kecamatan Rungkut Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:86']],function(){
+        Route::resource('KelurahanKalirungkut',KelurahanKalirungkutController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:87']],function(){
+        Route::resource('KelurahanKedungBaruk',KelurahanKedungBarukController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:88']],function(){
+        Route::resource('KelurahanMedokanAyu',KelurahanMedokanAyuController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:89']],function(){
+        Route::resource('KelurahanPenjaringanSari',KelurahanPenjaringanSariController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:90']],function(){
+        Route::resource('KelurahanRungkutKidul',KelurahanRungkutKidulController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:91']],function(){
+        Route::resource('KelurahanWonorejoRungkut',KelurahanWonorejoRungkutController::class);
+    });
 
 });
 Route::resource('form',formController::class);
