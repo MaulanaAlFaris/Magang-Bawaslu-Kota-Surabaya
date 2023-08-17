@@ -35,9 +35,11 @@ use App\Http\Controllers\KecamatanTenggilisMejoyoController;
 use App\Http\Controllers\KecamatanWiyungController;
 use App\Http\Controllers\KecamatanWonocoloController;
 use App\Http\Controllers\KecamatanWonokromoController;
+use App\Http\Controllers\KelurahanAirlanggaController;
 use App\Http\Controllers\KelurahanBabatanController;
 use App\Http\Controllers\KelurahanBalasKlumprikController;
 use App\Http\Controllers\KelurahanBanyuUripController;
+use App\Http\Controllers\KelurahanBaratajayaController;
 use App\Http\Controllers\KelurahanBendulMerisiController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KelurahanDarmoController;
@@ -45,6 +47,7 @@ use App\Http\Controllers\KelurahanDukuhKupangController;
 use App\Http\Controllers\KelurahanDukuhMenanggalController;
 use App\Http\Controllers\KelurahanDukuhPakisController;
 use App\Http\Controllers\KelurahanGayunganController;
+use App\Http\Controllers\KelurahanGubengController;
 use App\Http\Controllers\KelurahanGunungSariController;
 use App\Http\Controllers\KelurahanJagirController;
 use App\Http\Controllers\KelurahanJajarTunggalController;
@@ -55,15 +58,18 @@ use App\Http\Controllers\KelurahanKarangPilangController;
 use App\Http\Controllers\KelurahanKebonsariController;
 use App\Http\Controllers\KelurahanKebraonController;
 use App\Http\Controllers\KelurahanKedurusController;
+use App\Http\Controllers\KelurahanKertajayaController;
 use App\Http\Controllers\KelurahanKetintangController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
 use App\Http\Controllers\KelurahanMargorejoController;
 use App\Http\Controllers\KelurahanMenanggalController;
+use App\Http\Controllers\KelurahanMojoController;
 use App\Http\Controllers\KelurahanNgagelController;
 use App\Http\Controllers\KelurahanNgagelRejoController;
 use App\Http\Controllers\KelurahanPagesanganController;
 use App\Http\Controllers\KelurahanPakisController;
 use App\Http\Controllers\KelurahanPradahKalikendalController;
+use App\Http\Controllers\KelurahanPucangSewuController;
 use App\Http\Controllers\KelurahanPutatJayaController;
 use App\Http\Controllers\KelurahanSawahanController;
 use App\Http\Controllers\KelurahanSawunggalingController;
@@ -195,7 +201,13 @@ Route::resource('KelurahanSawunggaling',KelurahanSawunggalingController::class);
 Route::resource('KelurahanWonokromo',KelurahanWonokromoController::class);
 
 //Routingn Login Kecamatan 8 Untuk Kelurahan ini
-Route::resource('Kelurahan',Kelurahan::class);
+Route::resource('KelurahanAirlangga',KelurahanAirlanggaController::class);
+Route::resource('KelurahanBaratajaya',KelurahanBaratajayaController::class);
+Route::resource('KelurahanGubeng',KelurahanGubengController::class);
+Route::resource('KelurahanKertajaya',KelurahanKertajayaController::class);
+Route::resource('KelurahanKertajaya',KelurahanMojoController::class);
+Route::resource('KelurahanPucangSewu',KelurahanPucangSewuController::class);
+
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -448,6 +460,26 @@ Route::group(['middleware'=>['auth']],function(){
 
     //Routing Cek Login Kecamatan Gubeng Untuk Kelurahan ini
     Route::group(['middleware'=>['cekUserLogin:70']],function(){
+        Route::resource('KelurahanAirlangga',KelurahanAirlanggaController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:71']],function(){
+        Route::resource('KelurahanBaratajaya',KelurahanBaratajayaController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:72']],function(){
+        Route::resource('KelurahanGubeng',KelurahanGubengController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:73']],function(){
+        Route::resource('KelurahanKertajaya',KelurahanKertajayaController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:74']],function(){
+        Route::resource('KelurahanMojo',KelurahanMojoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:75']],function(){
+        Route::resource('KelurahanPucangSewu',KelurahanPucangSewuController::class);
+    });
+
+    //Routing Cek Login Kecamatan Gubeng Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:76']],function(){
         Route::resource('Kelurahan',Kelurahan::class);
     });
 
