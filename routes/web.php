@@ -56,17 +56,22 @@ use App\Http\Controllers\KelurahanJagirController;
 use App\Http\Controllers\KelurahanJajarTunggalController;
 use App\Http\Controllers\KelurahanJambanganController;
 use App\Http\Controllers\KelurahanJemurWonosariController;
+use App\Http\Controllers\KelurahanKalijudanController;
+use App\Http\Controllers\KelurahanKalisariController;
 use App\Http\Controllers\KelurahanKarahController;
 use App\Http\Controllers\KelurahanKarangPilangController;
 use App\Http\Controllers\KelurahanKebonsariController;
 use App\Http\Controllers\KelurahanKebraonController;
 use App\Http\Controllers\KelurahanKedurusController;
+use App\Http\Controllers\KelurahanKejawanPutihTambakController;
 use App\Http\Controllers\KelurahanKertajayaController;
 use App\Http\Controllers\KelurahanKetintangController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
+use App\Http\Controllers\KelurahanManyarSabranganController;
 use App\Http\Controllers\KelurahanMargorejoController;
 use App\Http\Controllers\KelurahanMenanggalController;
 use App\Http\Controllers\KelurahanMojoController;
+use App\Http\Controllers\KelurahanMulyorejoController;
 use App\Http\Controllers\KelurahanNgagelController;
 use App\Http\Controllers\KelurahanNgagelRejoController;
 use App\Http\Controllers\KelurahanPagesanganController;
@@ -221,6 +226,11 @@ Route::resource('KelurahanRungkutTengah',KelurahanRungkutTengahController::class
 
 //Routingn Login Kecamatan 11 Untuk Kelurahan ini
 Route::resource('KelurahanDukuhSutorejo',KelurahanDukuhSutorejoController::class);
+Route::resource('KelurahanKalijudan',KelurahanKalijudanController::class);
+Route::resource('KelurahanKalisari',KelurahanKalisariController::class);
+Route::resource('KelurahanKejawanPutihTambak',KelurahanKejawanPutihTambakController::class);
+Route::resource('KelurahanManyarSabrangan',KelurahanManyarSabranganController::class);
+Route::resource('KelurahanMulyorejo',KelurahanMulyorejoController::class);
 
 
 //Route::resource('login', loginController::class);
@@ -508,7 +518,22 @@ Route::group(['middleware'=>['auth']],function(){
 
     //Routing Cek Login Kecamatan Mulyorejo Untuk Kelurahan ini
     Route::group(['middleware'=>['cekUserLogin:80']],function(){
-        Route::resource('KelurahanDuukuhSutorejo',KelurahanDukuhSutorejoController::class);
+        Route::resource('KelurahanDukuhSutorejo',KelurahanDukuhSutorejoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:81']],function(){
+        Route::resource('KelurahanKalijudan',KelurahanKalijudanController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:82']],function(){
+        Route::resource('KelurahanKalisari',KelurahanKalisariController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:83']],function(){
+        Route::resource('KelurahanKejawanPutihTambak',KelurahanKejawanPutihTambakController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:84']],function(){
+        Route::resource('KelurahanManyarSabrangan',KelurahanManyarSabranganController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:85']],function(){
+        Route::resource('KelurahanMulyorejo',KelurahanMulyorejoController::class);
     });
     
 
