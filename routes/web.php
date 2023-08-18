@@ -46,8 +46,11 @@ use App\Http\Controllers\KelurahanDarmoController;
 use App\Http\Controllers\KelurahanDukuhKupangController;
 use App\Http\Controllers\KelurahanDukuhMenanggalController;
 use App\Http\Controllers\KelurahanDukuhPakisController;
+use App\Http\Controllers\KelurahanDukuhSetroController;
 use App\Http\Controllers\KelurahanDukuhSutorejoController;
+use App\Http\Controllers\KelurahanGadingController;
 use App\Http\Controllers\KelurahanGayunganController;
+use App\Http\Controllers\KelurahanGebangPutihController;
 use App\Http\Controllers\KelurahanGubengController;
 use App\Http\Controllers\KelurahanGunungAnyarController;
 use App\Http\Controllers\KelurahanGunungAnyarTambakController;
@@ -59,6 +62,7 @@ use App\Http\Controllers\KelurahanJemurWonosariController;
 use App\Http\Controllers\KelurahanKalijudanController;
 use App\Http\Controllers\KelurahanKalirungkutController;
 use App\Http\Controllers\KelurahanKalisariController;
+use App\Http\Controllers\KelurahanKapasmadyaBaruController;
 use App\Http\Controllers\KelurahanKarahController;
 use App\Http\Controllers\KelurahanKarangPilangController;
 use App\Http\Controllers\KelurahanKebonsariController;
@@ -66,30 +70,41 @@ use App\Http\Controllers\KelurahanKebraonController;
 use App\Http\Controllers\KelurahanKedungBarukController;
 use App\Http\Controllers\KelurahanKedurusController;
 use App\Http\Controllers\KelurahanKejawanPutihTambakController;
+use App\Http\Controllers\KelurahanKeputihController;
 use App\Http\Controllers\KelurahanKertajayaController;
 use App\Http\Controllers\KelurahanKetintangController;
+use App\Http\Controllers\KelurahanKlampisNgasemController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
 use App\Http\Controllers\KelurahanManyarSabranganController;
 use App\Http\Controllers\KelurahanMargorejoController;
 use App\Http\Controllers\KelurahanMedokanAyuController;
+use App\Http\Controllers\KelurahanMedokanSemampirController;
 use App\Http\Controllers\KelurahanMenanggalController;
+use App\Http\Controllers\KelurahanMenurPumpunganController;
 use App\Http\Controllers\KelurahanMojoController;
 use App\Http\Controllers\KelurahanMulyorejoController;
 use App\Http\Controllers\KelurahanNgagelController;
 use App\Http\Controllers\KelurahanNgagelRejoController;
+use App\Http\Controllers\KelurahanNgindenJangkunganController;
+use App\Http\Controllers\KelurahanPacarkelingController;
+use App\Http\Controllers\KelurahanPacarkembangController;
 use App\Http\Controllers\KelurahanPagesanganController;
 use App\Http\Controllers\KelurahanPakisController;
 use App\Http\Controllers\KelurahanPenjaringanSariController;
+use App\Http\Controllers\KelurahanPlosoController;
 use App\Http\Controllers\KelurahanPradahKalikendalController;
 use App\Http\Controllers\KelurahanPucangSewuController;
 use App\Http\Controllers\KelurahanPutatJayaController;
+use App\Http\Controllers\KelurahanRangkahController;
 use App\Http\Controllers\KelurahanRungkutKidulController;
 use App\Http\Controllers\KelurahanRungkutMenanggalController;
 use App\Http\Controllers\KelurahanRungkutTengahController;
 use App\Http\Controllers\KelurahanSawahanController;
 use App\Http\Controllers\KelurahanSawunggalingController;
+use App\Http\Controllers\KelurahanSemolowaruController;
 use App\Http\Controllers\KelurahanSidosermoController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
+use App\Http\Controllers\KelurahanTambaksariController;
 use App\Http\Controllers\KelurahanWaruGunungController;
 use App\Http\Controllers\KelurahanWiyungController;
 use App\Http\Controllers\KelurahanWonokromoController;
@@ -245,6 +260,25 @@ Route::resource('KelurahanMedokanAyu',KelurahanMedokanAyuController::class);
 Route::resource('KelurahanPenjaringanSari',KelurahanPenjaringanSariController::class);
 Route::resource('KelurahanRungkutKidul',KelurahanRungkutKidulController::class);
 Route::resource('KelurahanWonorejoRungkut',KelurahanWonorejoRungkutController::class);
+
+//Routingn Login Kecamatan 13 Untuk Kelurahan ini
+Route::resource('KelurahanGebangPutih',KelurahanGebangPutihController::class);
+Route::resource('KelurahanKeputih',KelurahanKeputihController::class);
+Route::resource('KelurahanKlampisNgasem',KelurahanKlampisNgasemController::class);
+Route::resource('KelurahanMedokanSemampir',KelurahanMedokanSemampirController::class);
+Route::resource('KelurahanMenurPumpungan',KelurahanMenurPumpunganController::class);
+Route::resource('KelurahanNgindenJangkungan',KelurahanNgindenJangkunganController::class);
+Route::resource('KelurahanSemolowaru',KelurahanSemolowaruController::class);
+
+//Routingn Login Kecamatan 14 Untuk Kelurahan ini
+Route::resource('KelurahanDukuhSetro',KelurahanDukuhSetroController::class);
+Route::resource('KelurahanGading',KelurahanGadingController::class);
+Route::resource('KelurahanKapasmadyaBaru',KelurahanKapasmadyaBaruController::class);
+Route::resource('KelurahanPacarkeling',KelurahanPacarkelingController::class);
+Route::resource('KelurahanPacarkembang',KelurahanPacarkembangController::class);
+Route::resource('KelurahanPloso',KelurahanPlosoController::class);
+Route::resource('KelurahanRangkah',KelurahanRangkahController::class);
+Route::resource('KelurahanTambaksari',KelurahanTambaksariController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -567,6 +601,56 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:91']],function(){
         Route::resource('KelurahanWonorejoRungkut',KelurahanWonorejoRungkutController::class);
+    });
+
+    //Routing Cek Login Kecamatan Rungkut Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:92']],function(){
+        Route::resource('KelurahanGebangPutih',KelurahanGebangPutihController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:93']],function(){
+        Route::resource('KelurahanKeputih',KelurahanKeputihController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:94']],function(){
+        Route::resource('KelurahanKlampisNgasem',KelurahanKlampisNgasemController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:95']],function(){
+        Route::resource('KelurahanMedokanSemampir',KelurahanMedokanSemampirController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:96']],function(){
+        Route::resource('KelurahanMenurPumpungan',KelurahanMenurPumpunganController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:97']],function(){
+        Route::resource('KelurahanNgindenJangkungan',KelurahanNgindenJangkunganController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:98']],function(){
+        Route::resource('KelurahanSemolowaru',KelurahanSemolowaruController::class);
+    });
+    
+
+    //Routing Cek Login Kecamatan Rungkut Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:99']],function(){
+        Route::resource('KelurahanDukuhSetro',KelurahanDukuhSetroController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:100']],function(){
+        Route::resource('KelurahanGading',KelurahanGadingController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:101']],function(){
+        Route::resource('KelurahanKapasmadyaBaru',KelurahanKapasmadyaBaruController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:102']],function(){
+        Route::resource('KelurahanPacarkeling',KelurahanPacarkelingController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:103']],function(){
+        Route::resource('KelurahanPacarkembang',KelurahanPacarkembangController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:104']],function(){
+        Route::resource('KelurahanPloso',KelurahanPlosoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:105']],function(){
+        Route::resource('KelurahanRangkah',KelurahanRangkahController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:106']],function(){
+        Route::resource('KelurahanTambaksari',KelurahanTambaksariController::class);
     });
 
 });
