@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kelurahan_Keputih_Form;
+use App\Models\Kelurahan_TenggilisMejoyo_Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class KelurahanKeputihController extends Controller
+class KelurahanTenggilisMejoyoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data=Kelurahan_Keputih_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Keputih.index')->with('data',$data);
+        $data=Kelurahan_TenggilisMejoyo_Form::orderBy('tahapan','desc')->paginate(10);
+        return view('content.kelurahan.Kecamatan_15_Tenggilis_Mejoyo.Kelurahan_Tenggilis_Mejoyo.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanKeputihController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Keputih.create');
+        return view('content.kelurahan.Kecamatan_15_Tenggilis_Mejoyo.Kelurahan_Tenggilis_Mejoyo.create');
     }
 
     /**
@@ -81,8 +81,8 @@ class KelurahanKeputihController extends Controller
             'uraian'=>$request->uraian        
 
         ];
-        Kelurahan_Keputih_Form::create($data);
-        return redirect()->to('KelurahanKeputih')->with('success','berhasil menambahkan data');
+        Kelurahan_TenggilisMejoyo_Form::create($data);
+        return redirect()->to('KelurahanTenggilisMejoyo')->with('success','berhasil menambahkan data');
     }
 
     /**
@@ -98,8 +98,8 @@ class KelurahanKeputihController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Kelurahan_Keputih_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Keputih.edit')->with('data', $data);
+        $data = Kelurahan_TenggilisMejoyo_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_15_Tenggilis_Mejoyo.Kelurahan_Tenggilis_Mejoyo.edit')->with('data', $data);
     }
 
     /**
@@ -140,8 +140,8 @@ class KelurahanKeputihController extends Controller
             'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
             'uraian'=>  $request->uraian   
         ];
-        Kelurahan_Keputih_Form::where('tahapan',$id)->update($data);
-        return redirect()->to('KelurahanKeputih')->with('success','berhasil mengupdate data');
+        Kelurahan_TenggilisMejoyo_Form::where('tahapan',$id)->update($data);
+        return redirect()->to('KelurahanTenggilisMejoyo')->with('success','berhasil mengupdate data');
     }
 
     /**
@@ -149,9 +149,7 @@ class KelurahanKeputihController extends Controller
      */
     public function destroy(string $id)
     {
-        Kelurahan_Keputih_Form::where('tahapan',$id)->delete();
-        return redirect()->to('KelurahanKeputih')->with('succes','berhasil melakukan delete data');
+        Kelurahan_TenggilisMejoyo_Form::where('tahapan',$id)->delete();
+        return redirect()->to('KelurahanTenggilisMejoyo')->with('succes','berhasil melakukan delete data');
     }
 }
-
-    

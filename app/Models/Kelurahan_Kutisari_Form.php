@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kelurahan_Tambaksari_Form extends Model
+class Kelurahan_Kutisari_Form extends Model
 {
     use HasFactory;
     protected $fillable=[
@@ -20,6 +20,6 @@ class Kelurahan_Tambaksari_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Tambaksari_Form';
+    protected $table ='Kelurahan_Kutisari_Form';
     public $timestamps = false;
 }
