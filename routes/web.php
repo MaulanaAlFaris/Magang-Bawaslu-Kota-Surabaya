@@ -47,6 +47,7 @@ use App\Http\Controllers\KelurahanBanyuUripController;
 use App\Http\Controllers\KelurahanBaratajayaController;
 use App\Http\Controllers\KelurahanBendulMerisiController;
 use App\Http\Controllers\KelurahanBenowoController;
+use App\Http\Controllers\KelurahanBeringinController;
 use App\Http\Controllers\KelurahanBongkaranController;
 use App\Http\Controllers\KelurahanBubutanController;
 use App\Http\Controllers\KelurahanBulakBantengController;
@@ -109,6 +110,8 @@ use App\Http\Controllers\KelurahanKutisariController;
 use App\Http\Controllers\KelurahanLakarsantriController;
 use App\Http\Controllers\KelurahanLidahKulonController;
 use App\Http\Controllers\KelurahanLidahWetanController;
+use App\Http\Controllers\KelurahanLontarController;
+use App\Http\Controllers\KelurahanMadeController;
 use App\Http\Controllers\KelurahanManyarSabranganController;
 use App\Http\Controllers\KelurahanMargorejoController;
 use App\Http\Controllers\KelurahanMedokanAyuController;
@@ -143,6 +146,7 @@ use App\Http\Controllers\KelurahanRomokalisariController;
 use App\Http\Controllers\KelurahanRungkutKidulController;
 use App\Http\Controllers\KelurahanRungkutMenanggalController;
 use App\Http\Controllers\KelurahanRungkutTengahController;
+use App\Http\Controllers\KelurahanSambikerepController;
 use App\Http\Controllers\KelurahanSawahanController;
 use App\Http\Controllers\KelurahanSawunggalingController;
 use App\Http\Controllers\KelurahanSememiController;
@@ -435,6 +439,12 @@ Route::resource('KelurahanBabatJerawat',KelurahanBabatJerawatController::class);
 Route::resource('KelurahanBenowo',KelurahanBenowoController::class);
 Route::resource('KelurahanPakal',KelurahanPakalController::class);
 Route::resource('KelurahanSumberRejo',KelurahanSumberRejoController::class);
+
+//Routingn Login Kecamatan 29 Untuk Kelurahan ini
+Route::resource('KelurahanBeringin',KelurahanBeringinController::class);
+Route::resource('KelurahanLontar',KelurahanLontarController::class);
+Route::resource('KelurahanMade',KelurahanMadeController::class);
+Route::resource('KelurahanSambikerep',KelurahanSambikerepController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -1027,6 +1037,20 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:170']],function(){
         Route::resource('KelurahanSumberRejo',KelurahanSumberRejoController::class);
+    });
+
+    //Routing Cek Login Kecamatan Benowo Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:171']],function(){
+        Route::resource('KelurahanBeringin',KelurahanBeringinController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:172']],function(){
+        Route::resource('KelurahanLontar',KelurahanLontarController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:173']],function(){
+        Route::resource('KelurahanMade',KelurahanMadeController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:174']],function(){
+        Route::resource('KelurahanSambikerep',KelurahanSambikerepController::class);
     });
 
 });

@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kelurahan_Beringin_Form;
+use App\Models\Kelurahan_Lontar_Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class KelurahanBeringinController extends Controller
+class KelurahanLontarController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data=Kelurahan_Beringin_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Beringin.index')->with('data',$data);
+        $data=Kelurahan_Lontar_Form::orderBy('tahapan','desc')->paginate(10);
+        return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Lontar.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanBeringinController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Beringin.create');
+        return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Lontar.create');
     }
 
     /**
@@ -81,8 +81,8 @@ class KelurahanBeringinController extends Controller
             'uraian'=>$request->uraian        
 
         ];
-        Kelurahan_Beringin_Form::create($data);
-        return redirect()->to('KelurahanBeringin')->with('success','berhasil menambahkan data');
+        Kelurahan_Lontar_Form::create($data);
+        return redirect()->to('KelurahanLontar')->with('success','berhasil menambahkan data');
     }
 
     /**
@@ -98,8 +98,8 @@ class KelurahanBeringinController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Kelurahan_Beringin_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Beringin.edit')->with('data', $data);
+        $data = Kelurahan_Lontar_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Lontar.edit')->with('data', $data);
     }
 
     /**
@@ -140,8 +140,8 @@ class KelurahanBeringinController extends Controller
             'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
             'uraian'=>  $request->uraian   
         ];
-        Kelurahan_Beringin_Form::where('tahapan',$id)->update($data);
-        return redirect()->to('KelurahanBeringin')->with('success','berhasil mengupdate data');
+        Kelurahan_Lontar_Form::where('tahapan',$id)->update($data);
+        return redirect()->to('KelurahanLontar')->with('success','berhasil mengupdate data');
     }
 
     /**
@@ -149,7 +149,7 @@ class KelurahanBeringinController extends Controller
      */
     public function destroy(string $id)
     {
-        Kelurahan_Beringin_Form::where('tahapan',$id)->delete();
-        return redirect()->to('KelurahanBeringin')->with('succes','berhasil melakukan delete data');
+        Kelurahan_Lontar_Form::where('tahapan',$id)->delete();
+        return redirect()->to('KelurahanLontar')->with('succes','berhasil melakukan delete data');
     }
 }
