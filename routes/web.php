@@ -43,6 +43,7 @@ use App\Http\Controllers\KelurahanBanyuUripController;
 use App\Http\Controllers\KelurahanBaratajayaController;
 use App\Http\Controllers\KelurahanBendulMerisiController;
 use App\Http\Controllers\KelurahanBubutanController;
+use App\Http\Controllers\KelurahanBulakBantengController;
 use App\Http\Controllers\KelurahanBulakController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KelurahanDarmoController;
@@ -123,11 +124,14 @@ use App\Http\Controllers\KelurahanSawunggalingController;
 use App\Http\Controllers\KelurahanSemolowaruController;
 use App\Http\Controllers\KelurahanSidodadiController;
 use App\Http\Controllers\KelurahanSidosermoController;
+use App\Http\Controllers\KelurahanSidotopoWetanController;
 use App\Http\Controllers\KelurahanSimolawangController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
 use App\Http\Controllers\KelurahanSukoliloBaruController;
 use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
+use App\Http\Controllers\KelurahanTambakWediController;
+use App\Http\Controllers\KelurahanTanahKaliKedindingController;
 use App\Http\Controllers\KelurahanTegalsariController;
 use App\Http\Controllers\KelurahanTembokDukuhController;
 use App\Http\Controllers\KelurahanTenggilisMejoyoController;
@@ -345,6 +349,12 @@ Route::resource('KelurahanBulak',KelurahanBulakController::class);
 Route::resource('KelurahanKedungCowek',KelurahanKedungCowekController::class);
 Route::resource('KelurahanKenjeran',KelurahanKenjeranController::class);
 Route::resource('KelurahanSukoliloBaru',KelurahanSukoliloBaruController::class);
+
+//Routingn Login Kecamatan 21 Untuk Kelurahan ini
+Route::resource('KelurahanBulakBanteng',KelurahanBulakBantengController::class);
+Route::resource('KelurahanSidotopoWetan',KelurahanSidotopoWetanController::class);
+Route::resource('KelurahanTambakWedi',KelurahanTambakWediController::class);
+Route::resource('KelurahanTanahKaliKedinding',KelurahanTanahKaliKedindingController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -810,6 +820,20 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:133']],function(){
         Route::resource('KelurahanSukoliloBaru',KelurahanSukoliloBaruController::class);
+    });
+
+    //Routing Cek Login Kecamatan Kenjeran Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:134']],function(){
+        Route::resource('KelurahanBulakBanteng',KelurahanBulakBantengController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:135']],function(){
+        Route::resource('KelurahanSidotopoWetan',KelurahanSidotopoWetanController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:136']],function(){
+        Route::resource('KelurahanTambakWedi',KelurahanTambakWediController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:137']],function(){
+        Route::resource('KelurahanTanahKaliKedinding',KelurahanTanahKaliKedindingController::class);
     });
     
 
