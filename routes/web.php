@@ -40,10 +40,13 @@ use App\Http\Controllers\KelurahanAlunAlunContongController;
 use App\Http\Controllers\KelurahanAmpelController;
 use App\Http\Controllers\KelurahanAsemRowoController;
 use App\Http\Controllers\KelurahanBabatanController;
+use App\Http\Controllers\KelurahanBabatJerawatController;
 use App\Http\Controllers\KelurahanBalasKlumprikController;
+use App\Http\Controllers\KelurahanBangkinganController;
 use App\Http\Controllers\KelurahanBanyuUripController;
 use App\Http\Controllers\KelurahanBaratajayaController;
 use App\Http\Controllers\KelurahanBendulMerisiController;
+use App\Http\Controllers\KelurahanBenowoController;
 use App\Http\Controllers\KelurahanBongkaranController;
 use App\Http\Controllers\KelurahanBubutanController;
 use App\Http\Controllers\KelurahanBulakBantengController;
@@ -73,6 +76,7 @@ use App\Http\Controllers\KelurahanJajarTunggalController;
 use App\Http\Controllers\KelurahanJambanganController;
 use App\Http\Controllers\KelurahanJemurWonosariController;
 use App\Http\Controllers\KelurahanJeparaController;
+use App\Http\Controllers\KelurahanJerukController;
 use App\Http\Controllers\KelurahanKalijudanController;
 use App\Http\Controllers\KelurahanKalirungkutController;
 use App\Http\Controllers\KelurahanKalisariController;
@@ -102,6 +106,9 @@ use App\Http\Controllers\KelurahanKrembanganSelatanController;
 use App\Http\Controllers\KelurahanKrembanganUtaraController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
 use App\Http\Controllers\KelurahanKutisariController;
+use App\Http\Controllers\KelurahanLakarsantriController;
+use App\Http\Controllers\KelurahanLidahKulonController;
+use App\Http\Controllers\KelurahanLidahWetanController;
 use App\Http\Controllers\KelurahanManyarSabranganController;
 use App\Http\Controllers\KelurahanMargorejoController;
 use App\Http\Controllers\KelurahanMedokanAyuController;
@@ -118,6 +125,7 @@ use App\Http\Controllers\KelurahanNyamplunganController;
 use App\Http\Controllers\KelurahanPacarkelingController;
 use App\Http\Controllers\KelurahanPacarkembangController;
 use App\Http\Controllers\KelurahanPagesanganController;
+use App\Http\Controllers\KelurahanPakalController;
 use App\Http\Controllers\KelurahanPakisController;
 use App\Http\Controllers\KelurahanPanjangJiwoController;
 use App\Http\Controllers\KelurahanPegirianController;
@@ -146,6 +154,8 @@ use App\Http\Controllers\KelurahanSidotopoWetanController;
 use App\Http\Controllers\KelurahanSimolawangController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
 use App\Http\Controllers\KelurahanSukoliloBaruController;
+use App\Http\Controllers\KelurahanSumberRejoController;
+use App\Http\Controllers\KelurahanSumurwelutController;
 use App\Http\Controllers\KelurahanTambakOsoWilangunController;
 use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
@@ -411,6 +421,20 @@ Route::resource('KelurahanKandangan',KelurahanKandanganController::class);
 Route::resource('KelurahanRomokalisari',KelurahanRomokalisariController::class);
 Route::resource('KelurahanSememi',KelurahanSememiController::class);
 Route::resource('KelurahanTambakOsoWilangun',KelurahanTambakOsoWilangunController::class);
+
+//Routingn Login Kecamatan 27 Untuk Kelurahan ini
+Route::resource('KelurahanBangkingan',KelurahanBangkinganController::class);
+Route::resource('KelurahanJeruk',KelurahanJerukController::class);
+Route::resource('KelurahanLakarsantri',KelurahanLakarsantriController::class);
+Route::resource('KelurahanLidahKulon',KelurahanLidahKulonController::class);
+Route::resource('KelurahanLidahWetan',KelurahanLidahWetanController::class);
+Route::resource('KelurahanSumurwelut',KelurahanSumurwelutController::class);
+
+//Routingn Login Kecamatan 28 Untuk Kelurahan ini
+Route::resource('KelurahanBabatJerawat',KelurahanBabatJerawatController::class);
+Route::resource('KelurahanBenowo',KelurahanBenowoController::class);
+Route::resource('KelurahanPakal',KelurahanPakalController::class);
+Route::resource('KelurahanSumberRejo',KelurahanSumberRejoController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -969,6 +993,40 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:160']],function(){
         Route::resource('KelurahanTambakOsoWilangun',KelurahanTambakOsoWilangunController::class);
+    });
+
+    //Routing Cek Login Kecamatan Benowo Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:161']],function(){
+        Route::resource('KelurahanBangkingan',KelurahanBangkinganController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:162']],function(){
+        Route::resource('KelurahanJeruk',KelurahanJerukController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:163']],function(){
+        Route::resource('KelurahanLakarsantri',KelurahanLakarsantriController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:164']],function(){
+        Route::resource('KelurahanLidahKulon',KelurahanLidahKulonController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:165']],function(){
+        Route::resource('KelurahanLidahWetan',KelurahanLidahWetanController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:166']],function(){
+        Route::resource('KelurahanSumurwelut',KelurahanSumurwelutController::class);
+    });
+
+    //Routing Cek Login Kecamatan Benowo Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:167']],function(){
+        Route::resource('KelurahanBabatJerawat',KelurahanBabatJerawatController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:168']],function(){
+        Route::resource('KelurahanBenowo',KelurahanBenowoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:169']],function(){
+        Route::resource('KelurahanPakal',KelurahanPakalController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:170']],function(){
+        Route::resource('KelurahanSumberRejo',KelurahanSumberRejoController::class);
     });
 
 });
