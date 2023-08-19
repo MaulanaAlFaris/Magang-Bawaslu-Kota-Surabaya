@@ -11,9 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kelurahan__sambikerep__forms', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('kelurahan_sambikerep_form', function (Blueprint $table) {
+            $table->string('tahapan')->unique();
+            $table->string('nama_pelaksana');
+            $table->string('jabatan');
+            $table->string('nomor');
+            $table->string('alamat');
+            $table->string('bentuk');
+            $table->text('tujuan');
+            $table->string('sasaran');
+            $table->string('waktu_dan_tempat');
+            $table->text('uraian');
         });
     }
 
@@ -22,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kelurahan__sambikerep__forms');
+        Schema::dropIfExists('kelurahan_sambikerep_form');
     }
 };

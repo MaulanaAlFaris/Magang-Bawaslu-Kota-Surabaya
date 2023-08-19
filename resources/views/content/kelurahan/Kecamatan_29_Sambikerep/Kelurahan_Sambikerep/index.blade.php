@@ -8,7 +8,7 @@
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <!-- TOMBOL TAMBAH DATA -->
             <div class="pb-3">
-            <a href='{{ url('KelurahanPakal/create') }}' class="btn btn-primary">+ Tambah Data</a>
+            <a href='{{ url('KelurahanSambikerep/create') }}' class="btn btn-primary">+ Tambah Data</a>
             </div>
     
             <table class="table table-striped">
@@ -30,8 +30,8 @@
                         <td>{{ $item->nomor }}</td>
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
-                            <a href='{{ url('KelurahanPakal/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
-                            <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KelurahanPakal'.$item->tahapan) }}" method="post">
+                            <a href='{{ url('KelurahanSambikerep/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KelurahanSambikerep'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" name="submit" class="btn btn-danger btn-sm">Delete</button>
