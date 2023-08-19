@@ -42,6 +42,7 @@ use App\Http\Controllers\KelurahanBalasKlumprikController;
 use App\Http\Controllers\KelurahanBanyuUripController;
 use App\Http\Controllers\KelurahanBaratajayaController;
 use App\Http\Controllers\KelurahanBendulMerisiController;
+use App\Http\Controllers\KelurahanBongkaranController;
 use App\Http\Controllers\KelurahanBubutanController;
 use App\Http\Controllers\KelurahanBulakBantengController;
 use App\Http\Controllers\KelurahanBulakController;
@@ -94,6 +95,7 @@ use App\Http\Controllers\KelurahanKetabangController;
 use App\Http\Controllers\KelurahanKetintangController;
 use App\Http\Controllers\KelurahanKlampisNgasemController;
 use App\Http\Controllers\KelurahanKrembanganSelatanController;
+use App\Http\Controllers\KelurahanKrembanganUtaraController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
 use App\Http\Controllers\KelurahanKutisariController;
 use App\Http\Controllers\KelurahanManyarSabranganController;
@@ -108,6 +110,7 @@ use App\Http\Controllers\KelurahanMulyorejoController;
 use App\Http\Controllers\KelurahanNgagelController;
 use App\Http\Controllers\KelurahanNgagelRejoController;
 use App\Http\Controllers\KelurahanNgindenJangkunganController;
+use App\Http\Controllers\KelurahanNyamplunganController;
 use App\Http\Controllers\KelurahanPacarkelingController;
 use App\Http\Controllers\KelurahanPacarkembangController;
 use App\Http\Controllers\KelurahanPagesanganController;
@@ -116,6 +119,8 @@ use App\Http\Controllers\KelurahanPanjangJiwoController;
 use App\Http\Controllers\KelurahanPenelehController;
 use App\Http\Controllers\KelurahanPenjaringanSariController;
 use App\Http\Controllers\KelurahanPerakBaratController;
+use App\Http\Controllers\KelurahanPerakTimurController;
+use App\Http\Controllers\KelurahanPerakUtaraController;
 use App\Http\Controllers\KelurahanPlosoController;
 use App\Http\Controllers\KelurahanPradahKalikendalController;
 use App\Http\Controllers\KelurahanPucangSewuController;
@@ -137,6 +142,7 @@ use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
 use App\Http\Controllers\KelurahanTambakWediController;
 use App\Http\Controllers\KelurahanTanahKaliKedindingController;
+use App\Http\Controllers\KelurahanTanjungPerakController;
 use App\Http\Controllers\KelurahanTegalsariController;
 use App\Http\Controllers\KelurahanTembokDukuhController;
 use App\Http\Controllers\KelurahanTenggilisMejoyoController;
@@ -367,6 +373,14 @@ Route::resource('KelurahanKemayoran',KelurahanKemayoranController::class);
 Route::resource('KelurahanKrembanganSelatan',KelurahanKrembanganSelatanController::class);
 Route::resource('KelurahanMorokrembangan',KelurahanMorokrembanganController::class);
 Route::resource('KelurahanPerakBarat',KelurahanPerakBaratController::class);
+
+//Routingn Login Kecamatan 23 Untuk Kelurahan ini
+Route::resource('KelurahanBongkaran',KelurahanBongkaranController::class);
+Route::resource('KelurahanKrembanganUtara',KelurahanKrembanganUtaraController::class);
+Route::resource('KelurahanNyamplungan',KelurahanNyamplunganController::class);
+Route::resource('KelurahanPerakTimur',KelurahanPerakTimurController::class);
+Route::resource('KelurahanPerakUtara',KelurahanPerakUtaraController::class);
+Route::resource('KelurahanTanjungPerak',KelurahanTanjungPerakController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -864,7 +878,26 @@ Route::group(['middleware'=>['auth']],function(){
     Route::group(['middleware'=>['cekUserLogin:142']],function(){
         Route::resource('KelurahanPerakBarat',KelurahanPerakBaratController::class);
     });
-    
+
+    //Routing Cek Login Kecamatan Pabean Cantian Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:143']],function(){
+        Route::resource('KelurahanBongkaran',KelurahanBongkaranController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:144']],function(){
+        Route::resource('KelurahanKrembanganUtara',KelurahanKrembanganUtaraController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:145']],function(){
+        Route::resource('KelurahanNyamplungan',KelurahanNyamplunganController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:146']],function(){
+        Route::resource('KelurahanPerakTimur',KelurahanPerakTimurController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:147']],function(){
+        Route::resource('KelurahanPerakUtara',KelurahanPerakUtaraController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:148']],function(){
+        Route::resource('KelurahanTanjungPerak',KelurahanTanjungPerakController::class);
+    });
 
 });
 Route::resource('form',formController::class);
