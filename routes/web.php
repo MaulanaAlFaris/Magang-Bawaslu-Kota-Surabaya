@@ -43,8 +43,10 @@ use App\Http\Controllers\KelurahanBanyuUripController;
 use App\Http\Controllers\KelurahanBaratajayaController;
 use App\Http\Controllers\KelurahanBendulMerisiController;
 use App\Http\Controllers\KelurahanBubutanController;
+use App\Http\Controllers\KelurahanBulakController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KelurahanDarmoController;
+use App\Http\Controllers\KelurahanDrSoetomoController;
 use App\Http\Controllers\KelurahanDukuhKupangController;
 use App\Http\Controllers\KelurahanDukuhMenanggalController;
 use App\Http\Controllers\KelurahanDukuhPakisController;
@@ -76,10 +78,12 @@ use App\Http\Controllers\KelurahanKarangPilangController;
 use App\Http\Controllers\KelurahanKebonsariController;
 use App\Http\Controllers\KelurahanKebraonController;
 use App\Http\Controllers\KelurahanKedungBarukController;
+use App\Http\Controllers\KelurahanKedungdoroController;
 use App\Http\Controllers\KelurahanKedurusController;
 use App\Http\Controllers\KelurahanKejawanPutihTambakController;
 use App\Http\Controllers\KelurahanKendangsariController;
 use App\Http\Controllers\KelurahanKeputihController;
+use App\Http\Controllers\KelurahanKeputranController;
 use App\Http\Controllers\KelurahanKertajayaController;
 use App\Http\Controllers\KelurahanKetabangController;
 use App\Http\Controllers\KelurahanKetintangController;
@@ -121,12 +125,14 @@ use App\Http\Controllers\KelurahanSimolawangController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
 use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
+use App\Http\Controllers\KelurahanTegalsariController;
 use App\Http\Controllers\KelurahanTembokDukuhController;
 use App\Http\Controllers\KelurahanTenggilisMejoyoController;
 use App\Http\Controllers\KelurahanWaruGunungController;
 use App\Http\Controllers\KelurahanWiyungController;
 use App\Http\Controllers\KelurahanWonokromoController;
 use App\Http\Controllers\KelurahanWonorejoRungkutController;
+use App\Http\Controllers\KelurahanWonorejoTegalsariController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\KotaSurabayaController;
 use App\Http\Controllers\LoginController;
@@ -323,6 +329,16 @@ Route::resource('KelurahanKapasan',KelurahanKapasanController::class);
 Route::resource('KelurahanSidodadi',KelurahanSidodadiController::class);
 Route::resource('KelurahanSimolawang',KelurahanSimolawangController::class);
 Route::resource('KelurahanTambakrejo',KelurahanTambakrejoController::class);
+
+//Routingn Login Kecamatan 19 Untuk Kelurahan ini
+Route::resource('KelurahanDrSoetomo',KelurahanDrSoetomoController::class);
+Route::resource('KelurahanKedungdoro',KelurahanKedungdoroController::class);
+Route::resource('KelurahanKeputran',KelurahanKeputranController::class);
+Route::resource('KelurahanTegalsari',KelurahanTegalsariController::class);
+Route::resource('KelurahanWonorejoTegalsari',KelurahanWonorejoTegalsariController::class);
+
+//Routingn Login Kecamatan 20 Untuk Kelurahan ini
+Route::resource('KelurahanBulak',KelurahanBulakController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -757,6 +773,28 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:124']],function(){
         Route::resource('KelurahanTambakrejo',KelurahanTambakrejoController::class);
+    });
+
+    //Routing Cek Login Kecamatan Simokerto Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:125']],function(){
+        Route::resource('KelurahanDrSoetomo',KelurahanDrSoetomoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:126']],function(){
+        Route::resource('KelurahanKedungdoro',KelurahanKedungdoroController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:127']],function(){
+        Route::resource('KelurahanKeputran',KelurahanKeputranController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:128']],function(){
+        Route::resource('KelurahanTegalsari',KelurahanTegalsariController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:129']],function(){
+        Route::resource('KelurahanWonorejoTegalsari',KelurahanWonorejoTegalsariController::class);
+    });
+
+    //Routing Cek Login Kecamatan Simokerto Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:130']],function(){
+        Route::resource('KelurahanBulak',KelurahanBulakController::class);
     });
     
 
