@@ -78,10 +78,12 @@ use App\Http\Controllers\KelurahanKarangPilangController;
 use App\Http\Controllers\KelurahanKebonsariController;
 use App\Http\Controllers\KelurahanKebraonController;
 use App\Http\Controllers\KelurahanKedungBarukController;
+use App\Http\Controllers\KelurahanKedungCowekController;
 use App\Http\Controllers\KelurahanKedungdoroController;
 use App\Http\Controllers\KelurahanKedurusController;
 use App\Http\Controllers\KelurahanKejawanPutihTambakController;
 use App\Http\Controllers\KelurahanKendangsariController;
+use App\Http\Controllers\KelurahanKenjeranController;
 use App\Http\Controllers\KelurahanKeputihController;
 use App\Http\Controllers\KelurahanKeputranController;
 use App\Http\Controllers\KelurahanKertajayaController;
@@ -123,6 +125,7 @@ use App\Http\Controllers\KelurahanSidodadiController;
 use App\Http\Controllers\KelurahanSidosermoController;
 use App\Http\Controllers\KelurahanSimolawangController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
+use App\Http\Controllers\KelurahanSukoliloBaruController;
 use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
 use App\Http\Controllers\KelurahanTegalsariController;
@@ -339,6 +342,9 @@ Route::resource('KelurahanWonorejoTegalsari',KelurahanWonorejoTegalsariControlle
 
 //Routingn Login Kecamatan 20 Untuk Kelurahan ini
 Route::resource('KelurahanBulak',KelurahanBulakController::class);
+Route::resource('KelurahanKedungCowek',KelurahanKedungCowekController::class);
+Route::resource('KelurahanKenjeran',KelurahanKenjeranController::class);
+Route::resource('KelurahanSukoliloBaru',KelurahanSukoliloBaruController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -795,6 +801,15 @@ Route::group(['middleware'=>['auth']],function(){
     //Routing Cek Login Kecamatan Simokerto Untuk Kelurahan ini
     Route::group(['middleware'=>['cekUserLogin:130']],function(){
         Route::resource('KelurahanBulak',KelurahanBulakController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:131']],function(){
+        Route::resource('KelurahanKedungCowek',KelurahanKedungCowekController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:132']],function(){
+        Route::resource('KelurahanKenjeran',KelurahanKenjeranController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:133']],function(){
+        Route::resource('KelurahanSukoliloBaru',KelurahanSukoliloBaruController::class);
     });
     
 
