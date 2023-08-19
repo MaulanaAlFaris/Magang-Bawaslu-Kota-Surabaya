@@ -68,6 +68,7 @@ use App\Http\Controllers\KelurahanJeparaController;
 use App\Http\Controllers\KelurahanKalijudanController;
 use App\Http\Controllers\KelurahanKalirungkutController;
 use App\Http\Controllers\KelurahanKalisariController;
+use App\Http\Controllers\KelurahanKapasanController;
 use App\Http\Controllers\KelurahanKapasariController;
 use App\Http\Controllers\KelurahanKapasmadyaBaruController;
 use App\Http\Controllers\KelurahanKarahController;
@@ -114,8 +115,11 @@ use App\Http\Controllers\KelurahanRungkutTengahController;
 use App\Http\Controllers\KelurahanSawahanController;
 use App\Http\Controllers\KelurahanSawunggalingController;
 use App\Http\Controllers\KelurahanSemolowaruController;
+use App\Http\Controllers\KelurahanSidodadiController;
 use App\Http\Controllers\KelurahanSidosermoController;
+use App\Http\Controllers\KelurahanSimolawangController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
+use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
 use App\Http\Controllers\KelurahanTembokDukuhController;
 use App\Http\Controllers\KelurahanTenggilisMejoyoController;
@@ -313,6 +317,12 @@ Route::resource('KelurahanGenteng',KelurahanGentengController::class);
 Route::resource('KelurahanKapasari',KelurahanKapasariController::class);
 Route::resource('KelurahanKetabang',KelurahanKetabangController::class);
 Route::resource('KelurahanPeneleh',KelurahanPenelehController::class);
+
+//Routingn Login Kecamatan 18 Untuk Kelurahan ini
+Route::resource('KelurahanKapasan',KelurahanKapasanController::class);
+Route::resource('KelurahanSidodadi',KelurahanSidodadiController::class);
+Route::resource('KelurahanSimolawang',KelurahanSimolawangController::class);
+Route::resource('KelurahanTambakrejo',KelurahanTambakrejoController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -733,6 +743,20 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:120']],function(){
         Route::resource('KelurahanPeneleh',KelurahanPenelehController::class);
+    });
+
+    //Routing Cek Login Kecamatan Simokerto Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:121']],function(){
+        Route::resource('KelurahanKapasan',KelurahanKapasanController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:122']],function(){
+        Route::resource('KelurahanSidodadi',KelurahanSidodadiController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:123']],function(){
+        Route::resource('KelurahanSimolawang',KelurahanSimolawangController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:124']],function(){
+        Route::resource('KelurahanTambakrejo',KelurahanTambakrejoController::class);
     });
     
 
