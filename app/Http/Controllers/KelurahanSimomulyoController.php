@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kelurahan_PutatGede_Form;
+use App\Models\Kelurahan_Simomulyo_Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class KelurahanPutatGedeController extends Controller
+class KelurahanSimomulyoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data=Kelurahan_PutatGede_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Putat_Gede.index')->with('data',$data);
+        $data=Kelurahan_Simomulyo_Form::orderBy('tahapan','desc')->paginate(10);
+        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Simomulyo.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanPutatGedeController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Putat_Gede.create');
+        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Simomulyo.create');
     }
 
     /**
@@ -81,8 +81,8 @@ class KelurahanPutatGedeController extends Controller
             'uraian'=>$request->uraian        
 
         ];
-        Kelurahan_PutatGede_Form::create($data);
-        return redirect()->to('KelurahanPutatGede')->with('success','berhasil menambahkan data');
+        Kelurahan_Simomulyo_Form::create($data);
+        return redirect()->to('KelurahanSimomulyo')->with('success','berhasil menambahkan data');
     }
 
     /**
@@ -98,8 +98,8 @@ class KelurahanPutatGedeController extends Controller
      */
     public function edit(string $id)
     {
-        $data = Kelurahan_PutatGede_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Putat_Gede.edit')->with('data', $data);
+        $data = Kelurahan_Simomulyo_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Simomulyo.edit')->with('data', $data);
     }
 
     /**
@@ -140,8 +140,8 @@ class KelurahanPutatGedeController extends Controller
             'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
             'uraian'=>  $request->uraian   
         ];
-        Kelurahan_PutatGede_Form::where('tahapan',$id)->update($data);
-        return redirect()->to('KelurahanPutatGede')->with('success','berhasil mengupdate data');
+        Kelurahan_Simomulyo_Form::where('tahapan',$id)->update($data);
+        return redirect()->to('KelurahanSimomulyo')->with('success','berhasil mengupdate data');
     }
 
     /**
@@ -149,7 +149,7 @@ class KelurahanPutatGedeController extends Controller
      */
     public function destroy(string $id)
     {
-        Kelurahan_PutatGede_Form::where('tahapan',$id)->delete();
-        return redirect()->to('KelurahanPutatGede')->with('succes','berhasil melakukan delete data');
+        Kelurahan_Simomulyo_Form::where('tahapan',$id)->delete();
+        return redirect()->to('KelurahanSimomulyo')->with('succes','berhasil melakukan delete data');
     }
 }

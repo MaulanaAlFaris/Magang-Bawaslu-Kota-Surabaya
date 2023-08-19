@@ -140,6 +140,7 @@ use App\Http\Controllers\KelurahanPerakUtaraController;
 use App\Http\Controllers\KelurahanPlosoController;
 use App\Http\Controllers\KelurahanPradahKalikendalController;
 use App\Http\Controllers\KelurahanPucangSewuController;
+use App\Http\Controllers\KelurahanPutatGedeController;
 use App\Http\Controllers\KelurahanPutatJayaController;
 use App\Http\Controllers\KelurahanRangkahController;
 use App\Http\Controllers\KelurahanRomokalisariController;
@@ -156,8 +157,12 @@ use App\Http\Controllers\KelurahanSidosermoController;
 use App\Http\Controllers\KelurahanSidotopoController;
 use App\Http\Controllers\KelurahanSidotopoWetanController;
 use App\Http\Controllers\KelurahanSimolawangController;
+use App\Http\Controllers\KelurahanSimomulyoBaruController;
+use App\Http\Controllers\KelurahanSimomulyoController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
+use App\Http\Controllers\KelurahanSonokwijenanController;
 use App\Http\Controllers\KelurahanSukoliloBaruController;
+use App\Http\Controllers\KelurahanSukomanunggalController;
 use App\Http\Controllers\KelurahanSumberRejoController;
 use App\Http\Controllers\KelurahanSumurwelutController;
 use App\Http\Controllers\KelurahanTambakOsoWilangunController;
@@ -167,6 +172,7 @@ use App\Http\Controllers\KelurahanTambakSariosoController;
 use App\Http\Controllers\KelurahanTambakWediController;
 use App\Http\Controllers\KelurahanTanahKaliKedindingController;
 use App\Http\Controllers\KelurahanTanjungPerakController;
+use App\Http\Controllers\KelurahanTanjungsariController;
 use App\Http\Controllers\KelurahanTegalsariController;
 use App\Http\Controllers\KelurahanTembokDukuhController;
 use App\Http\Controllers\KelurahanTenggilisMejoyoController;
@@ -445,6 +451,14 @@ Route::resource('KelurahanBeringin',KelurahanBeringinController::class);
 Route::resource('KelurahanLontar',KelurahanLontarController::class);
 Route::resource('KelurahanMade',KelurahanMadeController::class);
 Route::resource('KelurahanSambikerep',KelurahanSambikerepController::class);
+
+//Routingn Login Kecamatan 30 Untuk Kelurahan ini
+Route::resource('KelurahanPutatGede',KelurahanPutatGedeController::class);
+Route::resource('KelurahanSimomulyo',KelurahanSimomulyoController::class);
+Route::resource('KelurahanSimomulyoBaru',KelurahanSimomulyoBaruController::class);
+Route::resource('KelurahanSonokwijenan',KelurahanSonokwijenanController::class);
+Route::resource('KelurahanSukomanunggal',KelurahanSukomanunggalController::class);
+Route::resource('KelurahanTanjungsari',KelurahanTanjungsariController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -1051,6 +1065,26 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:174']],function(){
         Route::resource('KelurahanSambikerep',KelurahanSambikerepController::class);
+    });
+
+    //Routing Cek Login Kecamatan Sukomanunggal Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:175']],function(){
+        Route::resource('KelurahanPutatGede',KelurahanPutatGedeController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:176']],function(){
+        Route::resource('KelurahanSimomulyo',KelurahanSimomulyoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:177']],function(){
+        Route::resource('KelurahanSimomulyoBaru',KelurahanSimomulyoBaruController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:178']],function(){
+        Route::resource('KelurahanSonokwijenan',KelurahanSonokwijenanController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:179']],function(){
+        Route::resource('KelurahanSukomanunggal',KelurahanSukomanunggalController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:180']],function(){
+        Route::resource('KelurahanTanjungsari',KelurahanTanjungsariController::class);
     });
 
 });
