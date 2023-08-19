@@ -37,6 +37,8 @@ use App\Http\Controllers\KecamatanWonocoloController;
 use App\Http\Controllers\KecamatanWonokromoController;
 use App\Http\Controllers\KelurahanAirlanggaController;
 use App\Http\Controllers\KelurahanAlunAlunContongController;
+use App\Http\Controllers\KelurahanAmpelController;
+use App\Http\Controllers\KelurahanAsemRowoController;
 use App\Http\Controllers\KelurahanBabatanController;
 use App\Http\Controllers\KelurahanBalasKlumprikController;
 use App\Http\Controllers\KelurahanBanyuUripController;
@@ -116,6 +118,7 @@ use App\Http\Controllers\KelurahanPacarkembangController;
 use App\Http\Controllers\KelurahanPagesanganController;
 use App\Http\Controllers\KelurahanPakisController;
 use App\Http\Controllers\KelurahanPanjangJiwoController;
+use App\Http\Controllers\KelurahanPegirianController;
 use App\Http\Controllers\KelurahanPenelehController;
 use App\Http\Controllers\KelurahanPenjaringanSariController;
 use App\Http\Controllers\KelurahanPerakBaratController;
@@ -134,6 +137,7 @@ use App\Http\Controllers\KelurahanSawunggalingController;
 use App\Http\Controllers\KelurahanSemolowaruController;
 use App\Http\Controllers\KelurahanSidodadiController;
 use App\Http\Controllers\KelurahanSidosermoController;
+use App\Http\Controllers\KelurahanSidotopoController;
 use App\Http\Controllers\KelurahanSidotopoWetanController;
 use App\Http\Controllers\KelurahanSimolawangController;
 use App\Http\Controllers\KelurahanSiwalankertoController;
@@ -146,9 +150,11 @@ use App\Http\Controllers\KelurahanTanjungPerakController;
 use App\Http\Controllers\KelurahanTegalsariController;
 use App\Http\Controllers\KelurahanTembokDukuhController;
 use App\Http\Controllers\KelurahanTenggilisMejoyoController;
+use App\Http\Controllers\KelurahanUjungController;
 use App\Http\Controllers\KelurahanWaruGunungController;
 use App\Http\Controllers\KelurahanWiyungController;
 use App\Http\Controllers\KelurahanWonokromoController;
+use App\Http\Controllers\KelurahanWonokusumoController;
 use App\Http\Controllers\KelurahanWonorejoRungkutController;
 use App\Http\Controllers\KelurahanWonorejoTegalsariController;
 use App\Http\Controllers\KotaController;
@@ -381,6 +387,16 @@ Route::resource('KelurahanNyamplungan',KelurahanNyamplunganController::class);
 Route::resource('KelurahanPerakTimur',KelurahanPerakTimurController::class);
 Route::resource('KelurahanPerakUtara',KelurahanPerakUtaraController::class);
 Route::resource('KelurahanTanjungPerak',KelurahanTanjungPerakController::class);
+
+//Routingn Login Kecamatan 24 Untuk Kelurahan ini
+Route::resource('KelurahanAmpel',KelurahanAmpelController::class);
+Route::resource('KelurahanPegirian',KelurahanPegirianController::class);
+Route::resource('KelurahanSidotopo',KelurahanSidotopoController::class);
+Route::resource('KelurahanUjung',KelurahanUjungController::class);
+Route::resource('KelurahanWonokusumo',KelurahanWonokusumoController::class);
+
+//Routingn Login Kecamatan 25 Untuk Kelurahan ini
+Route::resource('KelurahanAsemRowo',KelurahanAsemRowoController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -897,6 +913,28 @@ Route::group(['middleware'=>['auth']],function(){
     });
     Route::group(['middleware'=>['cekUserLogin:148']],function(){
         Route::resource('KelurahanTanjungPerak',KelurahanTanjungPerakController::class);
+    });
+
+    //Routing Cek Login Kecamatan Semampir Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:149']],function(){
+        Route::resource('KelurahanAmpel',KelurahanAmpelController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:150']],function(){
+        Route::resource('KelurahanPegirian',KelurahanPegirianController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:151']],function(){
+        Route::resource('KelurahanSidotopo',KelurahanSidotopoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:152']],function(){
+        Route::resource('KelurahanUjung',KelurahanUjungController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:153']],function(){
+        Route::resource('KelurahanWonokusumo',KelurahanWonokusumoController::class);
+    });
+
+    //Routing Cek Login Kecamatan Asem Rowo Untuk Kelurahan ini
+    Route::group(['middleware'=>['cekUserLogin:154']],function(){
+        Route::resource('KelurahanAsemRowo',KelurahanAsemRowoController::class);
     });
 
 });
