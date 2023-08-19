@@ -50,9 +50,11 @@ use App\Http\Controllers\KelurahanDukuhMenanggalController;
 use App\Http\Controllers\KelurahanDukuhPakisController;
 use App\Http\Controllers\KelurahanDukuhSetroController;
 use App\Http\Controllers\KelurahanDukuhSutorejoController;
+use App\Http\Controllers\KelurahanEmbongKaliasinController;
 use App\Http\Controllers\KelurahanGadingController;
 use App\Http\Controllers\KelurahanGayunganController;
 use App\Http\Controllers\KelurahanGebangPutihController;
+use App\Http\Controllers\KelurahanGentengController;
 use App\Http\Controllers\KelurahanGubengController;
 use App\Http\Controllers\KelurahanGundihController;
 use App\Http\Controllers\KelurahanGunungAnyarController;
@@ -66,6 +68,7 @@ use App\Http\Controllers\KelurahanJeparaController;
 use App\Http\Controllers\KelurahanKalijudanController;
 use App\Http\Controllers\KelurahanKalirungkutController;
 use App\Http\Controllers\KelurahanKalisariController;
+use App\Http\Controllers\KelurahanKapasariController;
 use App\Http\Controllers\KelurahanKapasmadyaBaruController;
 use App\Http\Controllers\KelurahanKarahController;
 use App\Http\Controllers\KelurahanKarangPilangController;
@@ -77,6 +80,7 @@ use App\Http\Controllers\KelurahanKejawanPutihTambakController;
 use App\Http\Controllers\KelurahanKendangsariController;
 use App\Http\Controllers\KelurahanKeputihController;
 use App\Http\Controllers\KelurahanKertajayaController;
+use App\Http\Controllers\KelurahanKetabangController;
 use App\Http\Controllers\KelurahanKetintangController;
 use App\Http\Controllers\KelurahanKlampisNgasemController;
 use App\Http\Controllers\KelurahanKupangKrajanController;
@@ -97,6 +101,7 @@ use App\Http\Controllers\KelurahanPacarkembangController;
 use App\Http\Controllers\KelurahanPagesanganController;
 use App\Http\Controllers\KelurahanPakisController;
 use App\Http\Controllers\KelurahanPanjangJiwoController;
+use App\Http\Controllers\KelurahanPenelehController;
 use App\Http\Controllers\KelurahanPenjaringanSariController;
 use App\Http\Controllers\KelurahanPlosoController;
 use App\Http\Controllers\KelurahanPradahKalikendalController;
@@ -303,7 +308,11 @@ Route::resource('KelurahanJepara',KelurahanJeparaController::class);
 Route::resource('KelurahanTembokDukuh',KelurahanTembokDukuhController::class);
 
 //Routingn Login Kecamatan 17 Untuk Kelurahan ini
-Route::resource('Kelurahan',Kelurahan::class);
+Route::resource('KelurahanEmbongKaliasin',KelurahanEmbongKaliasinController::class);
+Route::resource('KelurahanGenteng',KelurahanGentengController::class);
+Route::resource('KelurahanKapasari',KelurahanKapasariController::class);
+Route::resource('KelurahanKetabang',KelurahanKetabangController::class);
+Route::resource('KelurahanPeneleh',KelurahanPenelehController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -709,9 +718,21 @@ Route::group(['middleware'=>['auth']],function(){
         Route::resource('KelurahanTembokDukuh',KelurahanTembokDukuhController::class);
     });
 
-    //Routing Cek Login Kecamatan Bubutan Untuk Kelurahan ini
+    //Routing Cek Login Kecamatan Genteng Untuk Kelurahan ini
     Route::group(['middleware'=>['cekUserLogin:116']],function(){
-        Route::resource('Kelurahan',Kelurahan::class);
+        Route::resource('KelurahanEmbongKaliasi',KelurahanEmbongKaliasinController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:117']],function(){
+        Route::resource('KelurahanGenteng',KelurahanGentengController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:118']],function(){
+        Route::resource('KelurahanKapasari',KelurahanKapasariController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:119']],function(){
+        Route::resource('KelurahanKetabang',KelurahanKetabangController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:120']],function(){
+        Route::resource('KelurahanPeneleh',KelurahanPenelehController::class);
     });
     
 
