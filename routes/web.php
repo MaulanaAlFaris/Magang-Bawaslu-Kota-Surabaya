@@ -62,6 +62,7 @@ use App\Http\Controllers\KelurahanGadingController;
 use App\Http\Controllers\KelurahanGayunganController;
 use App\Http\Controllers\KelurahanGebangPutihController;
 use App\Http\Controllers\KelurahanGentengController;
+use App\Http\Controllers\KelurahanGentingKalianakController;
 use App\Http\Controllers\KelurahanGubengController;
 use App\Http\Controllers\KelurahanGundihController;
 use App\Http\Controllers\KelurahanGunungAnyarController;
@@ -144,6 +145,7 @@ use App\Http\Controllers\KelurahanSiwalankertoController;
 use App\Http\Controllers\KelurahanSukoliloBaruController;
 use App\Http\Controllers\KelurahanTambakrejoController;
 use App\Http\Controllers\KelurahanTambaksariController;
+use App\Http\Controllers\KelurahanTambakSariosoController;
 use App\Http\Controllers\KelurahanTambakWediController;
 use App\Http\Controllers\KelurahanTanahKaliKedindingController;
 use App\Http\Controllers\KelurahanTanjungPerakController;
@@ -397,6 +399,8 @@ Route::resource('KelurahanWonokusumo',KelurahanWonokusumoController::class);
 
 //Routingn Login Kecamatan 25 Untuk Kelurahan ini
 Route::resource('KelurahanAsemRowo',KelurahanAsemRowoController::class);
+Route::resource('KelurahanGentingKalianak',KelurahanGentingKalianakController::class);
+Route::resource('KelurahanTambakSarioso',KelurahanTambakSariosoController::class);
 
 //Route::resource('login', loginController::class);
 Route::controller(LoginController::class)->group(function(){
@@ -935,6 +939,12 @@ Route::group(['middleware'=>['auth']],function(){
     //Routing Cek Login Kecamatan Asem Rowo Untuk Kelurahan ini
     Route::group(['middleware'=>['cekUserLogin:154']],function(){
         Route::resource('KelurahanAsemRowo',KelurahanAsemRowoController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:155']],function(){
+        Route::resource('KelurahanGentingKalianak',KelurahanGentingKalianakController::class);
+    });
+    Route::group(['middleware'=>['cekUserLogin:156']],function(){
+        Route::resource('KelurahanTambakSarioso',KelurahanTambakSariosoController::class);
     });
 
 });
