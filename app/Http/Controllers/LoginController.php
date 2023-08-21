@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\SuperAdmin_Form;
 
 class LoginController extends Controller
 {
@@ -14,7 +15,7 @@ class LoginController extends Controller
     {
         if($user = Auth::user()){
                 if($user->level == '1'){
-                    return redirect()->intended('admin');
+                    return redirect()->intended('SuperAdmin');
                 }elseif($user->level =='999'){
                     return redirect()->intended('kota');
                 }elseif($user->level == '998'){
@@ -417,7 +418,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             $user = Auth::user();
             if($user->level == '1'){
-                    return redirect()->intended('admin');
+                    return redirect()->intended('SuperAdmin');
                 }elseif($user->level =='999'){
                     return redirect()->intended('kota');
                 }elseif($user->level == '998'){

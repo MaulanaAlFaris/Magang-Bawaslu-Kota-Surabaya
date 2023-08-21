@@ -14,6 +14,7 @@
             <form action="{{ url('login/process') }}" method="post">
                 @csrf
                 <div class="container-list">
+
                     <div class="mb-3 row">
                         <div class="col-sm-10">
                             <input autofocus type="text" class="form-control" 
@@ -22,13 +23,13 @@
                             @enderror
                             name="username" id="username" value="{{ old('username') }}" placeholder="username">
                         </div>
-
                         @error('username')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
                         @enderror
                     </div>
+
                     <div class="mb-3 row">
                         <div class="col-sm-10">
                             <input type="password" class="form-control" 
@@ -43,12 +44,14 @@
                             </div>
                         @enderror
                     </div>
+
                     <div class="mb-3 row">
                         <label for="submit" class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-primary" name="submit">Login</button>
                         </div>
                     </div>
+                    
                 </div>
             </form>
         </div>

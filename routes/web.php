@@ -194,6 +194,7 @@ use App\Http\Controllers\KelurahanWonorejoTegalsariController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\KotaSurabayaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SuperAdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -219,7 +220,8 @@ Route::get('/tes', function () {
 Route::get('/', function () {
     return view('content.dashboard');
 });
-Route::resource('admin',adminController::class);
+//Route::resource('admin',adminController::class);
+Route::resource('SuperAdmin',SuperAdminController::class);
 Route::resource('kota',KotaController::class);
 Route::resource('kecamatan',KecamatanController::class);
 Route::resource('kelurahan',KelurahanController::class);
@@ -488,7 +490,7 @@ Route::controller(LoginController::class)->group(function(){
 //Middlewawre Setting Cek Login Sistem
 Route::group(['middleware'=>['auth']],function(){
     Route::group(['middleware'=>['cekUserLogin:1']],function(){
-        Route::resource('admin',adminController::class);
+        Route::resource('SuperAdmin',SuperAdminController::class);
     });
 
     Route::group(['middleware'=>['cekUserLogin:999']],function(){

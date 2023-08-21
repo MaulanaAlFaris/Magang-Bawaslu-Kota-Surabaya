@@ -75,3 +75,18 @@ body{
     height: 100%;
     background-color: rgb(211, 207, 207);
 }
+button{
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+}
+.logout-button{
+    border-radius: 20px;
+}
+button:hover{
+    background-color: rgb(203, 22, 22);
+    cursor: pointer;
+}
