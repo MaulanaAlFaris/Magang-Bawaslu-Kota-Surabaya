@@ -1,7 +1,7 @@
 @extends('content.layouts.layouts')
 
 @section('content-side')
-    <button class="sidebar-button-list">Kelurahan</button>
+<button class="sidebar-button-list">Kelurahan</button>
 @endsection
 
 @section('content-main')

@@ -15,7 +15,7 @@ class KecamatanTenggilisMejoyoController extends Controller
     public function index()
     {
         $data=Kecamatan_TenggilisMejoyo_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kecamatan.Kecamatan_TenggilisMejoyo.index')->with('data',$data);
+        return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KecamatanTenggilisMejoyoController extends Controller
      */
     public function create()
     {
-        return view('content.kecamatan.Kecamatan_TenggilisMejoyo.create');
+        return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.create');
     }
 
     /**
@@ -101,7 +101,7 @@ class KecamatanTenggilisMejoyoController extends Controller
     public function edit(string $id)
     {
         $data = Kecamatan_TenggilisMejoyo_Form::where('tahapan',$id)->first();
-        return view('content.kecamatan.Kecamatan_TenggilisMejoyo.edit')->with('data', $data);
+        return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.edit')->with('data', $data);
     }
 
     /**

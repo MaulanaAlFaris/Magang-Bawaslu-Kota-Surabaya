@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kecamatan_tenggilismejoyo_form', function (Blueprint $table) {
+        Schema::create('kecamatan_tenggilis_mejoyo_form', function (Blueprint $table) {
             $table->string('tahapan')->unique();
             $table->string('nama_pelaksana');
             $table->string('jabatan');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kecamatan_tenggilismejoyo_form');
+        Schema::dropIfExists('kecamatan_tenggilis_mejoyo_form');
     }
 };

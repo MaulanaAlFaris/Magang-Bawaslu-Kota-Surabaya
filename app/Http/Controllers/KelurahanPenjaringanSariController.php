@@ -15,7 +15,7 @@ class KelurahanPenjaringanSariController extends Controller
     public function index()
     {
         $data=Kelurahan_PenjaringanSari_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Penjaringan_Sari.index')->with('data',$data);
+        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Penjaringansari.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanPenjaringanSariController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Penjaringan_Sari.create');
+        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Penjaringansari.create');
     }
 
     /**
@@ -99,7 +99,7 @@ class KelurahanPenjaringanSariController extends Controller
     public function edit(string $id)
     {
         $data = Kelurahan_PenjaringanSari_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Penjaringan_Sari.edit')->with('data', $data);
+        return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Penjaringansari.edit')->with('data', $data);
     }
 
     /**

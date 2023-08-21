@@ -20,6 +20,6 @@ class Kelurahan_PenjaringanSari_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Penjaringan_Sari_Form';
+    protected $table ='Kelurahan_PenjaringanSari_Form';
     public $timestamps = false;
 }

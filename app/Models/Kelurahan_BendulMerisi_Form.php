@@ -20,6 +20,6 @@ class Kelurahan_BendulMerisi_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Bendul_Merisi_Form';
+    protected $table ='Kelurahan_BendulMerisi_Form';
     public $timestamps = false;
 }

@@ -1,10 +1,30 @@
 @extends('content.layouts.layouts')
 
 @section('content-side')
-    <button class="sidebar-button-list">Kelurahan</button>
+<ul class="listing-kec-kel">
+    <li><div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Kelurahan
+        </a>
+      
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{url('KelurahanGebangPutih') }}">Kelurahan Gebang Putih</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanKeputih') }}">Kelurahan Keputih</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanKlampisNgasem') }}">Kelurahan Klampis Ngasem</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanMedokanSemampir') }}">Kelurahan Medokan Semampir</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanMenurPumpungan') }}">Kelurahan Menur Pumpungan</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanNgindenJangkungan') }}">Kelurahan Nginden Jangkungan</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanSemolowaru') }}">Kelurahan Semolowaru</a></li>
+        </ul>
+      </div>
+    </li>
+</ul>
 @endsection
 
 @section('content-main')
+<div class="container-name">
+    <h1>Selamat Datang Di Kecamatan Sukolilo</h1>
+</div>
 <div class="content-main-bg">
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <!-- TOMBOL TAMBAH DATA -->
@@ -32,6 +52,7 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KecamatanSukolilo/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <a href='#' class="btn btn-success btn-sm">PDF</a>
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KecamatanSukolilo/'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

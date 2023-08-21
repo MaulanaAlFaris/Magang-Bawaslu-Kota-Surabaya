@@ -20,6 +20,6 @@ class Kelurahan_ManyarSabrangan_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Manyar_Sabrangan_Form';
+    protected $table ='Kelurahan_ManyarSabrangan_Form';
     public $timestamps = false;
 }

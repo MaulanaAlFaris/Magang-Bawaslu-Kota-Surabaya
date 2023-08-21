@@ -20,6 +20,6 @@ class Kelurahan_DukuhMenanggal_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Dukuh_Menanggal_Form';
+    protected $table ='Kelurahan_DukuhMenanggal_Form';
     public $timestamps = false;
 }

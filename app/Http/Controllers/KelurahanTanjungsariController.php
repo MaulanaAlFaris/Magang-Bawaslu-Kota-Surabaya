@@ -15,7 +15,7 @@ class KelurahanTanjungsariController extends Controller
     public function index()
     {
         $data=Kelurahan_Tanjungsari_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_30_Tanjungsari.Kelurahan_Tanjungsari.index')->with('data',$data);
+        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Tanjungsari.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanTanjungsariController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_30_Tanjungsari.Kelurahan_Tanjungsari.create');
+        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Tanjungsari.create');
     }
 
     /**
@@ -99,7 +99,7 @@ class KelurahanTanjungsariController extends Controller
     public function edit(string $id)
     {
         $data = Kelurahan_Tanjungsari_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_30_Tanjungsari.Kelurahan_Tanjungsari.edit')->with('data', $data);
+        return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Tanjungsari.edit')->with('data', $data);
     }
 
     /**

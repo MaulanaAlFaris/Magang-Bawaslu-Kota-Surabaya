@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Kecamatan_Lakarsantri_Form extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'tahapan',
+        'nama_pelaksana',
+        'jabatan',
+        'nomor',
+        'alamat',
+        'bentuk',
+        'tujuan',
+        'sasaran',
+        'waktu_dan_tempat',
+        'uraian'
+    ];
+    protected $table ='Kecamatan_Lakarsantri_Form';
+    public $timestamps = false;
 }

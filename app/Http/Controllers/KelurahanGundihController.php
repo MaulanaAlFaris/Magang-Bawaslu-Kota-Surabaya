@@ -15,7 +15,7 @@ class KelurahanGundihController extends Controller
     public function index()
     {
         $data=Kelurahan_Gundih_Form::orderBy('tahapan','desc')->paginate(10);
-        return view('content.kelurahan.Kecamatan_16_Gundih.Kelurahan_Gundih.index')->with('data',$data);
+        return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Gundih.index')->with('data',$data);
     }
 
     /**
@@ -23,7 +23,7 @@ class KelurahanGundihController extends Controller
      */
     public function create()
     {
-        return view('content.kelurahan.Kecamatan_16_Gundih.Kelurahan_Gundih.create');
+        return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Gundih.create');
     }
 
     /**
@@ -99,7 +99,7 @@ class KelurahanGundihController extends Controller
     public function edit(string $id)
     {
         $data = Kelurahan_Gundih_Form::where('tahapan',$id)->first();
-        return view('content.kelurahan.Kecamatan_16_Gundih.Kelurahan_Gundih.edit')->with('data', $data);
+        return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Gundih.edit')->with('data', $data);
     }
 
     /**

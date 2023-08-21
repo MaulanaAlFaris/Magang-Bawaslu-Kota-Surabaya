@@ -20,6 +20,6 @@ class Kelurahan_KarangPilang_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_KarangPilang_Form';
+    protected $table ='Kelurahan_Karang_Pilang_Form';
     public $timestamps = false;
 }

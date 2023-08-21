@@ -21,6 +21,14 @@ class CekUserLogin
         }
 
         $user = Auth::user();
+        //admin kota bisa mengakses semua
+        if($user->level==2){
+            return $next($request);
+        }
+        //admin kecamatan hanya bisa mengakses sesuai kecamatannya
+        if($user->level==3 && in_array($rules,[34,35,36,37])){
+            return $next($request);
+        }
         if($user->level == $rules)
             return $next($request);
 

@@ -20,6 +20,6 @@ class Kelurahan_KejawanPutihTambak_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Kejawan_Putih_Tambak_Form';
+    protected $table ='Kelurahan_KejawanPutihTambak_Form';
     public $timestamps = false;
 }

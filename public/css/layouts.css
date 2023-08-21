@@ -38,7 +38,7 @@ button:hover{
     width: 85%;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: block;
 }
 .navbar-background{
     width: 100%;
@@ -113,4 +113,28 @@ footer{
     width: 100%;
     overflow: hidden;
     overflow-y: scroll;
+}
+ul.listing-kec-kel{
+    display: grid;
+    height: 150px;
+    width: 200px;
+    position: sticky;
+}
+ul.dropdown-menu{
+    height: 200px;
+    width: 280px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.container-name{
+    height: 25px;
+    top: 5px;
+    position: relative;
+}
+.container-name h1{
+    font-size: 20px;
+    justify-content: center;
+    position: relative;
+    display: flex;
 }

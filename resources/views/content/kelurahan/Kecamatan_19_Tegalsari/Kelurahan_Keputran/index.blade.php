@@ -5,6 +5,9 @@
 
 @section('content-main')
 <div class="content-main-bg">
+    <div class="container-name">
+        <h1>Selamat Datang Di Kelurahan Keputran</h1>
+    </div>
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <!-- TOMBOL TAMBAH DATA -->
             <div class="pb-3">

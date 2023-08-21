@@ -20,6 +20,6 @@ class Kelurahan_NgagelRejo_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Ngagel_Rejo_Form';
+    protected $table ='Kelurahan_NgagelRejo_Form';
     public $timestamps = false;
 }

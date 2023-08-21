@@ -391,6 +391,10 @@ class LoginController extends Controller
                     return redirect()->intended('KelurahanManukanWetan');
                 }elseif($user->level == '186'){
                     return redirect()->intended('KelurahanTandes');
+                }elseif($user->level == '187'){
+                    return redirect()->intended('KelurahanSimokerto');
+                }elseif($user->level == '188'){
+                    return redirect()->intended('KelurahanPetemon');
                 }
             }
 
@@ -790,6 +794,10 @@ class LoginController extends Controller
                     return redirect()->intended('KelurahanManukanWetan');
                 }elseif($user->level == '186'){
                     return redirect()->intended('KelurahanTandes');
+                }elseif($user->level == '187'){
+                    return redirect()->intended('KelurahanSimokerto');
+                }elseif($user->level == '188'){
+                    return redirect()->intended('KelurahanPetemon');
                 }
 
             return redirect()->intended('/');

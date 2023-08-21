@@ -20,6 +20,6 @@ class Kelurahan_DukuhSutorejo_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Dukuh_Sutorejo_Form';
+    protected $table ='Kelurahan_DukuhSutorejo_Form';
     public $timestamps = false;
 }

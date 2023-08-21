@@ -20,6 +20,6 @@ class Kelurahan_GunungAnyar_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Gunung_Anyar_Form';
+    protected $table ='Kelurahan_GunungAnyar_Form';
     public $timestamps = false;
 }

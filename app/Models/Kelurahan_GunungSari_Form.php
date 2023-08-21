@@ -20,6 +20,6 @@ class Kelurahan_GunungSari_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Gunung_Sari_Form';
+    protected $table ='Kelurahan_GunungSari_Form';
     public $timestamps = false;
 }

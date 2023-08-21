@@ -20,6 +20,6 @@ class Kelurahan_RungkutTengah_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Rungkut_Tengah_Form';
+    protected $table ='Kelurahan_RungkutTengah_Form';
     public $timestamps = false;
 }

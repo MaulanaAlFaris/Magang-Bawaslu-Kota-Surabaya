@@ -4,6 +4,9 @@
 @endsection
 
 @section('content-main')
+<div class="container-name">
+    <h1>Selamat Datang Di Kelurahan Benowo</h1>
+</div>
 <div class="content-main-bg">
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <!-- TOMBOL TAMBAH DATA -->

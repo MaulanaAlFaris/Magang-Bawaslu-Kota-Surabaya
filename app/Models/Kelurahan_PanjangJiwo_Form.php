@@ -20,6 +20,6 @@ class Kelurahan_PanjangJiwo_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Penjang_Jiwo_Form';
+    protected $table ='Kelurahan_Panjang_Jiwo_Form';
     public $timestamps = false;
 }

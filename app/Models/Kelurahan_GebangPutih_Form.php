@@ -20,6 +20,6 @@ class Kelurahan_GebangPutih_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Gebang_Putih_Form';
+    protected $table ='Kelurahan_GebangPutih_Form';
     public $timestamps = false;
 }

@@ -20,6 +20,6 @@ class Kelurahan_DukuhPakis_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Dukuh_Pakis_Form';
+    protected $table ='Kelurahan_DukuhPakis_Form';
     public $timestamps = false;
 }

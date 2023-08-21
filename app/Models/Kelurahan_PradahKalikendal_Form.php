@@ -20,6 +20,6 @@ class Kelurahan_PradahKalikendal_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Pradah_Kalikendal_Form';
+    protected $table ='Kelurahan_PradahKalikendal_Form';
     public $timestamps = false;
 }

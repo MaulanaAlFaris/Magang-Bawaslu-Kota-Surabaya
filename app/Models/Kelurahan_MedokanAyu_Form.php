@@ -20,6 +20,6 @@ class Kelurahan_MedokanAyu_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Medokan_Ayu_Form';
+    protected $table ='Kelurahan_MedokanAyu_Form';
     public $timestamps = false;
 }

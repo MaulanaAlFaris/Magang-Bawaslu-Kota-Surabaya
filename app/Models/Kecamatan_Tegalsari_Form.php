@@ -20,6 +20,6 @@ class Kecamatan_Tegalsari_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kecamatan_Tengalsari_Form';
+    protected $table ='Kecamatan_Tegalsari_Form';
     public $timestamps = false;
 }

@@ -1,10 +1,29 @@
 @extends('content.layouts.layouts')
 
 @section('content-side')
-    <button class="sidebar-button-list">Kelurahan</button>
+<ul class="listing-kec-kel">
+    <li><div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Kelurahan
+        </a>
+      
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{url('KelurahanKalirungkut') }}">Kelurahan Kalirungkut</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanKedungBaruk') }}">Kelurahan Kedung Baruk</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanMedokanAyu') }}">Kelurahan Medokan Ayu</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanPenjaringanSari') }}">Kelurahan Penjaringansari</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanRungkutKidul') }}">Kelurahan Rungkut Kidul</a></li>
+            <li><a class="dropdown-item" href="{{url('KelurahanWonorejoRungkut') }}">Kelurahan Wonorejo Rungkut</a></li>
+        </ul>
+      </div>
+    </li>
+</ul>
 @endsection
 
 @section('content-main')
+<div class="container-name">
+    <h1>Selamat Datang Di Kecamatan Rungkut</h1>
+</div>
 <div class="content-main-bg">
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <!-- TOMBOL TAMBAH DATA -->
@@ -32,6 +51,7 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KecamatanRungkut/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <a href='#' class="btn btn-success btn-sm">PDF</a>
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KecamatanRungkut/'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

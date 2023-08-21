@@ -416,6 +416,13 @@ class UserData extends Seeder
                 'email'=>'AdminKelurahanSawahan@gmail.com'
             ],
             [
+                'name'=>'Admin Kelurahan Petemon',
+                'username'=>'AdminKelPetemon1',
+                'password'=>bcrypt('123456'),
+                'level'=>188,
+                'email'=>'AdminKelurahanPetemon@gmail.com'
+            ],
+            [
                 'name'=>'Admin Kelurahan Babatan',
                 'username'=>'AdminKelBabatan1',
                 'password'=>bcrypt('123456'),
@@ -897,6 +904,13 @@ class UserData extends Seeder
                 'password'=>bcrypt('123456'),
                 'level'=>124,
                 'email'=>'AdminKelurahanTambakrejo@gmail.com'
+            ],
+            [
+                'name'=>'Admin Kelurahan Simokerto',
+                'username'=>'AdminKelSimokerto1',
+                'password'=>bcrypt('123456'),
+                'level'=>187,
+                'email'=>'AdminKelurahanSimokerto@gmail.com'
             ],
             [
                 'name'=>'Admin Kelurahan Dr. Soetomo',

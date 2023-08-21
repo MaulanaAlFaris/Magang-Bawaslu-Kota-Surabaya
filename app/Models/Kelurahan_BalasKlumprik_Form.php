@@ -20,6 +20,6 @@ class Kelurahan_BalasKlumprik_Form extends Model
         'waktu_dan_tempat',
         'uraian'
     ];
-    protected $table ='Kelurahan_Balas_Klumprik_Form';
+    protected $table ='Kelurahan_BalasKlumprik_Form';
     public $timestamps = false;
 }
