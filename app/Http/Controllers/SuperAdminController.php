@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\SuperAdmin_Form;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -14,7 +14,7 @@ class SuperAdminController extends Controller
      */
     public function index()
     {
-        $data=SuperAdmin_Form::orderBy('username','desc')->paginate(10);
+        $data=User::orderBy('username','desc')->paginate(4);
         return view('SuperAdmin.index')->with('data',$data);
     }
 
@@ -59,7 +59,7 @@ class SuperAdminController extends Controller
             'email'=> $request->email,
             'name'=> $request->name,
         ];
-        SuperAdmin_Form::create($data);
+        User::create($data);
         return redirect()->to('SuperAdmin')->with('success','berhasil menambahkan Akun');
     }
 
@@ -76,7 +76,7 @@ class SuperAdminController extends Controller
      */
     public function edit(string $id)
     {
-        $data = SuperAdmin_Form::where('username',$id)->first();
+        $data = User::where('username',$id)->first();
         return view('SuperAdmin.edit')->with('data', $data);
     }
 
@@ -102,7 +102,7 @@ class SuperAdminController extends Controller
             'name'=> $request->name,
             'email'=> $request->email,
         ];
-        SuperAdmin_Form::where('username',$id)->update($data);
+        User::where('username',$id)->update($data);
         return redirect()->to('SuperAdmin')->with('success','berhasil mengupdate Akun');
     }
 
@@ -111,7 +111,7 @@ class SuperAdminController extends Controller
      */
     public function destroy(string $id)
     {
-        SuperAdmin_Form::where('username',$id)->delete();
+        User::where('username',$id)->delete();
         return redirect()->to('SuperAdmin')->with('succes','berhasil melakukan delete data');
     }
 }

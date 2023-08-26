@@ -26,6 +26,11 @@ class KotaSurabayaController extends Controller
         return view('content.kota.Kota_Surabaya.create');
     }
 
+    public function pdf()
+    {
+        return view('content.kota.Kota_Surabaya.pdf');
+    }
+
     /**
      * Store a newly created resource in storage.
      */

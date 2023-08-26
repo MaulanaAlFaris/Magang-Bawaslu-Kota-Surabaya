@@ -39,6 +39,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     display: block;
+    overflow: hidden;
 }
 .navbar-background{
     width: 100%;

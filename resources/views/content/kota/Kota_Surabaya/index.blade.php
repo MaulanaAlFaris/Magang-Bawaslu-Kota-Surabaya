@@ -242,7 +242,7 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KotaSurabaya/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
-                            <a href='#' class="btn btn-success btn-sm">PDF</a>
+                            <a href='{{ url('KotaSurabaya/pdf') }}' class="btn btn-success btn-sm">PDF</a>
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KotaSurabaya/'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

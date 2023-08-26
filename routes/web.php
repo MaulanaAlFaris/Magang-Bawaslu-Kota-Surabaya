@@ -194,6 +194,7 @@ use App\Http\Controllers\KelurahanWonorejoTegalsariController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\KotaSurabayaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\pdfController;
 use App\Http\Controllers\SuperAdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -220,8 +221,11 @@ Route::get('/tes', function () {
 Route::get('/', function () {
     return view('content.dashboard');
 });
+//PDF ROUTE
+Route::get('/generate-pdf',[pdfController::class,'generatePdf']);
+
 //Route::resource('admin',adminController::class);
-Route::resource('SuperAdmin',SuperAdminController::class);
+Route::resource('Users',SuperAdminController::class);
 Route::resource('kota',KotaController::class);
 Route::resource('kecamatan',KecamatanController::class);
 Route::resource('kelurahan',KelurahanController::class);
