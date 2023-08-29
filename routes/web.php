@@ -226,6 +226,9 @@ Route::get('/generate-pdf',[pdfController::class,'generatePdf']);
 
 //Route::resource('admin',adminController::class);
 Route::resource('Users',SuperAdminController::class);
+//Routing Search Bar
+Route::get('SuperAdmin/search', [SuperAdminController::class, 'search'])->name('search');
+
 Route::resource('kota',KotaController::class);
 Route::resource('kecamatan',KecamatanController::class);
 Route::resource('kelurahan',KelurahanController::class);
@@ -234,6 +237,8 @@ Route::resource('kelurahan',KelurahanController::class);
 Route::resource('KotaSurabaya',KotaSurabayaController::class);
 //Routing PDF
 Route::get('KotaSurabaya/pdf/{id}', [KotaSurabayaController::class,'pdf'])->name('kotasurabaya.pdf');
+//Routing Search Bar
+Route::get('search', [KotaSurabayaController::class, 'search'])->name('kotasurabaya.search');
 
 //Kecamatan Surabaya Routing
 Route::resource('KecamatanDukuhPakis',KecamatanDukuhPakisController::class);

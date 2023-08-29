@@ -32,7 +32,7 @@
 
                     <div class="mb-3 row">
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" 
+                            <input autofocus type="password" class="form-control" 
                             @error('password')
                                 is-invalid
                             @enderror

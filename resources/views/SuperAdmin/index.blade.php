@@ -2,9 +2,18 @@
 @section('content')
 <!-- START DATA -->
 <div class="my-3 p-3 bg-body rounded shadow-sm">
-        <!-- TOMBOL TAMBAH DATA -->
+        <!-- TOMBOL TAMBAH DATA dan SEARCH BAR-->
         <div class="pb-3">
         <a href='{{ url('SuperAdmin/create') }}' class="btn btn-primary">+ Tambah Data</a>
+
+        <form action="{{ route('search') }}" method="GET" class="form-inline mb-3">
+            <div class="input-group input-group-sm">
+              <input type="text" name="keyword" class="form-control" placeholder="Cari...">
+              <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">Cari</button>
+              </div>
+            </div>
+          </form>
         </div>
 
         <table class="table table-striped">

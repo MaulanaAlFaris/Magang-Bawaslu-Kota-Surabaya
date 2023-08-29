@@ -181,4 +181,34 @@ class KotaSurabayaController extends Controller
             return $pdf->stream();
         }
     }
+
+    public function search(Request $request)
+    {
+        $searchKeyword = $request->input('keyword');
+
+    if ($searchKeyword) {
+        $data = Kota_Surabaya_Form::where('nama_pelaksana', 'LIKE', "%$searchKeyword%")
+            ->orWhere('jabatan', 'LIKE', "%$searchKeyword%")
+            ->orWhere('nomor', 'LIKE', "%$searchKeyword%")
+            ->orWhere('alamat', 'LIKE', "%$searchKeyword%")
+            ->orWhere('bentuk', 'LIKE', "%$searchKeyword%")
+            ->orWhere('tujuan', 'LIKE', "%$searchKeyword%")
+            ->orWhere('sasaran', 'LIKE', "%$searchKeyword%")
+            ->orWhere('waktu_dan_tempat', 'LIKE', "%$searchKeyword%")
+            ->orWhere('uraian', 'LIKE', "%$searchKeyword%")
+            ->orWhere('tahapan', 'LIKE', "%$searchKeyword%")
+            ->orderBy('tahapan', 'desc')
+            ->paginate(7);
+
+        if ($data->isEmpty()) {
+            return view('content.kota.Kota_Surabaya.index')
+                ->with('data', $data)
+                ->with('error', 'Data tidak ditemukan');
+        }
+    } else {
+        $data = Kota_Surabaya_Form::orderBy('tahapan', 'desc')->paginate(7);
+    }
+
+    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    }
 }

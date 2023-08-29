@@ -114,4 +114,29 @@ class SuperAdminController extends Controller
         User::where('username',$id)->delete();
         return redirect()->to('SuperAdmin')->with('succes','berhasil melakukan delete data');
     }
+
+    public function search(Request $request)
+    {
+        $searchKeyword = $request->input('keyword');
+
+        if ($searchKeyword) {
+            $data = User::where('level', 'LIKE', "%$searchKeyword%")
+                ->orWhere('name', 'LIKE', "%$searchKeyword%")
+                ->orWhere('email', 'LIKE', "%$searchKeyword%")
+                ->orWhere('username', 'LIKE', "%$searchKeyword%")
+                ->orderBy('username', 'desc')
+                ->paginate(4);
+
+            if ($data->isEmpty()) {
+                return view('SuperAdmin.index')
+                    ->with('data', $data)
+                    ->with('error', 'Data tidak ditemukan');
+            }
+        } else {
+            $data = User::orderBy('username', 'desc')->paginate(4);
+        }
+
+        return view('SuperAdmin.index')->with('data', $data);
+        }
+
 }
