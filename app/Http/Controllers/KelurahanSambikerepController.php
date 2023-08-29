@@ -14,7 +14,7 @@ class KelurahanSambikerepController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sambikerep_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sambikerep_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Sambikerep.index')->with('data',$data);
     }
 

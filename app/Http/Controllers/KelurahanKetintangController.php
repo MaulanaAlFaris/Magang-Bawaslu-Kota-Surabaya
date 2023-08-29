@@ -14,7 +14,7 @@ class KelurahanKetintangController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Ketintang_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Ketintang_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Ketintang.index')->with('data',$data);
     }
 

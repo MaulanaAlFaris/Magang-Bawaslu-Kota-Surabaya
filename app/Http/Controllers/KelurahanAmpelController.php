@@ -14,7 +14,7 @@ class KelurahanAmpelController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Ampel_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Ampel_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_24_Semampir.Kelurahan_Ampel.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KecamatanJambanganController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Jambangan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Jambangan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Jambangan.index')->with('data',$data);
     }
 

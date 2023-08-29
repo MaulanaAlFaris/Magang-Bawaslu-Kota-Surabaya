@@ -14,7 +14,7 @@ class KelurahanRungkutKidulController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_RungkutKidul_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_RungkutKidul_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Rungkut_Kidul.index')->with('data',$data);
     }
 

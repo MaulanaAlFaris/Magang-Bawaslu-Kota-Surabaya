@@ -14,7 +14,7 @@ class KelurahanKalisariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kalisari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kalisari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.index')->with('data',$data);
     }
 

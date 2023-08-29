@@ -14,7 +14,7 @@ class KelurahanPucangSewuController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_PucangSewu_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_PucangSewu_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_9_Gubeng.Kelurahan_Pucang_Sewu.index')->with('data',$data);
     }
 

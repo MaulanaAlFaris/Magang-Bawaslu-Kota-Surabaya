@@ -232,6 +232,8 @@ Route::resource('kelurahan',KelurahanController::class);
 
 //Kota Surabaya Routing
 Route::resource('KotaSurabaya',KotaSurabayaController::class);
+//Routing PDF
+Route::get('KotaSurabaya/pdf/{id}', [KotaSurabayaController::class,'pdf'])->name('kotasurabaya.pdf');
 
 //Kecamatan Surabaya Routing
 Route::resource('KecamatanDukuhPakis',KecamatanDukuhPakisController::class);
@@ -294,7 +296,6 @@ Route::resource('KelurahanWaruGunung',KelurahanWaruGunung::class);
 //Routingn Login Kecamatan 5 Untuk Kelurahan ini
 Route::resource('KelurahanBanyuUrip',KelurahanBanyuUripController::class);
 Route::resource('KelurahanKupangKrajan',KelurahanKupangKrajanController::class);
-Route::resource('KelurahanKupangPakis',KelurahanKupangPakis::class);
 Route::resource('KelurahanKupangPutatJaya',KelurahanPutatJayaController::class);
 Route::resource('KelurahanKupangSawahan',KelurahanSawahanController::class);
 Route::resource('KelurahanKupangPetemon',KelurahanPetemonController::class);

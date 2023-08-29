@@ -14,7 +14,7 @@ class KelurahanTambakSariosoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_TambakSarioso_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_TambakSarioso_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_25_Asem_Rowo.Kelurahan_Tambak_Sarioso.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanSawunggalingController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sawunggaling_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sawunggaling_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_8_Wonokromo.Kelurahan_Sawunggaling.index')->with('data',$data);
     }
 

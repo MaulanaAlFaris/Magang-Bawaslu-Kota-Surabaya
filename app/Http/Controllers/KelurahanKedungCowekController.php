@@ -14,7 +14,7 @@ class KelurahanKedungCowekController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_KedungCowek_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_KedungCowek_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_20_Bulak.Kelurahan_Kedung_Cowek.index')->with('data',$data);
     }
 

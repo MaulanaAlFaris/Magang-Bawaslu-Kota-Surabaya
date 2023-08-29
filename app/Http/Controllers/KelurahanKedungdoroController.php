@@ -14,7 +14,7 @@ class KelurahanKedungdoroController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kedungdoro_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kedungdoro_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_19_Tegalsari.Kelurahan_Kedungdoro.index')->with('data',$data);
     }
 

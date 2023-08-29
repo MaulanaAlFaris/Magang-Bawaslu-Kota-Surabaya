@@ -14,7 +14,7 @@ class KelurahanGebangPutihController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_GebangPutih_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_GebangPutih_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Gebang_Putih.index')->with('data',$data);
     }
 

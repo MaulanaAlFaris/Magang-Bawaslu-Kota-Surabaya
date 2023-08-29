@@ -14,7 +14,7 @@ class KelurahanKrembanganSelatanController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_KrembanganSelatan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_KrembanganSelatan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_22_Krembangan.Kelurahan_Krembangan_Selatan.index')->with('data',$data);
     }
 

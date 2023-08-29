@@ -14,7 +14,7 @@ class KelurahanMedokanAyuController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_MedokanAyu_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_MedokanAyu_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Medokan_Ayu.index')->with('data',$data);
     }
 

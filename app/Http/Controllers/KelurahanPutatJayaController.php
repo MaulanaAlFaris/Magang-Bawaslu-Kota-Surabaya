@@ -14,7 +14,7 @@ class KelurahanPutatJayaController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_PutatJaya_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_PutatJaya_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Putat_Jaya.index')->with('data',$data);
     }
 

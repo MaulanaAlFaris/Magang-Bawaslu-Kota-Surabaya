@@ -14,7 +14,7 @@ class KelurahanDarmoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Darmo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Darmo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_8_Wonokromo.Kelurahan_Darmo.index')->with('data',$data);
     }
 

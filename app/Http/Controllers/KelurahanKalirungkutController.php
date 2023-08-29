@@ -14,7 +14,7 @@ class KelurahanKalirungkutController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kalirungkut_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kalirungkut_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Kalirungkut.index')->with('data',$data);
     }
 

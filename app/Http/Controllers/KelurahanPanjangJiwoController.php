@@ -14,7 +14,7 @@ class KelurahanPanjangJiwoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_PanjangJiwo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_PanjangJiwo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_15_Tenggilis_Mejoyo.Kelurahan_Panjang_Jiwo.index')->with('data',$data);
     }
 

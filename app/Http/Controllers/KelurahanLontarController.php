@@ -14,7 +14,7 @@ class KelurahanLontarController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Lontar_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Lontar_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Lontar.index')->with('data',$data);
     }
 

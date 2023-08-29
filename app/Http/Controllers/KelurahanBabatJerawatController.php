@@ -14,7 +14,7 @@ class KelurahanBabatJerawatController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_BabatJerawat_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_BabatJerawat_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_28_Pakal.Kelurahan_Babat_Jerawat.index')->with('data',$data);
     }
 

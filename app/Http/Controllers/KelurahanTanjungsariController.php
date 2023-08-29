@@ -14,7 +14,7 @@ class KelurahanTanjungsariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Tanjungsari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Tanjungsari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Tanjungsari.index')->with('data',$data);
     }
 

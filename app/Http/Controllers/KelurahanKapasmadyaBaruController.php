@@ -14,7 +14,7 @@ class KelurahanKapasmadyaBaruController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_KapasmadyaBaru_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_KapasmadyaBaru_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_14_Tambaksari.Kelurahan_Kapasmadya_Baru.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KecamatanGubengController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Gubeng_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Gubeng_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Gubeng.index')->with('data',$data);
     }
 

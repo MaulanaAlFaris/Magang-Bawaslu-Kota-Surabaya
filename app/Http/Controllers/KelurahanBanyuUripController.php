@@ -14,7 +14,7 @@ class KelurahanBanyuUripController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_BanyuUrip_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_BanyuUrip_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Banyu_Urip.index')->with('data',$data);
     }
 

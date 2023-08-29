@@ -14,7 +14,7 @@ class KecamatanTenggilisMejoyoController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_TenggilisMejoyo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_TenggilisMejoyo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.index')->with('data',$data);
     }
 

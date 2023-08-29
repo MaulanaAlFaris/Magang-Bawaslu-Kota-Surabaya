@@ -14,7 +14,7 @@ class KelurahanGunungAnyarController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_GunungAnyar_Form::orderBy('tahapan','desc')->paginate(100);
+        $data=Kelurahan_GunungAnyar_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_10_Gunung_Anyar.Kelurahan_Gunung_Anyar.index')->with('data',$data);
     }
 

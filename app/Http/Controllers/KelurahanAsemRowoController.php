@@ -14,7 +14,7 @@ class KelurahanAsemRowoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_AsemRowo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_AsemRowo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_25_Asem_Rowo.Kelurahan_Asem_Rowo.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanKlampisNgasemController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_KlampisNgasem_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_KlampisNgasem_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Klampis_Ngasem.index')->with('data',$data);
     }
 

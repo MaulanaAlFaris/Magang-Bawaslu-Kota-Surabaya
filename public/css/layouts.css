@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: 13px;
 }
 body{
     width: 100%;
@@ -40,6 +41,7 @@ button:hover{
     align-items: center;
     display: block;
     overflow: hidden;
+    overflow-wrap: anywhere;
 }
 .navbar-background{
     width: 100%;

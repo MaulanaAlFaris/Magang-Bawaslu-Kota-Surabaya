@@ -14,7 +14,7 @@ class KelurahanMenurPumpunganController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_MenurPumpungan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_MenurPumpungan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Menur_Pumpungan.index')->with('data',$data);
     }
 

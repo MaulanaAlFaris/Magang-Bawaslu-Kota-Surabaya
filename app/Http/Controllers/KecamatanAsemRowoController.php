@@ -14,7 +14,7 @@ class KecamatanAsemRowoController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_AsemRowo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_AsemRowo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Asem_Rowo.index')->with('data',$data);
     }
 

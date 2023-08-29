@@ -14,7 +14,7 @@ class KelurahanJemurWonosariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_JemurWonosari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_JemurWonosari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_7_Wonocolo.Kelurahan_Jemur_Wonosari.index')->with('data',$data);
     }
 

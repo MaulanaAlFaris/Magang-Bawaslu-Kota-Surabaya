@@ -14,7 +14,7 @@ class KelurahanWaruGunungController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_WaruGunung_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_WaruGunung_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_4_Karang_Pilang.Kelurahan_Waru_Gunung.index')->with('data',$data);
     }
 

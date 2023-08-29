@@ -14,7 +14,7 @@ class KecamatanDukuhPakisController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Dukuh_Pakis_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Dukuh_Pakis_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Dukuh_Pakis.index')->with('data',$data);
     }
 

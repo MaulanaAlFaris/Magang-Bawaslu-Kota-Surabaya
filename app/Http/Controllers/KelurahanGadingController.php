@@ -14,7 +14,7 @@ class KelurahanGadingController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Gading_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Gading_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_14_Tambaksari.Kelurahan_Gading.index')->with('data',$data);
     }
 

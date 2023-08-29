@@ -14,7 +14,7 @@ class KelurahanSumberRejoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_SumberRejo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_SumberRejo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_28_Pakal.Kelurahan_Sumber_Rejo.index')->with('data',$data);
     }
 

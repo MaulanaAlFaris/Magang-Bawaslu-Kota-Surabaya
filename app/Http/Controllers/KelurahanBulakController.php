@@ -14,7 +14,7 @@ class KelurahanBulakController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Bulak_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Bulak_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_20_Bulak.Kelurahan_Bulak.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KecamatanTambaksariController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Tambaksari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Tambaksari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Tambak_Sari.index')->with('data',$data);
     }
 

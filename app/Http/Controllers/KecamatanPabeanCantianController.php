@@ -14,7 +14,7 @@ class KecamatanPabeanCantianController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_PabeanCantian_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_PabeanCantian_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Pabean_Cantian.index')->with('data',$data);
     }
 

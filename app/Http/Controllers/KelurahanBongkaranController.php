@@ -14,7 +14,7 @@ class KelurahanBongkaranController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Bongkaran_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Bongkaran_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_23_Pabean_Cantian.Kelurahan_Bongkaran.index')->with('data',$data);
     }
 

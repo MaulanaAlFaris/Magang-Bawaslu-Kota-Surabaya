@@ -14,7 +14,7 @@ class KelurahanPerakBaratController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_PerakBarat_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_PerakBarat_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_22_Krembangan.Kelurahan_Perak_Barat.index')->with('data',$data);
     }
 

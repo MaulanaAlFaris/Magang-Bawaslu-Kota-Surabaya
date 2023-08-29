@@ -14,7 +14,7 @@ class KelurahanBendulMerisiController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_BendulMerisi_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_BendulMerisi_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_7_Wonocolo.Kelurahan_Bendul_Merisi.index')->with('data',$data);
     }
 

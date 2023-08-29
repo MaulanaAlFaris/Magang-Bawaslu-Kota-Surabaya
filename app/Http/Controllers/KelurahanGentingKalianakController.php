@@ -14,7 +14,7 @@ class KelurahanGentingKalianakController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_GentingKalianak_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_GentingKalianak_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_25_Asem_Rowo.Kelurahan_Genting_Kalianak.index')->with('data',$data);
     }
 

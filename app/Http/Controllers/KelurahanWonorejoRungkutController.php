@@ -14,7 +14,7 @@ class KelurahanWonorejoRungkutController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_WonorejoRungkut_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_WonorejoRungkut_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Wonorejo_Rungkut.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanKapasanController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kapasan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kapasan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_18_Simokerto.Kelurahan_Kapasan.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanSukomanunggalController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sukomanunggal_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sukomanunggal_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_30_Sukomanunggal.Kelurahan_Sukomanunggal.index')->with('data',$data);
     }
 

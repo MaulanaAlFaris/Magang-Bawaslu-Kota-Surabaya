@@ -14,7 +14,7 @@ class KelurahanMenanggalController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Menanggal_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Menanggal_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Menanggal.index')->with('data',$data);
     }
 

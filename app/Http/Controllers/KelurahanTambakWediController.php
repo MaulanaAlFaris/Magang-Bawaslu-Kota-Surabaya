@@ -14,7 +14,7 @@ class KelurahanTambakWediController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_TambakWedi_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_TambakWedi_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_21_Kenjeran.Kelurahan_Tambak_Wedi.index')->with('data',$data);
     }
 

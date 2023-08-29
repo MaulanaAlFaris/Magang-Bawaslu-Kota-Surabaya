@@ -14,7 +14,7 @@ class KelurahanGunungSariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_GunungSari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_GunungSari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_1_Dukuh_Pakis.Kelurahan_Gunung_Sari.index')->with('data',$data);
     }
 

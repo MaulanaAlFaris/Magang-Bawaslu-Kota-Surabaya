@@ -14,7 +14,7 @@ class KelurahanJajarTunggalController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_JajarTunggal_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_JajarTunggal_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_6_Wiyung.Kelurahan_Jajar_Tunggal.index')->with('data',$data);
     }
 

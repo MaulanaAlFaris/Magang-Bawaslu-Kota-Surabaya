@@ -14,7 +14,7 @@ class KelurahanAlunAlunContongController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_AlunAlunContong_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_AlunAlunContong_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Alun_Alun_Contong.index')->with('data',$data);
     }
 

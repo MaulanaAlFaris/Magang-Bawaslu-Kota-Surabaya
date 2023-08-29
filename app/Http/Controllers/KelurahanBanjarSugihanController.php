@@ -14,7 +14,7 @@ class KelurahanBanjarSugihanController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_BanjarSugihan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_BanjarSugihan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Banjar_Sugihan.index')->with('data',$data);
     }
 

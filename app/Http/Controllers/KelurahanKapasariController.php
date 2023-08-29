@@ -14,7 +14,7 @@ class KelurahanKapasariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kapasari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kapasari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Kapasari.index')->with('data',$data);
     }
 

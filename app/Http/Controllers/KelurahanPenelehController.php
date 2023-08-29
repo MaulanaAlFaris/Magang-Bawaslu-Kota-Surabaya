@@ -14,7 +14,7 @@ class KelurahanPenelehController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Peneleh_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Peneleh_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Peneleh.index')->with('data',$data);
     }
 

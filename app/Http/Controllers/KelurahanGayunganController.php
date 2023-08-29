@@ -14,7 +14,7 @@ class KelurahanGayunganController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Gayungan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Gayungan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Gayungan.index')->with('data',$data);
     }
 

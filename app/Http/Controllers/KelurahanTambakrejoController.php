@@ -14,7 +14,7 @@ class KelurahanTambakrejoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Tambakrejo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Tambakrejo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_18_Simokerto.Kelurahan_Tambakrejo.index')->with('data',$data);
     }
 

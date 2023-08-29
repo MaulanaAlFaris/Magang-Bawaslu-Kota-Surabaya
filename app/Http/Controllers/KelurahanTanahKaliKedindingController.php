@@ -14,7 +14,7 @@ class KelurahanTanahKaliKedindingController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_TanahKaliKedinding_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_TanahKaliKedinding_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_21_Kenjeran.Kelurahan_Tanah_Kali_Kedinding.index')->with('data',$data);
     }
 

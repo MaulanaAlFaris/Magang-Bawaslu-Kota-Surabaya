@@ -14,7 +14,7 @@ class KelurahanLidahKulonController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_LidahKulon_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_LidahKulon_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Lidah_Kulon.index')->with('data',$data);
     }
 

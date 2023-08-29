@@ -14,7 +14,7 @@ class KelurahanKertajayaController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kertajaya_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kertajaya_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_9_Gubeng.Kelurahan_Kertajaya.index')->with('data',$data);
     }
 

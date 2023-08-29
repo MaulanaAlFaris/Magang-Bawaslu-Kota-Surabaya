@@ -14,7 +14,7 @@ class KelurahanMargorejoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Margorejo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Margorejo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_7_Wonocolo.Kelurahan_Margorejo.index')->with('data',$data);
     }
 

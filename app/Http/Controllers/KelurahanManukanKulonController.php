@@ -14,7 +14,7 @@ class KelurahanManukanKulonController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_ManukanKulon_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_ManukanKulon_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Manukan_Kulon.index')->with('data',$data);
     }
 

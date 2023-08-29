@@ -14,7 +14,7 @@ class KecamatanSemampirController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Semampir_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Semampir_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Semampir.index')->with('data',$data);
     }
 

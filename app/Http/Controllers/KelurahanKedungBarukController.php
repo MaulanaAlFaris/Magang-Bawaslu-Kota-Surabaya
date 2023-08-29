@@ -14,7 +14,7 @@ class KelurahanKedungBarukController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_KedungBaruk_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_KedungBaruk_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_12_Rungkut.Kelurahan_Kedung_Baruk.index')->with('data',$data);
     }
 

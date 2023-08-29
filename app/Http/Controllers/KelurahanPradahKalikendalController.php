@@ -14,7 +14,7 @@ class KelurahanPradahKalikendalController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_PradahKalikendal_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_PradahKalikendal_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_1_Dukuh_Pakis.Kelurahan_Pradah_Kalikendal.index')->with('data',$data);
     }
 

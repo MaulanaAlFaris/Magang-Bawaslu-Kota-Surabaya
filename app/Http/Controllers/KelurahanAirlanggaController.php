@@ -14,7 +14,7 @@ class KelurahanAirlanggaController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Airlangga_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Airlangga_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_9_Gubeng.Kelurahan_Airlangga.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KecamatanKrembanganController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Krembangan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Krembangan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Krembangan.index')->with('data',$data);
     }
 

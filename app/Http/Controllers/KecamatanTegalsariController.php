@@ -14,7 +14,7 @@ class KecamatanTegalsariController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Tegalsari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Tegalsari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Tegalsari.index')->with('data',$data);
     }
 

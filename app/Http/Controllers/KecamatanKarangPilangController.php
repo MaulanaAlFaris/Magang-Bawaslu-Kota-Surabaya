@@ -14,7 +14,7 @@ class KecamatanKarangPilangController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_KarangPilang_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_KarangPilang_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Karang_Pilang.index')->with('data',$data);
     }
 

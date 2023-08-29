@@ -14,7 +14,7 @@ class KelurahanNgindenJangkunganController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_NgindenJangkungan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_NgindenJangkungan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Nginden_Jangkungan.index')->with('data',$data);
     }
 

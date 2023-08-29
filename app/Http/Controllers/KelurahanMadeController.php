@@ -14,7 +14,7 @@ class KelurahanMadeController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Made_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Made_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Made.index')->with('data',$data);
     }
 

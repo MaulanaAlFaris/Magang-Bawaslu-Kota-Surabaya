@@ -14,7 +14,7 @@ class KecamatanWonokromoController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Wonokromo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Wonokromo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Wonokromo.index')->with('data',$data);
     }
 

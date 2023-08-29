@@ -14,7 +14,7 @@ class KelurahanDukuhSetroController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_DukuhSetro_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_DukuhSetro_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_14_Tambaksari.Kelurahan_Dukuh_Setro.index')->with('data',$data);
     }
 

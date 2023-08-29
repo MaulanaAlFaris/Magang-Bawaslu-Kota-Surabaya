@@ -14,7 +14,7 @@ class KelurahanGundihController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Gundih_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Gundih_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Gundih.index')->with('data',$data);
     }
 

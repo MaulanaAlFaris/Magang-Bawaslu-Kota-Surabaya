@@ -14,7 +14,7 @@ class KelurahanBeringinController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Beringin_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Beringin_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_29_Sambikerep.Kelurahan_Beringin.index')->with('data',$data);
     }
 

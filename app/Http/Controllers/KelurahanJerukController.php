@@ -14,7 +14,7 @@ class KelurahanJerukController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Jeruk_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Jeruk_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Jeruk.index')->with('data',$data);
     }
 

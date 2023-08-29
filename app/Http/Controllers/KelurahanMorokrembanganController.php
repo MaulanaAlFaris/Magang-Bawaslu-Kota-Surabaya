@@ -14,7 +14,7 @@ class KelurahanMorokrembanganController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Morokrembangan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Morokrembangan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_22_Krembangan.Kelurahan_Morokrembangan.index')->with('data',$data);
     }
 

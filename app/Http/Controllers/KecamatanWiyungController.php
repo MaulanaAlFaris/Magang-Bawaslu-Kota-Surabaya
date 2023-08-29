@@ -14,7 +14,7 @@ class KecamatanWiyungController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Wiyung_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Wiyung_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Wiyung.index')->with('data',$data);
     }
 

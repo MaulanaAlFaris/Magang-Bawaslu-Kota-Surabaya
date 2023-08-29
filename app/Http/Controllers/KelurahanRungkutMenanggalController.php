@@ -14,7 +14,7 @@ class KelurahanRungkutMenanggalController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_RungkutMenanggal_Form::orderBy('tahapan','desc')->paginate(100);
+        $data=Kelurahan_RungkutMenanggal_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_10_Gunung_Anyar.Kelurahan_Rungkut_Menanggal.index')->with('data',$data);
     }
 

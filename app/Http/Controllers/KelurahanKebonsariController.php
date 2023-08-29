@@ -14,7 +14,7 @@ class KelurahanKebonsariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kebonsari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kebonsari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_3_Jambangan.Kelurahan_Kebonsari.index')->with('data',$data);
     }
 

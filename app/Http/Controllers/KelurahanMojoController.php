@@ -14,7 +14,7 @@ class KelurahanMojoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Mojo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Mojo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_9_Gubeng.Kelurahan_Mojo.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanBalasKlumprikController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_BalasKlumprik_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_BalasKlumprik_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_6_Wiyung.Kelurahan_Balas_Klumprik.index')->with('data',$data);
     }
 

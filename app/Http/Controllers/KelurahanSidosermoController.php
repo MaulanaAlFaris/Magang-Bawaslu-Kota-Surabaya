@@ -14,7 +14,7 @@ class KelurahanSidosermoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sidosermo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sidosermo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_7_Wonocolo.Kelurahan_Sidosermo.index')->with('data',$data);
     }
 

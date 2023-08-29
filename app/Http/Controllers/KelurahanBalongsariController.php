@@ -14,7 +14,7 @@ class KelurahanBalongsariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Balongsari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Balongsari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Balongsari.index')->with('data',$data);
     }
 

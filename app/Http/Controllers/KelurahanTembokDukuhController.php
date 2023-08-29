@@ -14,7 +14,7 @@ class KelurahanTembokDukuhController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_TembokDukuh_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_TembokDukuh_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Tembok_Dukuh.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanSumurwelutController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sumurwelut_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sumurwelut_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Sumurwelut.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanSidotopoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sidotopo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sidotopo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_24_Semampir.Kelurahan_Sidotopo.index')->with('data',$data);
     }
 

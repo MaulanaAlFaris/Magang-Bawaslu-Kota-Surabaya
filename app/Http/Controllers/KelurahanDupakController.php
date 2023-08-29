@@ -14,7 +14,7 @@ class KelurahanDupakController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Dupak_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Dupak_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_22_Krembangan.Kelurahan_Dupak.index')->with('data',$data);
     }
 

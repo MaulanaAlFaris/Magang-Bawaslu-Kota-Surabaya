@@ -14,7 +14,7 @@ class KelurahanKandanganController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kandangan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kandangan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_26_Benowo.Kelurahan_Kandangan.index')->with('data',$data);
     }
 

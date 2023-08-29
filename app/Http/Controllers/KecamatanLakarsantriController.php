@@ -14,7 +14,7 @@ class KecamatanLakarsantriController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Lakarsantri_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Lakarsantri_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Lakarsantri.index')->with('data',$data);
     }
 

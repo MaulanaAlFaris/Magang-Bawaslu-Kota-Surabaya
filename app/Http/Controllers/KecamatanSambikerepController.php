@@ -14,7 +14,7 @@ class KecamatanSambikerepController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Sambikerep_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Sambikerep_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Sambikerep.index')->with('data',$data);
     }
 

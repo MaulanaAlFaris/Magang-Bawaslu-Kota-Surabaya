@@ -14,7 +14,7 @@ class KelurahanKedurusController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kedurus_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kedurus_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_4_Karang_Pilang.Kelurahan_Kedurus.index')->with('data',$data);
     }
 

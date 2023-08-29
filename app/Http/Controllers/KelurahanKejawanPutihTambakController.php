@@ -14,7 +14,7 @@ class KelurahanKejawanPutihTambakController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_KejawanPutihTambak_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_KejawanPutihTambak_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kejawan_Putih_Tambak.index')->with('data',$data);
     }
 

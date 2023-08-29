@@ -14,7 +14,7 @@ class KelurahanKemayoranController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kemayoran_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kemayoran_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_22_Krembangan.Kelurahan_Kemayoran.index')->with('data',$data);
     }
 

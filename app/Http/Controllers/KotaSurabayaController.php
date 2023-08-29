@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Models\Kota_Surabaya_Form;
+use Dompdf\Dompdf;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Contracts\View\Factory;
 
 class KotaSurabayaController extends Controller
 {
@@ -14,7 +19,7 @@ class KotaSurabayaController extends Controller
      */
     public function index()
     {
-        $data=Kota_Surabaya_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kota_Surabaya_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kota.Kota_Surabaya.index')->with('data',$data);
     }
 
@@ -24,11 +29,6 @@ class KotaSurabayaController extends Controller
     public function create()
     {
         return view('content.kota.Kota_Surabaya.create');
-    }
-
-    public function pdf()
-    {
-        return view('content.kota.Kota_Surabaya.pdf');
     }
 
     /**
@@ -95,7 +95,8 @@ class KotaSurabayaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kota_Surabaya_Form::where('tahapan',$id)->first();
+        return view('content.kota.Kota_Surabaya.show')->with('data', $data);
     }
 
     /**
@@ -156,5 +157,28 @@ class KotaSurabayaController extends Controller
     {
         Kota_Surabaya_Form::where('tahapan',$id)->delete();
         return redirect()->to('KotaSurabaya')->with('succes','berhasil melakukan delete data');
+    }
+
+    public function pdf(string $id, Repository $config, Filesystem $files, Factory $view, Request $request)
+    {
+        $data = Kota_Surabaya_Form::where('tahapan', $id)->first();
+
+        $dompdf = new Dompdf();
+
+        
+        // Set options for Dompdf
+        $options = new \Dompdf\Options();
+        $options->set('isHtml5ParserEnabled', true);
+        $options->set('isRemoteEnabled', true);
+        $dompdf->setOptions($options);
+
+        // Load the view into Dompdf
+        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+
+        if ($request->input('download')) {
+            return $pdf->download("KotaSurabaya_{$id}.pdf");
+        } else {
+            return $pdf->stream();
+        }
     }
 }

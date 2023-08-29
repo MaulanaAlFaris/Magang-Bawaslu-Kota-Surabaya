@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class KelurahanController extends Controller
 {
     public function index(){
-        $data=formKelurahanBawaslu::orderBy('tahapan','desc')->paginate(10);
+        $data=formKelurahanBawaslu::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.index')->with('data',$data);
     }
 

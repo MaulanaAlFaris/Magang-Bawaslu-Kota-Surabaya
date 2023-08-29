@@ -14,7 +14,7 @@ class KelurahanPlosoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Ploso_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Ploso_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_14_Tambaksari.Kelurahan_Ploso.index')->with('data',$data);
     }
 

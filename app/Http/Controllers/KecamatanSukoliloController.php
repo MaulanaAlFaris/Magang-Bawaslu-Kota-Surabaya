@@ -14,7 +14,7 @@ class KecamatanSukoliloController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Sukolilo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Sukolilo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Sukolilo.index')->with('data',$data);
     }
 

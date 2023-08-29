@@ -14,7 +14,7 @@ class KecamatanRungkutController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Rungkut_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Rungkut_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Rungkut.index')->with('data',$data);
     }
 

@@ -14,7 +14,7 @@ class KelurahanPegirianController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Pegirian_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Pegirian_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_24_Semampir.Kelurahan_Pegirian.index')->with('data',$data);
     }
 

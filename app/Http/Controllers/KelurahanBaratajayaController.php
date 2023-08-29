@@ -14,7 +14,7 @@ class KelurahanBaratajayaController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Baratajaya_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Baratajaya_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_9_Gubeng.Kelurahan_Baratajaya.index')->with('data',$data);
     }
 

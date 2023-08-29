@@ -14,7 +14,7 @@ class KelurahanTambaksariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Tambaksari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Tambaksari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_14_Tambaksari.Kelurahan_Tambaksari.index')->with('data',$data);
     }
 

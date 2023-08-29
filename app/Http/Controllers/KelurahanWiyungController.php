@@ -15,7 +15,7 @@ class KelurahanWiyungController extends Controller
     public function index()
     {
         {
-            $data=Kelurahan_Wiyung_Form::orderBy('tahapan','desc')->paginate(10);
+            $data=Kelurahan_Wiyung_Form::orderBy('tahapan','desc')->paginate(7);
             return view('content.kelurahan.Kecamatan_6_Wiyung.Kelurahan_Wiyung.index')->with('data',$data);
         }
     }

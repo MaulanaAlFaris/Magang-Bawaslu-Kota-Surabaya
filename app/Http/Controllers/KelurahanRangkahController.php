@@ -14,7 +14,7 @@ class KelurahanRangkahController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Rangkah_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Rangkah_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_14_Tambaksari.Kelurahan_Rangkah.index')->with('data',$data);
     }
 

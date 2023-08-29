@@ -14,7 +14,7 @@ class KecamatanTandesController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Tandes_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Tandes_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Tandes.index')->with('data',$data);
     }
 

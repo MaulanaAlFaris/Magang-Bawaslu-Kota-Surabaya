@@ -14,7 +14,7 @@ class KecamatanBubutanController extends Controller
      */
     public function index()
     {
-        $data=Kecamatan_Bubutan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kecamatan_Bubutan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kecamatan.Kecamatan_Bubutan.index')->with('data',$data);
     }
 

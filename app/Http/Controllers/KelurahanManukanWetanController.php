@@ -14,7 +14,7 @@ class KelurahanManukanWetanController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_ManukanWetan_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_ManukanWetan_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Manukan_Wetan.index')->with('data',$data);
     }
 

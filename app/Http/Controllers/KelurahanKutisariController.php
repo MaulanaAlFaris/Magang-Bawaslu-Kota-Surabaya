@@ -14,7 +14,7 @@ class KelurahanKutisariController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Kutisari_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Kutisari_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_15_Tenggilis_Mejoyo.Kelurahan_Kutisari.index')->with('data',$data);
     }
 

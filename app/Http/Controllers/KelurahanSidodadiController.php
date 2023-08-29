@@ -14,7 +14,7 @@ class KelurahanSidodadiController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sidodadi_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sidodadi_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_18_Simokerto.Kelurahan_Sidodadi.index')->with('data',$data);
     }
 

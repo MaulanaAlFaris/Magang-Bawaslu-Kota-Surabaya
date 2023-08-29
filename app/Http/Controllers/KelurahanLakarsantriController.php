@@ -14,7 +14,7 @@ class KelurahanLakarsantriController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Lakarsantri_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Lakarsantri_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Lakarsantri.index')->with('data',$data);
     }
 

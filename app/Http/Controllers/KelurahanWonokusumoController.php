@@ -14,7 +14,7 @@ class KelurahanWonokusumoController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Wonokusumo_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Wonokusumo_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_24_Semampir.Kelurahan_Wonokusumo.index')->with('data',$data);
     }
 

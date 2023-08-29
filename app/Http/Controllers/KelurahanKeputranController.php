@@ -14,7 +14,7 @@ class KelurahanKeputranController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Keputran_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Keputran_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_19_Tegalsari.Kelurahan_Keputran.index')->with('data',$data);
     }
 

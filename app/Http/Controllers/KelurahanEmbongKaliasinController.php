@@ -14,7 +14,7 @@ class KelurahanEmbongKaliasinController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_EmbongKaliasin_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_EmbongKaliasin_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Embong_Kaliasin.index')->with('data',$data);
     }
 

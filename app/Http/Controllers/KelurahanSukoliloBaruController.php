@@ -14,7 +14,7 @@ class KelurahanSukoliloBaruController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_SukoliloBaru_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_SukoliloBaru_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_20_Bulak.Kelurahan_Sukolilo_Baru.index')->with('data',$data);
     }
 

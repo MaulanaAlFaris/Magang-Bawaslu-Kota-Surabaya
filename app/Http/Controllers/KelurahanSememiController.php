@@ -14,7 +14,7 @@ class KelurahanSememiController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Sememi_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Sememi_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_26_Benowo.Kelurahan_Sememi.index')->with('data',$data);
     }
 

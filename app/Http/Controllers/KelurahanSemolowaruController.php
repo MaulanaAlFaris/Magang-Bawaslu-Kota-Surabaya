@@ -14,7 +14,7 @@ class KelurahanSemolowaruController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Semolowaru_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Semolowaru_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Semolowaru.index')->with('data',$data);
     }
 

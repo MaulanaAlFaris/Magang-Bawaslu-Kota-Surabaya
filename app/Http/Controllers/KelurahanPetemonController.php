@@ -14,7 +14,7 @@ class KelurahanPetemonController extends Controller
      */
     public function index()
     {
-        $data=Kelurahan_Petemon_Form::orderBy('tahapan','desc')->paginate(10);
+        $data=Kelurahan_Petemon_Form::orderBy('tahapan','desc')->paginate(7);
         return view('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Petemon.index')->with('data',$data);
     }
 
