@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Dompdf\Dompdf;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Contracts\View\Factory;
 
 class KecamatanSabikerepController extends Controller
 {

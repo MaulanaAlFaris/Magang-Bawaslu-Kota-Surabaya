@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Kelurahan_ManukanWetan_Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Dompdf\Dompdf;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Contracts\View\Factory;
 
 class KelurahanManukanWetanController extends Controller
 {
@@ -151,5 +156,58 @@ class KelurahanManukanWetanController extends Controller
     {
         Kelurahan_ManukanWetan_Form::where('tahapan',$id)->delete();
         return redirect()->to('KelurahanManukanWetan')->with('succes','berhasil melakukan delete data');
+    }
+
+    public function pdf(string $id, Repository $config, Filesystem $files, Factory $view, Request $request)
+    {
+        $data = Kelurahan_ManukanWetan_Form::where('tahapan', $id)->first();
+
+        $dompdf = new Dompdf();
+
+        
+        // Set options for Dompdf
+        $options = new \Dompdf\Options();
+        $options->set('isHtml5ParserEnabled', true);
+        $options->set('isRemoteEnabled', true);
+        $dompdf->setOptions($options);
+
+        // Load the view into Dompdf
+        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+
+        if ($request->input('download')) {
+            return $pdf->download("KotaSurabaya_{$id}.pdf");
+        } else {
+            return $pdf->stream();
+        }
+    }
+
+    public function search(Request $request)
+    {
+        $searchKeyword = $request->input('keyword');
+
+    if ($searchKeyword) {
+        $data = Kelurahan_ManukanWetan_Form::where('nama_pelaksana', 'LIKE', "%$searchKeyword%")
+            ->orWhere('jabatan', 'LIKE', "%$searchKeyword%")
+            ->orWhere('nomor', 'LIKE', "%$searchKeyword%")
+            ->orWhere('alamat', 'LIKE', "%$searchKeyword%")
+            ->orWhere('bentuk', 'LIKE', "%$searchKeyword%")
+            ->orWhere('tujuan', 'LIKE', "%$searchKeyword%")
+            ->orWhere('sasaran', 'LIKE', "%$searchKeyword%")
+            ->orWhere('waktu_dan_tempat', 'LIKE', "%$searchKeyword%")
+            ->orWhere('uraian', 'LIKE', "%$searchKeyword%")
+            ->orWhere('tahapan', 'LIKE', "%$searchKeyword%")
+            ->orderBy('tahapan', 'desc')
+            ->paginate(7);
+
+        if ($data->isEmpty()) {
+            return view('content.kota.Kota_Surabaya.index')
+                ->with('data', $data)
+                ->with('error', 'Data tidak ditemukan');
+        }
+    } else {
+        $data = Kelurahan_ManukanWetan_Form::orderBy('tahapan', 'desc')->paginate(7);
+    }
+
+    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
     }
 }
