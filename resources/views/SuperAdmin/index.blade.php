@@ -34,7 +34,7 @@
                 <tr>
                     <td>{{ $i }}</td>
                     <td>{{ $item->username }}</td>
-                    <td>{{ $item->password }}</td>
+                    <td style="font-size: 12px">{{ $item->password }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->level }}</td>
                     <td>{{ $item->email }}</td>

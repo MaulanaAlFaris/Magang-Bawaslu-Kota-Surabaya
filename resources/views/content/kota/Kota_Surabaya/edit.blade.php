@@ -75,6 +75,8 @@
                     <input type="text" class="form-control" name='uraian' id="uraian" value="{{ $data->uraian }}">
                 </div>
             </div>
+
+            
             
             <div class="mb-3 row">
                 <label for="uraian" class="col-sm-2 col-form-label"></label>

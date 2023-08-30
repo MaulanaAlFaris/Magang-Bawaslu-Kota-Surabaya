@@ -76,6 +76,91 @@
                     </div>
                 </div>
 
+                 <!-- Tombol Yes/No -->
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            Ingin Menambahkan Informasi Dugaan Pelangaran dan Potensi Sengketa ?
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="d-flex justify-content-end mt-2">
+                                <button type="button" class="btn btn-success mr-2" id="yesBtn">Yes</button>
+                                <button type="button" class="btn btn-danger" id="noBtn">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian yang akan ditampilkan setelah memilih "Yes" -->
+                <div class="mb-3 row" id="additionalContent" style="display: none;">
+                    <!-- Isi dengan konten yang ingin Anda tampilkan -->
+                    <div class="mb-3 row">
+                        <label for="peristiwa" class="col-sm-2 col-form-label">a. Peristiwa : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='peristiwa' id="peristiwa" value="{{ Session::get('peristiwa') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="tempat_kejadian_peristiwa" class="col-sm-2 col-form-label">b. Tempat Kejadian : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='tempat_kejadian_peristiwa' id="tempat_kejadian_peristiwa" value="{{ Session::get('tempat_kejadian_peristiwa') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="waktu_kejadian_peristiwa" class="col-sm-2 col-form-label">c. Waktu Kejadian : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='waktu_kejadian_peristiwa' id="waktu_kejadian_peristiwa" value="{{ Session::get('waktu_kejadian_peristiwa') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="pelaku_peristiwa" class="col-sm-2 col-form-label">d. Pelaku : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='pelaku_peristiwa' id="pelaku_peristiwa" value="{{ Session::get('pelaku_peristiwa') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="alamat_peristiwa" class="col-sm-2 col-form-label">e.. Alamat :  </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='alamat_peristiwa' id="alamat_peristiwa" value="{{ Session::get('alamat_peristiwa') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="nama_saksi_1" class="col-sm-2 col-form-label">a. Nama :  </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='nama_saksi_1' id="nama_saksi_1" value="{{ Session::get('nama_saksi_1') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="alamat_saksi_1" class="col-sm-2 col-form-label">Alamat :  </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='alamat_saksi_1' id="alamat_saksi_1" value="{{ Session::get('alamat_saksi_1') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="nama_saksi_2" class="col-sm-2 col-form-label">b. Nama :  </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='nama_saksi_2' id="nama_saksi_2" value="{{ Session::get('nama_saksi_2') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="alamat_saksi_2" class="col-sm-2 col-form-label">Alamat : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='alamat_saksi_2' id="alamat_saksi_2" value="{{ Session::get('alamat_saksi_2') }}">
+                        </div>
+                    </div>
+
+                </div>
+
                 <div class="mb-3 row">
                     <label for="submit" class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">

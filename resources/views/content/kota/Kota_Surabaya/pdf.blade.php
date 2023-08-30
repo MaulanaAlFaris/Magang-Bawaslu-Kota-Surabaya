@@ -83,50 +83,53 @@
                     <li>
                         <h1 class="bab">IV. Informasi Dugaan Pelanggaran</h1>
                         <p class="p">1. Peristiwa</p>
-                        <p class="p">a. Peristiwa :</p>
-                        <p class="p">b. Tempat Kejadian :</p>
-                        <p class="p">c. Waktu Kejadian :</p>
-                        <p class="p">d. Pelaku :</p>
-                        <p class="p">e. Alamat :</p>
+                        <p class="p">a. Peristiwa : {{ $data->peristiwa }}</p>
+                        <p class="p">b. Tempat Kejadian : {{ $data->tempat_kejadian_peristiwa }}</p>
+                        <p class="p">c. Waktu Kejadian : {{ $data->waktu_kejadian_peristiwa }}</p>
+                        <p class="p">d. Pelaku : {{ $data->pelaku_peristiwa }}</p>
+                        <p class="p">e. Alamat : {{ $data->alamat_pelaku }}</p>
                         &nbsp;
                         <p class="p">2. Saksi-saksi</p>
-                        <p class="p">a. Nama :</p>
-                        <p class="p">Alamat :</p>
-                        <p class="p">b. Nama :</p>
-                        <p class="p">Alamat :</p>
+                        <p class="p">a. Nama : {{ $data->nama_saksi_1 }}</p>
+                        <p class="p">Alamat : {{ $data->alamat_saksi_1 }}</p>
+                        <p class="p">b. Nama : {{ $data->nama_saksi_2 }}</p>
+                        <p class="p">Alamat : {{ $data->alamat_saksi_2 }}</p>
                         &nbsp;
                         <p class="p">3. Alat Bukti</p>
-                        <p class="p">a. :</p>
-                        <p class="p">b. :</p>
-                        <p class="p">c. :</p>
+                        <p class="p">a. : {{ $data->alat_bukti_1}}</p>
+                        <p class="p">b. : {{ $data->alat_bukti_2}}</p>
+                        <p class="p">c. : {{ $data->alat_bukti_3 }}</p>
                         &nbsp;
                         <p class="p">4. Barang Bukti</p>
-                        <p class="p">a. : </p>
-                        <p class="p">b. : </p>
-                        <p class="p">c. : </p>
+                        <p class="p">a. : {{ $data->barang_bukti_1}}</p>
+                        <p class="p">b. : {{ $data->barang_bukti_2 }}</p>
+                        <p class="p">c. : {{ $data->barang_bukti_3 }}</p>
                         &nbsp;
-                        <p class="p">5. Uraian Singkat Dugaan Pelanggaran :</p>
+                        <p class="p uraian-content">5. Uraian Singkat Dugaan Pelanggaran :</p>
+                        <p class="p">{{ $data->uraian_singkat_dugaan }}</p>
                         &nbsp;
-                        <p class="p">6. Fakta dan Keterangan :</p>
+                        <p class="p uraian-content">6. Fakta dan Keterangan :</p>
+                        <p class="p">{{ $data->fakta }}</p>
                         &nbsp;
-                        <p class="p">7. Analisa : </p>
+                        <p class="p uraian-content">7. Analisa : </p>
+                        <p class="p">{{ $data->analisa }}</p>
                     </li>
     
                     <li>
                         <h1 class="bab">V. Informasi Potensi Sengketa</h1>
                         <p class="p">1.Peristiwa</p>
-                        <p class="p">a. Peserta Pemilu :</p>
-                        <p class="p">b. Tempat Kejadian :</p>
-                        <p class="p">c. Waktu Kejadian :</p>
+                        <p class="p">a. Peserta Pemilu : {{ $data->peserta_pemilu_sengketa }}</p>
+                        <p class="p">b. Tempat Kejadian : {{ $data->tempat_sengketa }}</p>
+                        <p class="p">c. Waktu Kejadian : {{ $data->waktu_sengketa }}</p>
                         &nbsp;
                         <p class="p">2. Objek Sengketa</p>
-                        <p class="p">a. Bentuk objek sengketa :</p>
-                        <p class="p">b. Identitas objek sengketa :</p>
-                        <p class="p">c. Hari/Tanggal dikeluarkan :</p>
-                        <p class="p">d. Kerugian langsung :</p>
+                        <p class="p">a. Bentuk objek sengketa : {{ $data->bentuk_objek }}</p>
+                        <p class="p">b. Identitas objek sengketa : {{ $data->identias_objek }}</p>
+                        <p class="p">c. Hari/Tanggal dikeluarkan : {{ $data->hari_objek}}</p>
+                        <p class="p">d. Kerugian langsung : {{ $data->kerugian_objek }}</p>
                         &nbsp;
                         <p class="p">3. Uraian Singkat Potensi Sengketa :</p>
-                        <p class="p uraian-content">-</p>
+                        <p class="p uraian-content">{{ $data->uraian_objek }}</p>
                     </li>
                 </ul>
             </div>

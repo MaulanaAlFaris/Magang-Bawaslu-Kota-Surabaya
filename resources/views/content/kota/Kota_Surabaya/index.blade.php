@@ -225,7 +225,7 @@
                 <div class="input-group input-group-sm">
                   <input type="text" name="keyword" class="form-control" placeholder="Cari...">
                   <div class="input-group-append">
-                      <button type="submit" class="btn btn-primary">Cari</button>
+                      <button type="submit" class="btn btn-primary btn-sm">Cari</button>
                   </div>
                 </div>
               </form>
