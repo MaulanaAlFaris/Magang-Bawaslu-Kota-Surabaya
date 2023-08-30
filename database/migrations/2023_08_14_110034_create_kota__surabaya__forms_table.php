@@ -44,7 +44,7 @@ return new class extends Migration
             $table->string('tempat_sengketa')->default('-');
             $table->string('waktu_sengketa')->default('-');
             $table->string('bentuk_objek')->default('-');
-            $table->string('identias_objek')->default('-');
+            $table->string('identitas_objek')->default('-');
             $table->string('hari_objek')->default('-');
             $table->string('kerugian_objek')->default('-');
             $table->text('uraian_objek')->default('-');

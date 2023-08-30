@@ -70,7 +70,7 @@ class Kota_Surabaya_Form extends Model
         'tempat_sengketa' => '-',
         'waktu_sengketa' => '-',
         'bentuk_objek' => '-',
-        'identias_objek' => '-',
+        'identitas_objek' => '-',
         'hari_objek' => '-',
         'kerugian_objek' => '-',
         'uraian_objek' => '-',
