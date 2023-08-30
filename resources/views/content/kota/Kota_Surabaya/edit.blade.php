@@ -76,6 +76,74 @@
                 </div>
             </div>
 
+            <!-- Bagian yang akan ditampilkan setelah memilih "Yes" -->
+            <div class="mb-3 row" id="additionalContent" style="display: none;">
+                <!-- Isi dengan konten yang ingin Anda tampilkan -->
+                <div class="mb-3 row">
+                    <label for="peristiwa" class="col-sm-2 col-form-label">a. Peristiwa : </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='peristiwa' id="peristiwa" value="{{ $data->peristiwa }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="tempat_kejadian_peristiwa" class="col-sm-2 col-form-label">b. Tempat Kejadian : </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='tempat_kejadian_peristiwa' id="tempat_kejadian_peristiwa" value="{{ $data->tempat_kejadian_peristiwa }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="waktu_kejadian_peristiwa" class="col-sm-2 col-form-label">c. Waktu Kejadian : </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='waktu_kejadian_peristiwa' id="waktu_kejadian_peristiwa" value="{{ $data->waktu_kejadian_peristiwa }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="pelaku_peristiwa" class="col-sm-2 col-form-label">d. Pelaku : </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='pelaku_peristiwa' id="pelaku_peristiwa" value="{{ $data->pelaku_peristiwa }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="alamat_peristiwa" class="col-sm-2 col-form-label">e.. Alamat :  </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='alamat_peristiwa' id="alamat_peristiwa" value="{{ $data->alamat_peristiwa }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="nama_saksi_1" class="col-sm-2 col-form-label">a. Nama :  </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='nama_saksi_1' id="nama_saksi_1" value="{{ $data->nama_saksi_1 }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="alamat_saksi_1" class="col-sm-2 col-form-label">Alamat :  </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='alamat_saksi_1' id="alamat_saksi_1" value="{{ $data->alamat_saksi_1}}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="nama_saksi_2" class="col-sm-2 col-form-label">b. Nama :  </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='nama_saksi_2' id="nama_saksi_2" value="{{ $data->nama_saksi_2}}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="alamat_saksi_2" class="col-sm-2 col-form-label">Alamat : </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='alamat_saksi_2' id="alamat_saksi_2" value="{{ $data->alamat_saksi_2}}">
+                    </div>
+                </div>
+
+            </div>
+
             
             
             <div class="mb-3 row">

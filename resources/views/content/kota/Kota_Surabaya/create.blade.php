@@ -159,6 +159,29 @@
                         </div>
                     </div>
 
+                    <div class="mb-3 row">
+                        <label for="alat_bukti_1" class="col-sm-2 col-form-label">a : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='alat_bukti_1' id="alat_bukti_1" value="{{ Session::get('alat_bukti_1') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="alat_bukti_2" class="col-sm-2 col-form-label">b : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='alat_bukti_2' id="alat_bukti_2" value="{{ Session::get('alat_bukti_2') }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="alat_bukti_3" class="col-sm-2 col-form-label">c : </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name='alat_bukti_3' id="alat_bukti_3" value="{{ Session::get('alat_bukti_3') }}">
+                        </div>
+                    </div>
+
+                    
+
                 </div>
 
                 <div class="mb-3 row">
