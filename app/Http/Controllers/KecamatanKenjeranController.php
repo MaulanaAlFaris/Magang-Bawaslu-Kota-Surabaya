@@ -122,7 +122,8 @@ class KecamatanKenjeranController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Kenjeran_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Kenjeran.show')->with('data', $data);
     }
 
     /**
@@ -224,16 +225,16 @@ class KecamatanKenjeranController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Kenjeran.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanKenjeran_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKenjeran(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -252,7 +253,7 @@ class KecamatanKenjeranController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Kenjeran.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -260,6 +261,6 @@ class KecamatanKenjeranController extends Controller
         $data = Kecamatan_Kenjeran_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Kenjeran.index')->with('data', $data);
     }
 }

@@ -124,7 +124,8 @@ class KecamatanGentengController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Genteng_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Genteng.show')->with('data', $data);
     }
 
     /**
@@ -229,16 +230,16 @@ class KecamatanGentengController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Genteng.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanGenteng_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchGenteng(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -257,7 +258,7 @@ class KecamatanGentengController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Genteng.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -265,6 +266,6 @@ class KecamatanGentengController extends Controller
         $data = Kecamatan_Genteng_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Genteng.index')->with('data', $data);
     }
 }

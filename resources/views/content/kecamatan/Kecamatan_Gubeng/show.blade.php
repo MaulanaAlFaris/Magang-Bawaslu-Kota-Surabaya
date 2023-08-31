@@ -79,7 +79,7 @@
                 </li>
 
                 <div class="buttonPDF">
-                    <a href="{{ route('kotasurabaya.pdf', ['id' => $data->tahapan]) }}" class="btn btn-success btn-sm">Download PDF</a>
+                    <a href="{{ route('KecamatanGubeng.pdf', ['id' => $data->tahapan]) }}" class="btn btn-success btn-sm">Download PDF</a>
                 </div>
             </ul>
         </div>

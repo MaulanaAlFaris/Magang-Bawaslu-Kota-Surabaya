@@ -124,7 +124,8 @@ class KecamatanBulakController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Bulak_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Bulak.show')->with('data', $data);
     }
 
     /**
@@ -228,16 +229,16 @@ class KecamatanBulakController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Bulak.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanBulak_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchBulak(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -256,7 +257,7 @@ class KecamatanBulakController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Bulak.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -264,6 +265,6 @@ class KecamatanBulakController extends Controller
         $data = Kecamatan_Bulak_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Bulak.index')->with('data', $data);
     }
 }

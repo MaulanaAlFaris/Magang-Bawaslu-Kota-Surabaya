@@ -120,7 +120,8 @@ class KecamatanKarangPilangController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_KarangPilang_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Karang_Pilang.show')->with('data', $data);
     }
 
     /**
@@ -222,16 +223,16 @@ class KecamatanKarangPilangController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Karang_Pilang.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanKarangPilang_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKarangPilang(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 

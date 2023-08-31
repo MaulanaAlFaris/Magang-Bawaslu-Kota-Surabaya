@@ -5,6 +5,7 @@
     <form action='{{ url('KecamatanBenowo') }}' method='post'>
         @csrf
             <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <a href="{{ url('KecamatanBenowo') }}" class="btn btn-secondary">Kembali</a>
                 &nbsp;
 
                 <div class="mb-3row" style="font-weight: bold">I. Data Pengawas Pemilihan</div>

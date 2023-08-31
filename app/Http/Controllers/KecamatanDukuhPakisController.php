@@ -120,7 +120,8 @@ class KecamatanDukuhPakisController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Dukuh_Pakis_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Dukuh_Pakis.show')->with('data', $data);
     }
 
     /**
@@ -222,16 +223,16 @@ class KecamatanDukuhPakisController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Dukuh_Pakis.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanDukuhPakis_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchDukuhPakis(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -250,7 +251,7 @@ class KecamatanDukuhPakisController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Dukuh_Pakis.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -258,6 +259,6 @@ class KecamatanDukuhPakisController extends Controller
         $data = Kecamatan_Dukuh_Pakis_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Dukuh_Pakis.index')->with('data', $data);
     }
 }
