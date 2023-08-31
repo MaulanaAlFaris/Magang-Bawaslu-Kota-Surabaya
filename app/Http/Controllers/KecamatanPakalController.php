@@ -122,7 +122,8 @@ class KecamatanPakalController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Pakal_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Pakal.show')->with('data', $data);
     }
 
     /**
@@ -224,16 +225,16 @@ class KecamatanPakalController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Pakal.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanPakal_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchPakal(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -252,7 +253,7 @@ class KecamatanPakalController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Pakal.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -260,6 +261,6 @@ class KecamatanPakalController extends Controller
         $data = Kecamatan_Pakal_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Pakal.index')->with('data', $data);
     }
 }

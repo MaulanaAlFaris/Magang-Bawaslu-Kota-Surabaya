@@ -123,7 +123,8 @@ class KecamatanTenggilisMejoyoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_TenggilisMejoyo_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.show')->with('data', $data);
     }
 
     /**
@@ -225,7 +226,7 @@ class KecamatanTenggilisMejoyoController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
             return $pdf->download("KotaSurabaya_{$id}.pdf");
@@ -234,7 +235,7 @@ class KecamatanTenggilisMejoyoController extends Controller
         }
     }
 
-    public function search(Request $request)
+    public function searchTenggilisMejoyo(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -253,7 +254,7 @@ class KecamatanTenggilisMejoyoController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -261,6 +262,6 @@ class KecamatanTenggilisMejoyoController extends Controller
         $data = Kecamatan_TenggilisMejoyo_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Tenggilis_Mejoyo.index')->with('data', $data);
     }
 }

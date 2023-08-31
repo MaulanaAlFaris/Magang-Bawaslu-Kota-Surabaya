@@ -124,7 +124,8 @@ class KecamatanWonocoloController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Wonocolo_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Wonocolo.show')->with('data', $data);
     }
 
     /**
@@ -226,16 +227,16 @@ class KecamatanWonocoloController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Wonocolo.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanWonocolo_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchWonocolo(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -254,7 +255,7 @@ class KecamatanWonocoloController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Wonocolo.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KecamatanWonocoloController extends Controller
         $data = Kecamatan_Wonocolo_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Wonocolo.index')->with('data', $data);
     }
 }
