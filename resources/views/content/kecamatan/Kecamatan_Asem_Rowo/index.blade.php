@@ -23,9 +23,18 @@
 </div>
 <div class="content-main-bg">
         <div class="my-3 p-3 bg-body rounded shadow-sm">
-            <!-- TOMBOL TAMBAH DATA -->
+            <!-- TOMBOL TAMBAH DATA dan SEARCH BAR-->
             <div class="pb-3">
             <a href='{{ url('KecamatanAsemRowo/create') }}' class="btn btn-primary">+ Tambah Data</a>
+
+            <form action="{{ route('kecamatanasemrowo.search') }}" method="GET" class="form-inline mb-3">
+                <div class="input-group input-group-sm">
+                  <input type="text" name="keyword" class="form-control" placeholder="Cari...">
+                  <div class="input-group-append">
+                      <button type="submit" class="btn btn-primary btn-sm">Cari</button>
+                  </div>
+                </div>
+            </form>
             </div>
     
             <table class="table table-striped">
@@ -48,7 +57,7 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KecamatanAsemRowo/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
-                            <a href='#' class="btn btn-success btn-sm">PDF</a>
+                            <a href='{{ url("KecamatanAsemRowo/".$item->tahapan) }}' class="btn btn-success btn-sm">PDF</a>
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KecamatanAsemRowo/'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

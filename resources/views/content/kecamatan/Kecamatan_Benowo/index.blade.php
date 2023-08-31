@@ -26,6 +26,15 @@
             <!-- TOMBOL TAMBAH DATA -->
             <div class="pb-3">
             <a href='{{ url('KecamatanBenowo/create') }}' class="btn btn-primary">+ Tambah Data</a>
+
+            <form action="{{ route('kecamatanbenowo.search') }}" method="GET" class="form-inline mb-3">
+                <div class="input-group input-group-sm">
+                  <input type="text" name="keyword" class="form-control" placeholder="Cari...">
+                  <div class="input-group-append">
+                      <button type="submit" class="btn btn-primary btn-sm">Cari</button>
+                  </div>
+                </div>
+              </form>
             </div>
     
             <table class="table table-striped">
@@ -48,7 +57,7 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KecamatanBenowo/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
-                            <a href='#' class="btn btn-success btn-sm">PDF</a>
+                            <a href='{{ url('KecamatanBenowo/'.$item->tahapan) }}' class="btn btn-success btn-sm">PDF</a>
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KecamatanBenowo/'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

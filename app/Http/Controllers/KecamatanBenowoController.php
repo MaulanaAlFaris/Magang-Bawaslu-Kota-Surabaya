@@ -85,7 +85,32 @@ class KecamatanBenowoController extends Controller
                     'tujuan'=>$request->tujuan,
                     'sasaran'=>$request->sasaran,
                     'waktu_dan_tempat'=>$request->waktu_dan_tempat,
-                    'uraian'=>$request->uraian        
+                    'uraian'=>$request->uraian,
+                    'peristiwa'=>  $request->peristiwa ?: Kecamatan_Benowo_Form::$defaults['peristiwa'],
+            'tempat_kejadian_peristiwa'=>  $request->tempat_kejadian_peristiwa ?: Kecamatan_Benowo_Form::$defaults['tempat_kejadian_peristiwa'],
+            'pelaku_peristiwa'=>  $request->pelaku_peristiwa ?: Kecamatan_Benowo_Form::$defaults['pelaku_peristiwa'],
+            'alamat_peristiwa'=>  $request->alamat_peristiwa ?: Kecamatan_Benowo_Form::$defaults['alamat_peristiwa'],
+            'nama_saksi_1'=>  $request->nama_saksi_1 ?: Kecamatan_Benowo_Form::$defaults['nama_saksi_1'],
+            'alamat_saksi_1'=>  $request->alamat_saksi_1 ?: Kecamatan_Benowo_Form::$defaults['alamat_saksi_1'],
+            'nama_saksi_2'=>  $request->nama_saksi_2 ?: Kecamatan_Benowo_Form::$defaults['nama_saksi_2'],
+            'alamat_saksi_2'=>  $request->alamat_saksi_2 ?: Kecamatan_Benowo_Form::$defaults['alamat_saksi_2'],
+            'alat_bukti_1'=>  $request->alat_bukti_1 ?: Kecamatan_Benowo_Form::$defaults['alat_bukti_1'],
+            'alat_bukti_2'=>  $request->alat_bukti_2 ?: Kecamatan_Benowo_Form::$defaults['alat_bukti_2'],
+            'alat_bukti_3'=>  $request->alat_bukti_3 ?: Kecamatan_Benowo_Form::$defaults['alat_bukti_3'],
+            'barang_bukti_1'=>  $request->barang_butki_1 ?: Kecamatan_Benowo_Form::$defaults['barang_bukti_1'],
+            'barang_bukti_2'=>  $request->barang_butki_2 ?: Kecamatan_Benowo_Form::$defaults['barang_bukti_2'],
+            'barang_bukti_3'=>  $request->barang_butki_3 ?: Kecamatan_Benowo_Form::$defaults['barang_bukti_3'],
+            'uraian_singkat_dugaan'=>  $request->uraian_singkat_dugaan ?: Kecamatan_Benowo_Form::$defaults['uraian_singkat_dugaan'],
+            'fakta'=>  $request->fakta ?: Kecamatan_Benowo_Form::$defaults['fakta'],
+            'analisa'=>  $request->analisa ?: Kecamatan_Benowo_Form::$defaults['analisa'],
+            'peserta_pemilu_sengketa'=>  $request->peserta_pemilu_sengketa ?: Kecamatan_Benowo_Form::$defaults['peserta_pemilu_sengketa'],
+            'tempat_sengketa'=>  $request->tempat_sengketa ?: Kecamatan_Benowo_Form::$defaults['tempat_sengketa'],
+            'waktu_sengketa'=>  $request->waktu_sengketa ?: Kecamatan_Benowo_Form::$defaults['waktu_sengketa'],
+            'bentuk_objek'=>  $request->bentuk_objek ?: Kecamatan_Benowo_Form::$defaults['bentuk_objek'],
+            'identitas_objek'=> $request->identitas_objek ?: Kecamatan_Benowo_Form::$defaults['identitas_objek'],
+            'hari_objek'=>  $request->hari_objek ?: Kecamatan_Benowo_Form::$defaults['hari_objek'],
+            'kerugian_objek'=>  $request->kerugian_objek ?: Kecamatan_Benowo_Form::$defaults['kerugian_objek'],
+            'uraian_objek'=>  $request->uraian_objek ?: Kecamatan_Benowo_Form::$defaults['uraian_objek'],          
         
                 ];
                 Kecamatan_Benowo_Form::create($data);
@@ -99,7 +124,8 @@ class KecamatanBenowoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kecamatan_Benowo_Form::where('tahapan',$id)->first();
+        return view('content.kecamatan.Kecamatan_Benowo.show')->with('data', $data);
     }
 
     /**
@@ -148,7 +174,32 @@ class KecamatanBenowoController extends Controller
                 'tujuan'=>  $request->tujuan,
                 'sasaran'=>  $request->sasaran,
                 'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
-                'uraian'=>  $request->uraian   
+                'uraian'=>  $request->uraian,
+                'peristiwa'=>  $request->peristiwa ?: Kecamatan_Benowo_Form::$defaults['peristiwa'],
+            'tempat_kejadian_peristiwa'=>  $request->tempat_kejadian_peristiwa ?: Kecamatan_Benowo_Form::$defaults['tempat_kejadian_peristiwa'],
+            'pelaku_peristiwa'=>  $request->pelaku_peristiwa ?: Kecamatan_Benowo_Form::$defaults['pelaku_peristiwa'],
+            'alamat_peristiwa'=>  $request->alamat_peristiwa ?: Kecamatan_Benowo_Form::$defaults['alamat_peristiwa'],
+            'nama_saksi_1'=>  $request->nama_saksi_1 ?: Kecamatan_Benowo_Form::$defaults['nama_saksi_1'],
+            'alamat_saksi_1'=>  $request->alamat_saksi_1 ?: Kecamatan_Benowo_Form::$defaults['alamat_saksi_1'],
+            'nama_saksi_2'=>  $request->nama_saksi_2 ?: Kecamatan_Benowo_Form::$defaults['nama_saksi_2'],
+            'alamat_saksi_2'=>  $request->alamat_saksi_2 ?: Kecamatan_Benowo_Form::$defaults['alamat_saksi_2'],
+            'alat_bukti_1'=>  $request->alat_bukti_1 ?: Kecamatan_Benowo_Form::$defaults['alat_bukti_1'],
+            'alat_bukti_2'=>  $request->alat_bukti_2 ?: Kecamatan_Benowo_Form::$defaults['alat_bukti_2'],
+            'alat_bukti_3'=>  $request->alat_bukti_3 ?: Kecamatan_Benowo_Form::$defaults['alat_bukti_3'],
+            'barang_bukti_1'=>  $request->barang_butki_1 ?: Kecamatan_Benowo_Form::$defaults['barang_bukti_1'],
+            'barang_bukti_2'=>  $request->barang_butki_2 ?: Kecamatan_Benowo_Form::$defaults['barang_bukti_2'],
+            'barang_bukti_3'=>  $request->barang_butki_3 ?: Kecamatan_Benowo_Form::$defaults['barang_bukti_3'],
+            'uraian_singkat_dugaan'=>  $request->uraian_singkat_dugaan ?: Kecamatan_Benowo_Form::$defaults['uraian_singkat_dugaan'],
+            'fakta'=>  $request->fakta ?: Kecamatan_Benowo_Form::$defaults['fakta'],
+            'analisa'=>  $request->analisa ?: Kecamatan_Benowo_Form::$defaults['analisa'],
+            'peserta_pemilu_sengketa'=>  $request->peserta_pemilu_sengketa ?: Kecamatan_Benowo_Form::$defaults['peserta_pemilu_sengketa'],
+            'tempat_sengketa'=>  $request->tempat_sengketa ?: Kecamatan_Benowo_Form::$defaults['tempat_sengketa'],
+            'waktu_sengketa'=>  $request->waktu_sengketa ?: Kecamatan_Benowo_Form::$defaults['waktu_sengketa'],
+            'bentuk_objek'=>  $request->bentuk_objek ?: Kecamatan_Benowo_Form::$defaults['bentuk_objek'],
+            'identitas_objek'=> $request->identitas_objek ?: Kecamatan_Benowo_Form::$defaults['identitas_objek'],
+            'hari_objek'=>  $request->hari_objek ?: Kecamatan_Benowo_Form::$defaults['hari_objek'],
+            'kerugian_objek'=>  $request->kerugian_objek ?: Kecamatan_Benowo_Form::$defaults['kerugian_objek'],
+            'uraian_objek'=>  $request->uraian_objek ?: Kecamatan_Benowo_Form::$defaults['uraian_objek'],     
             ];
             Kecamatan_Benowo_Form::where('tahapan',$id)->update($data);
             return redirect()->to('KecamatanBenowo')->with('success','berhasil mengupdate data');
@@ -178,16 +229,16 @@ class KecamatanBenowoController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kecamatan.Kecamatan_Benowo.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KecamatanBenowo_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchBenowo(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -206,7 +257,7 @@ class KecamatanBenowoController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kecamatan.Kecamatan_Benowo.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -214,6 +265,6 @@ class KecamatanBenowoController extends Controller
         $data = Kecamatan_Benowo_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kecamatan.Kecamatan_Benowo.index')->with('data', $data);
     }
 }

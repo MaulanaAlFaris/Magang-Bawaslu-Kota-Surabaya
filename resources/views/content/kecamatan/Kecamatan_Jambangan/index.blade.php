@@ -27,6 +27,15 @@
             <!-- TOMBOL TAMBAH DATA -->
             <div class="pb-3">
             <a href='{{ url('KecamatanJambangan/create') }}' class="btn btn-primary">+ Tambah Data</a>
+
+            <form action="{{ route('kotasurabaya.search') }}" method="GET" class="form-inline mb-3">
+                <div class="input-group input-group-sm">
+                  <input type="text" name="keyword" class="form-control" placeholder="Cari...">
+                  <div class="input-group-append">
+                      <button type="submit" class="btn btn-primary btn-sm">Cari</button>
+                  </div>
+                </div>
+              </form>
             </div>
     
             <table class="table table-striped">

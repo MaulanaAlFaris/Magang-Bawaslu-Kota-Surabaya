@@ -92,11 +92,10 @@
                     <div class="col-sm-10">
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                             Ingin Menambahkan Informasi Dugaan Pelangaran dan Potensi Sengketa ?
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <div aria-hidden="true">&times;</div>
-                            </button>
+                            
                             <div class="d-flex justify-content-end mt-2">
                                 <button type="button" class="btn btn-success mr-2" id="yesBtn">Yes</button>
+                                &nbsp;
                                 <button type="button" class="btn btn-danger" id="noBtn">No</button>
                             </div>
                         </div>

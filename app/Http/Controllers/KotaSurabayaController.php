@@ -233,7 +233,7 @@ class KotaSurabayaController extends Controller
         }
     }
 
-    public function search(Request $request)
+    public function searchSBY(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
