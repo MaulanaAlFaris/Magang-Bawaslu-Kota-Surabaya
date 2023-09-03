@@ -9,10 +9,6 @@
     <title>PDF</title>
 </head>
 <body>
-    <div class="logo">
-        <img src="{{ asset('images/LogoBawaslu.png') }}" alt="logo">
-    </div>
-
     <div class="title">
         <li>
             <h1 class="title-h1">FORMULIR MODEL A</h1>

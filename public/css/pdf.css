@@ -3,11 +3,6 @@
     padding: 5px;
     list-style: none;
 }
-.logo{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 .title{
     display: flex;
     justify-content: center;

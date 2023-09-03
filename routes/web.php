@@ -659,7 +659,7 @@ Route::resource('KelurahanAirlangga',KelurahanAirlanggaController::class);
 //Routing PDF
 Route::get('KelurahanAirlangga/pdf/{id}', [KelurahanAirlanggaController::class,'pdf'])->name('KelurahanAirlangga.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanAirlanggaController::class, 'search'])->name('kelurahanairlangga.search');
+Route::get('searchKelAirlangga', [KelurahanAirlanggaController::class, 'searchKelAirlangga'])->name('kelurahanairlangga.search');
 
 Route::resource('KelurahanBaratajaya',KelurahanBaratajayaController::class);
 //Routing PDF

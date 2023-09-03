@@ -78,6 +78,12 @@
                     <p class="p uraian-content">{{ $data->uraian_objek }}</p>
                 </li>
 
+                <li>
+                    <p class="p" style="text-align: right">Surabaya, 2 April 2023</p>
+                    <div class="kotak" style="height:90px"></div>
+                    <p class="p" style="text-align: right">{{ $data->nama_pelaksana }}</p>
+                </li>
+
                 <div class="buttonPDF">
                     <a href="{{ route('kotasurabaya.pdf', ['id' => $data->tahapan]) }}" class="btn btn-success btn-sm">Download PDF</a>
                 </div>
