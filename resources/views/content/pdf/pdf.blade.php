@@ -13,7 +13,7 @@
         <li>
             <h1 class="title-h1">FORMULIR MODEL A</h1>
             <h1 class="title-h1">LAPORAN HASIL PENGAWASAN PEMILU</h1>
-            <h1 class="title-h1">011/LHP/KJI-38.20/02/2023</h1>
+            <h1 class="title-h1">PENOMORAN</h1>
         </li>
     </div>
 

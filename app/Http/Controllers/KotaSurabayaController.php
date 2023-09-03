@@ -46,6 +46,7 @@ class KotaSurabayaController extends Controller
         Session::flash('sasaran', $request->sasaran);
         Session::flash('waktu_dan_tempat', $request->waktu_dan_tempat);
         Session::flash('uraian', $request->uraian);
+        Session::flash('penomoran_judul', $request->penomoran_judul);
 
         $request->validate([
             'tahapan' =>'required',
@@ -58,6 +59,7 @@ class KotaSurabayaController extends Controller
             'sasaran'=>'required',
             'waktu_dan_tempat'=>'required',
             'uraian'=>'required',
+            'penomoran_judul'=>'required',
             
         ],
         [
@@ -70,7 +72,8 @@ class KotaSurabayaController extends Controller
             'tujuan.required'=>'Tujuan wajib diisi',
             'sasaran.required'=>'Sasaran wajib diisi',
             'waktu_dan_tempat.required'=>'Waktu dan  Tempat wajib diisi',
-            'uraian.required'=>'Uraian Singkat Hasil Pengawasan wajib diisi'
+            'uraian.required'=>'Uraian Singkat Hasil Pengawasan wajib diisi',
+            'penomoran_judul.required'=>'Penomoran wajib diisi'
         ],
     );
 
@@ -85,6 +88,8 @@ class KotaSurabayaController extends Controller
             'sasaran'=>$request->sasaran,
             'waktu_dan_tempat'=>$request->waktu_dan_tempat,
             'uraian'=>$request->uraian,
+            'tanggal'=>$request->tanggal,
+            'penomoran_judul'=>$request->penomoran_judul,
             'peristiwa'=>  $request->peristiwa ?: Kota_Surabaya_Form::$defaults['peristiwa'],
             'tempat_kejadian_peristiwa'=>  $request->tempat_kejadian_peristiwa ?: Kota_Surabaya_Form::$defaults['tempat_kejadian_peristiwa'],
             'pelaku_peristiwa'=>  $request->pelaku_peristiwa ?: Kota_Surabaya_Form::$defaults['pelaku_peristiwa'],
@@ -149,6 +154,7 @@ class KotaSurabayaController extends Controller
             'sasaran' => 'required',
             'waktu_dan_tempat' => 'required',
             'uraian' => 'required',
+            'penomoran_judul'=>'required',
         ],[
             'nama_pelaksana.required'=>'Nama pelaksana Tugas Pengawasan sudah terupdate',
             'jabatan.required'=>'Jabatan sudah terupdate',
@@ -158,7 +164,8 @@ class KotaSurabayaController extends Controller
             'tujuan'=>'Tujuan sudah terupdate',
             'sasaran'=>'Sasaran sudah terupdate',
             'waktu_dan_tempat'=>'Waktu dan Tempat sudah terupdate',
-            'uraian'=>'Uraian Singkat Hasil Pengawasan sudah terupdate'
+            'uraian'=>'Uraian Singkat Hasil Pengawasan sudah terupdate',
+            'penomoran_judul.required'=>'Penomoran sudah terupdate'
         ]);
         $data=[
             'tahapan'=>$request->tahapan,
@@ -171,6 +178,8 @@ class KotaSurabayaController extends Controller
             'sasaran'=>  $request->sasaran,
             'waktu_dan_tempat'=>  $request->waktu_dan_tempat,
             'uraian'=>  $request->uraian,
+            'tanggal'=>$request->tanggal,
+            'penomoran_judul'=>$request->penomoran_judul,
             'peristiwa'=>  $request->peristiwa ?: Kota_Surabaya_Form::$defaults['peristiwa'],
             'tempat_kejadian_peristiwa'=>  $request->tempat_kejadian_peristiwa ?: Kota_Surabaya_Form::$defaults['tempat_kejadian_peristiwa'],
             'pelaku_peristiwa'=>  $request->pelaku_peristiwa ?: Kota_Surabaya_Form::$defaults['pelaku_peristiwa'],

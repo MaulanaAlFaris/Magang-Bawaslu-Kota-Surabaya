@@ -13,7 +13,7 @@
             <div class="pb-3">
             <a href='{{ url('KelurahanDukuhKupang/create') }}' class="btn btn-primary">+ Tambah Data</a>
 
-            <form action="{{ route('kotasurabaya.search') }}" method="GET" class="form-inline mb-3">
+            <form action="{{ route('kelurahandukuhkupang.search') }}" method="GET" class="form-inline mb-3">
                 <div class="input-group input-group-sm">
                   <input type="text" name="keyword" class="form-control" placeholder="Cari...">
                   <div class="input-group-append">
@@ -43,6 +43,7 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KelurahanDukuhKupang/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <a href='{{ url("KelurahanDukuhKupang/".$item->tahapan) }}' class="btn btn-success btn-sm">PDF</a>
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KelurahanDukuhKupang'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

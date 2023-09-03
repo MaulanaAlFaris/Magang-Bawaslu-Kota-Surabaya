@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('sasaran');
             $table->string('waktu_dan_tempat');
             $table->text('uraian');
+            $table->string('tanggal');
+            $table->string('penomoran_judul');
             $table->string('peristiwa')->default('-');
             $table->string('tempat_kejadian_peristiwa')->default('-');
             $table->string('waktu_kejadian_peristiwa')->default('-');

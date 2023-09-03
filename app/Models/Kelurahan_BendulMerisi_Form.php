@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Kelurahan_BendulMerisi_Form extends Model
 {
@@ -19,6 +20,8 @@ class Kelurahan_BendulMerisi_Form extends Model
         'sasaran',
         'waktu_dan_tempat',
         'uraian',
+        'tanggal',
+        'penomoran_judul',
         'peristiwa',
         'tempat_kejadian_peristiwa',
         'pelaku_peristiwa',
@@ -43,10 +46,11 @@ class Kelurahan_BendulMerisi_Form extends Model
         'identitas_objek',
         'hari_objek',
         'kerugian_objek',
-        'uraian_objek'
-
-       
+        'uraian_objek',
     ];
+
+
+
     public static $defaults = [
         'peristiwa' => '-',
         'tempat_kejadian_peristiwa' => '-',
@@ -75,6 +79,18 @@ class Kelurahan_BendulMerisi_Form extends Model
         'kerugian_objek' => '-',
         'uraian_objek' => '-',
     ];
+
+    public function getTanggalAttribute($value)
+    {
+        // Konversi kolom 'tanggal' ke format "d F Y" saat mengambilnya dari database
+        return Carbon::parse($value)->format('d F Y');
+    }
+
+    public function setTanggalAttribute($value)
+    {
+        // Konversi dan simpan kolom 'tanggal' dalam format "Y-m-d" saat menyimpannya ke database
+        $this->attributes['tanggal'] = Carbon::createFromFormat('d F Y', $value)->format('Y-m-d');
+    }
     protected $table ='Kelurahan_BendulMerisi_Form';
     public $timestamps = false;
 }

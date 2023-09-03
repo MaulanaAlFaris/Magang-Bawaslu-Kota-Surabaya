@@ -40,7 +40,7 @@
         <li>
             <h1 class="title-h1">FORMULIR MODEL A</h1>
             <h1 class="title-h1">LAPORAN HASIL PENGAWASAN PEMILU</h1>
-            <h1 class="title-h1">011/LHP/KJI-38.20/02/2023</h1>
+            <h1 class="title-h1">{{ $data->penomoran_judul }}</h1>
         </li>
     </div>
 
@@ -123,7 +123,7 @@
                     </li>
 
                     <li>
-                        <p class="p" style="text-align: right">Surabaya, 2 April 2023</p>
+                        <p class="p" style="text-align: right">Surabaya, {{ $data->tanggal }}</p>
                         <div class="kotak" style="height:90px"></div>
                         <p class="p" style="text-align: right">{{ $data->nama_pelaksana }}</p>
                     </li>

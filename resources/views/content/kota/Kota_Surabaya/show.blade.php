@@ -79,7 +79,7 @@
                 </li>
 
                 <li>
-                    <p class="p" style="text-align: right">Surabaya, 2 April 2023</p>
+                    <p class="p" style="text-align: right">Surabaya, {{ $data->tanggal }}</p>
                     <div class="kotak" style="height:90px"></div>
                     <p class="p" style="text-align: right">{{ $data->nama_pelaksana }}</p>
                 </li>
