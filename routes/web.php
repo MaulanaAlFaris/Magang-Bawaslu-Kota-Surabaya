@@ -219,7 +219,7 @@ Route::get('/tes', function () {
     return view('content.layouts.layouts');
 });
 Route::get('/', function () {
-    return view('content.dashboard');
+    return view('login.index');
 });
 //PDF ROUTE
 Route::get('/generate-pdf',[pdfController::class,'generatePdf']);
