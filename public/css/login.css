@@ -58,8 +58,9 @@ body{
 .invalid-feedback{
     position: absolute;
     top: 17%;
-    left: 42%;
+    left: 40%;
     background-color: red;
     color: white;
+    border-radius: 10px;
 
 }

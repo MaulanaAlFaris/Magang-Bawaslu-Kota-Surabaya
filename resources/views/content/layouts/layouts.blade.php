@@ -42,10 +42,9 @@
     <div class="footer">
         <div class="footer-background">
             <ul class="footer-list">
-                <li>Tentang Kami</li>
-                <li>Alamat : Jl. Raya Tenggilis Mejoyo, Kali Rungkut, Kec. Rungkut, Kota Surabaya</li>
-                <li>Email : set.surabaya@bawaslu.go.id</li>
-                <li>No.Telpon: (031)99857450</li>
+                <a href="{{ url('portofolio') }}">
+                    Copyright © 2023 Bawaslu Kota Surabaya.
+                </a>
             </ul>
         </div>
     </div>
