@@ -2,10 +2,10 @@
 
 @section('content-main')
 <div class="content-main-create-bg">
-    <form action='{{ url('KecamatanBulak') }}' method='post'>
+    <form action='{{ url('KelurahanPradahKalikendal') }}' method='post'>
         @csrf
             <div class="my-3 p-3 bg-body rounded shadow-sm">
-                <a href="{{ url('KecamatanBulak') }}" class="btn btn-secondary">Kembali</a>
+                <a href="{{ url('KelurahanPradahKalikendal') }}" class="btn btn-secondary">Kembali</a>
                 &nbsp;
 
                 <div class="mb-3row" style="font-weight: bold">I. Data Pengawas Pemilihan</div>
@@ -48,7 +48,7 @@
 
                 <div class="mb-3row" style="font-weight: bold">II. Kegiatan Pengawasan</div>
                 &nbsp;
-                
+
                 <div class="mb-3row">Kegiatan</div>
 
                 <div class="mb-3 row">
@@ -324,7 +324,7 @@
                         </div>
                     </div>
 
-                    
+
 
                 </div>
 

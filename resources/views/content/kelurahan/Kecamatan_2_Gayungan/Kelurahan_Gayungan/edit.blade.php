@@ -48,7 +48,7 @@
 
                 <div class="mb-3row" style="font-weight: bold">II. Kegiatan Pengawasan</div>
                 &nbsp;
-                
+
                 <div class="mb-3row">Kegiatan</div>
 
                 <div class="mb-3 row">
@@ -324,10 +324,10 @@
                         </div>
                     </div>
 
-                    
+
 
                 </div>
-            
+
             <div class="mb-3 row">
                 <label for="uraian" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">SIMPAN</button></div>

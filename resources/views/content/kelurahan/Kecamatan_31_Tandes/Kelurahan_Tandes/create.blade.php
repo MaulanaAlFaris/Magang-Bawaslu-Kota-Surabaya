@@ -48,7 +48,7 @@
 
                 <div class="mb-3row" style="font-weight: bold">II. Kegiatan Pengawasan</div>
                 &nbsp;
-                
+
                 <div class="mb-3row">Kegiatan</div>
 
                 <div class="mb-3 row">
@@ -324,7 +324,7 @@
                         </div>
                     </div>
 
-                    
+
 
                 </div>
 
