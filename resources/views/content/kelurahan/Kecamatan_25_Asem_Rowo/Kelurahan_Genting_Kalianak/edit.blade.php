@@ -1,11 +1,11 @@
 @extends('content.layouts.layouts')
 @section('content-main')
 <div class="content-main-edit-bg">
-    <form action='{{ url('KelurahanGeningKalianak/'.$data->tahapan) }}' method='post'>
+    <form action='{{ url('KelurahanGentingKalianak/'.$data->tahapan) }}' method='post'>
     @csrf
     @method('PUT')
         <div class="my-3 p-3 bg-body rounded shadow-sm">
-            <a href="{{ url('KelurahanGeningKalianak') }}" class="btn btn-secondary"> Kembali</a>
+            <a href="{{ url('KelurahanGentingKalianak') }}" class="btn btn-secondary"> Kembali</a>
             &nbsp;
 
                 <div class="mb-3row" style="font-weight: bold">I. Data Pengawas Pemilihan</div>
@@ -48,7 +48,7 @@
 
                 <div class="mb-3row" style="font-weight: bold">II. Kegiatan Pengawasan</div>
                 &nbsp;
-                
+
                 <div class="mb-3row">Kegiatan</div>
 
                 <div class="mb-3 row">
@@ -324,10 +324,10 @@
                         </div>
                     </div>
 
-                    
+
 
                 </div>
-            
+
             <div class="mb-3 row">
                 <label for="uraian" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">SIMPAN</button></div>
