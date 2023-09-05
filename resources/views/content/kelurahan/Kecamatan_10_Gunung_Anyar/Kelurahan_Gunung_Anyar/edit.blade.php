@@ -86,6 +86,20 @@
                 </div>
             </div>
 
+            <div class="mb-3 row">
+                <label for="penomoran_judul" class="col-sm-2 col-form-label" style="font-weight: bold">Penomoran</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name='penomoran_judul' id="penomoran_judul" value="{{($data->penomoran_judul) }}">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="tanggal" class="col-sm-2 col-form-label" style="font-weight: bold">Tanggal</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name='tanggal' id="tanggal" value="{{($data->tanggal) }}">
+               </div>
+            </div>
+
              <!-- Tombol Yes/No -->
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label"></label>

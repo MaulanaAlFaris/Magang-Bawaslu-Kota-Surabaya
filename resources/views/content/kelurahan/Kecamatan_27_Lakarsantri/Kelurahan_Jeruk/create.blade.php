@@ -14,35 +14,35 @@
                 <div class="mb-3 row">
                     <label for="tahapan" class="col-sm-2 col-form-label">Tahapan  Yang Diawasi</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='tahapan' id="tahapan" value="{{ $data->tahapan }}">
+                        <input type="text" class="form-control" name='tahapan' id="tahapan" value="{{ Session::get('tahapan') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="nama_pelaksana" class="col-sm-2 col-form-label">Nama Pelaksana Tugas Pengawasan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='nama_pelaksana' id="nama_pelaksana" value="{{ $data->nama_pelaksana }}">
+                        <input type="text" class="form-control" name='nama_pelaksana' id="nama_pelaksana" value="{{ Session::get('nama_pelaksana') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='jabatan' id="jabatan" value="{{ $data->jabatan }}">
+                        <input type="text" class="form-control" name='jabatan' id="jabatan" value="{{ Session::get('jabatan') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="nomor" class="col-sm-2 col-form-label">Nomor Surat Perintah Tugas</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='nomor' id="nomor" value="{{ $data->nomor }}">
+                        <input type="text" class="form-control" name='nomor' id="nomor" value="{{ Session::get('nomor') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='alamat' id="alamat" value="{{ $data->alamat }}">
+                        <input type="text" class="form-control" name='alamat' id="alamat" value="{{ Session::get('alamat') }}">
                     </div>
                 </div>
 
@@ -54,35 +54,49 @@
                 <div class="mb-3 row">
                     <label for="bentuk" class="col-sm-2 col-form-label">a. Bentuk</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='bentuk' id="bentuk" value="{{ $data->bentuk }}">
+                        <input type="text" class="form-control" name='bentuk' id="bentuk" value="{{ Session::get('bentuk') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="tujuan" class="col-sm-2 col-form-label">b. Tujuan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='tujuan' id="tujuan" value="{{ $data->tujuan }}">
+                        <input type="text" class="form-control" name='tujuan' id="tujuan" value="{{ Session::get('tujuaan') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="sasaran" class="col-sm-2 col-form-label">c. Sasaran</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='sasaran' id="sasaran" value="{{ $data->sasaran }}">
+                        <input type="text" class="form-control" name='sasaran' id="sasaran" value="{{ Session::get('sasaran') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="waktu_dan_tempat" class="col-sm-2 col-form-label">d. Waktu dan Tempat</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='waktu_dan_tempat' id="waktu_dan_tempat" value="{{ $data->waktu_dan_tempat }}">
+                        <input type="text" class="form-control" name='waktu_dan_tempat' id="waktu_dan_tempat" value="{{ Session::get('waktu_dan_tempat') }}">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="uraian" class="col-sm-2 col-form-label" style="font-weight: bold">III. Uraian Singkat Hasil Pengawasan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name='uraian' id="uraian" value="{{ $data->uraian }}">
+                        <input type="text" class="form-control" name='uraian' id="uraian" value="{{ Session::get('uraian') }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="penomoran_judul" class="col-sm-2 col-form-label" style="font-weight: bold">Penomoran</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='penomoran_judul' id="penomoran_judul" value="{{ Session::get('penomoran_judul') }}">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="tanggal" class="col-sm-2 col-form-label" style="font-weight: bold">Tanggal</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name='tanggal' id="tanggal" value="{{ Session::get('tanggal') }}">
                     </div>
                 </div>
 
@@ -113,35 +127,35 @@
                     <div class="mb-3 row">
                         <label for="peristiwa" class="col-sm-2 col-form-label">a. Peristiwa : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='peristiwa' id="peristiwa" value="{{ $data->peristiwa }}">
+                            <input type="text" class="form-control" name='peristiwa' id="peristiwa" value="{{ Session::get('peristiwa') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="tempat_kejadian_peristiwa" class="col-sm-2 col-form-label">b. Tempat Kejadian : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='tempat_kejadian_peristiwa' id="tempat_kejadian_peristiwa" value="{{ $data->tempat_kejadian_peristiwa }}">
+                            <input type="text" class="form-control" name='tempat_kejadian_peristiwa' id="tempat_kejadian_peristiwa" value="{{ Session::get('tempat_kejadian_peristiwa') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="waktu_kejadian_peristiwa" class="col-sm-2 col-form-label">c. Waktu Kejadian : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='waktu_kejadian_peristiwa' id="waktu_kejadian_peristiwa" value="{{ $data->waktu_kejadian_peristiwa }}">
+                            <input type="text" class="form-control" name='waktu_kejadian_peristiwa' id="waktu_kejadian_peristiwa" value="{{ Session::get('waktu_kejadian_peristiwa') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="pelaku_peristiwa" class="col-sm-2 col-form-label">d. Pelaku : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='pelaku_peristiwa' id="pelaku_peristiwa" value="{{ $data->pelaku_peristiwa }}">
+                            <input type="text" class="form-control" name='pelaku_peristiwa' id="pelaku_peristiwa" value="{{ Session::get('pelaku_peristiwa') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="alamat_peristiwa" class="col-sm-2 col-form-label">e.. Alamat :  </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='alamat_peristiwa' id="alamat_peristiwa" value="{{ $data->alamat_peristiwa }}">
+                            <input type="text" class="form-control" name='alamat_peristiwa' id="alamat_peristiwa" value="{{ Session::get('alamat_peristiwa') }}">
                         </div>
                     </div>
 
@@ -152,28 +166,28 @@
                     <div class="mb-3 row">
                         <label for="nama_saksi_1" class="col-sm-2 col-form-label">Nama Saksi 1:  </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='nama_saksi_1' id="nama_saksi_1" value="{{ $data->nama_saksi_1 }}">
+                            <input type="text" class="form-control" name='nama_saksi_1' id="nama_saksi_1" value="{{ Session::get('nama_saksi_1') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="alamat_saksi_1" class="col-sm-2 col-form-label">Alamat Saksi 1 :  </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='alamat_saksi_1' id="alamat_saksi_1" value="{{ $data->alamat_saksi_1 }}">
+                            <input type="text" class="form-control" name='alamat_saksi_1' id="alamat_saksi_1" value="{{ Session::get('alamat_saksi_1') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="nama_saksi_2" class="col-sm-2 col-form-label">Nama Saksi 2 :  </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='nama_saksi_2' id="nama_saksi_2" value="{{ $data->nama_saksi_2 }}">
+                            <input type="text" class="form-control" name='nama_saksi_2' id="nama_saksi_2" value="{{ Session::get('nama_saksi_2') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="alamat_saksi_2" class="col-sm-2 col-form-label">Alamat Saksi 2 : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='alamat_saksi_2' id="alamat_saksi_2" value="{{ $data->alamat_saksi_2 }}">
+                            <input type="text" class="form-control" name='alamat_saksi_2' id="alamat_saksi_2" value="{{ Session::get('alamat_saksi_2') }}">
                         </div>
                     </div>
 
@@ -184,21 +198,21 @@
                     <div class="mb-3 row">
                         <label for="alat_bukti_1" class="col-sm-2 col-form-label">a : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='alat_bukti_1' id="alat_bukti_1" value="{{ $data->alat_bukti_1 }}">
+                            <input type="text" class="form-control" name='alat_bukti_1' id="alat_bukti_1" value="{{ Session::get('alat_bukti_1') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="alat_bukti_2" class="col-sm-2 col-form-label">b : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='alat_bukti_2' id="alat_bukti_2" value="{{ $data->alat_bukti_2 }}">
+                            <input type="text" class="form-control" name='alat_bukti_2' id="alat_bukti_2" value="{{ Session::get('alat_bukti_2') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="alat_bukti_3" class="col-sm-2 col-form-label">c : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='alat_bukti_3' id="alat_bukti_3" value="{{ $data->alat_bukti_3 }}">
+                            <input type="text" class="form-control" name='alat_bukti_3' id="alat_bukti_3" value="{{ Session::get('alat_bukti_3') }}">
                         </div>
                     </div>
 
@@ -209,21 +223,21 @@
                     <div class="mb-3 row">
                         <label for="barang_bukti_1" class="col-sm-2 col-form-label">a : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='barang_bukti_1' id="barang_bukti_1" value="{{ $data->barang_bukti_1 }}">
+                            <input type="text" class="form-control" name='barang_bukti_1' id="barang_bukti_1" value="{{ Session::get('barang_bukti_1') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="barang_bukti_2" class="col-sm-2 col-form-label">b : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='barang_bukti_2' id="barang_bukti_2" value="{{ $data->barang_bukti_2 }}">
+                            <input type="text" class="form-control" name='barang_bukti_2' id="barang_bukti_2" value="{{ Session::get('barang_bukti_2') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="barang_bukti_3" class="col-sm-2 col-form-label">c : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='barang_bukti_3' id="barang_bukti_3" value="{{ $data->barang_bukti_3 }}">
+                            <input type="text" class="form-control" name='barang_bukti_3' id="barang_bukti_3" value="{{ Session::get('barang_bukti_3') }}">
                         </div>
                     </div>
 
@@ -231,7 +245,7 @@
                     <div class="mb-3 row">
                         <label for="uraian_singkat_dugaan" class="col-sm-2 col-form-label">5. Uraian Singkat Dugaan Pelanggaran : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='uraian_singkat_dugaan' id="uraian_singkat_dugaan" value="{{ $data->uraian_singkat_dugaan }}">
+                            <input type="text" class="form-control" name='uraian_singkat_dugaan' id="uraian_singkat_dugaan" value="{{ Session::get('uraian_singkat_dugaan') }}">
                         </div>
                     </div>
 
@@ -239,7 +253,7 @@
                     <div class="mb-3 row">
                         <label for="fakta" class="col-sm-2 col-form-label">6. Fakta dan Keterangan : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='fakta' id="fakta" value="{{ $data->fakta }}">
+                            <input type="text" class="form-control" name='fakta' id="fakta" value="{{ Session::get('fakta') }}">
                         </div>
                     </div>
 
@@ -248,7 +262,7 @@
                     <div class="mb-3 row">
                         <label for="analisa" class="col-sm-2 col-form-label">7. Analisa : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='analisa' id="analisa" value="{{ $data->analisa }}">
+                            <input type="text" class="form-control" name='analisa' id="analisa" value="{{ Session::get('analisa') }}">
                         </div>
                     </div>
 
@@ -263,21 +277,21 @@
                     <div class="mb-3 row">
                         <label for="peserta_pemilu_sengketa" class="col-sm-2 col-form-label">a. Peserta Pemilu : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='peserta_pemilu_sengketa' id="peserta_pemilu_sengketa" value="{{ $data->peserta_pemilu_sengketa }}">
+                            <input type="text" class="form-control" name='peserta_pemilu_sengketa' id="peserta_pemilu_sengketa" value="{{ Session::get('peserta_pemilu_sengketa') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="tempat_sengketa" class="col-sm-2 col-form-label">b. Tempat Kejadian : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='tempat_sengketa' id="tempat_sengketa" value="{{ $data->tempat_sengketa }}">
+                            <input type="text" class="form-control" name='tempat_sengketa' id="tempat_sengketa" value="{{ Session::get('tempat_sengketa') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="waktu_sengketa" class="col-sm-2 col-form-label">c. Waktu Kejadian : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='waktu_sengketa' id="waktu_sengketa" value="{{ $data->waktu_sengketa }}">
+                            <input type="text" class="form-control" name='waktu_sengketa' id="waktu_sengketa" value="{{ Session::get('waktu_sengketa') }}">
                         </div>
                     </div>
 
@@ -290,28 +304,28 @@
                     <div class="mb-3 row">
                         <label for="bentuk_objek" class="col-sm-2 col-form-label">a. Bentuk Objek Sengketa : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='bentuk_objek' id="bentuk_objek" value="{{ $data->bentuk_objek }}">
+                            <input type="text" class="form-control" name='bentuk_objek' id="bentuk_objek" value="{{ Session::get('bentuk_objek') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="identitas_objek" class="col-sm-2 col-form-label">b. Identitas Objek Sengketa : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='identitas_objek' id="identitas_objek" value="{{ $data->identitas_objek }}">
+                            <input type="text" class="form-control" name='identitas_objek' id="identitas_objek" value="{{ Session::get('identitas_objek') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="hari_objek" class="col-sm-2 col-form-label">c. Hari/Tanggal dikeluarkan : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='hari_objek' id="hari_objek" value="{{ $data->hari_objek }}">
+                            <input type="text" class="form-control" name='hari_objek' id="hari_objek" value="{{ Session::get('hari_objek') }}">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="kerugian_objek" class="col-sm-2 col-form-label">d. Kerugian Langsung : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='kerugian_objek' id="kerugian_objek" value="{{ $data->kerugian_objek }}">
+                            <input type="text" class="form-control" name='kerugian_objek' id="kerugian_objek" value="{{ Session::get('kerugian_objek') }}">
                         </div>
                     </div>
 
@@ -320,14 +334,13 @@
                     <div class="mb-3 row">
                         <label for="uraian_objek" class="col-sm-2 col-form-label">3. Uraian Singkat Potensi Sengketa : </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='uraian_objek' id="uraian_objek" value="{{ $data->uraian_objek }}">
+                            <input type="text" class="form-control" name='uraian_objek' id="uraian_objek" value="{{ Session::get('uraian_objek') }}">
                         </div>
                     </div>
 
                     
 
                 </div>
-
                 <div class="mb-3 row">
                     <label for="submit" class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">
