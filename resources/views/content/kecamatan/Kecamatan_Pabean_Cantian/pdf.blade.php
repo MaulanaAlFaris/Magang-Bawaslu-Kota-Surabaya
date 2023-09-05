@@ -5,14 +5,8 @@
     <style>
         *{
             margin: 0;
-            padding: 5px;
+            padding: 10px;
             list-style: none;
-        }
-        .logo{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            text-align: center;
         }
         .title{
             display: flex;
@@ -42,15 +36,11 @@
             </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="{{ public_path('images/LogoBawaslu.png') }}" alt="logo" style="position: relative">
-    </div>
-
     <div class="title">
         <li>
             <h1 class="title-h1">FORMULIR MODEL A</h1>
             <h1 class="title-h1">LAPORAN HASIL PENGAWASAN PEMILU</h1>
-            <h1 class="title-h1">011/LHP/KJI-38.20/02/2023</h1>
+            <h1 class="title-h1">{{ $data->penomoran_judul }}</h1>
         </li>
     </div>
 
@@ -131,6 +121,13 @@
                         <p class="p">3. Uraian Singkat Potensi Sengketa :</p>
                         <p class="p uraian-content">{{ $data->uraian_objek }}</p>
                     </li>
+
+                    <li>
+                        <p class="p" style="text-align: right">Surabaya, {{ $data->tanggal }}</p>
+                        <div class="kotak" style="height:90px"></div>
+                        <p class="p" style="text-align: right">{{ $data->nama_pelaksana }}</p>
+                    </li>
+
                 </ul>
             </div>
     </div>

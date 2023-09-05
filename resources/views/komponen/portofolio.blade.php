@@ -14,35 +14,73 @@
       <li>
         
         <div class="card">
-          <div class="logo-name-pos">
+           
+              <div class="logo">
+                <img src="{{ asset('images/totty.jpg') }}" alt="Porto Totty">
+              </div>
             
-            <li>
+              <div class="name-bar">
+                <h1>F.Totty Valentino Yohanes Rumbiak</h1>
+                <h2>Universitas Airlangga - Sistem Informasi</h2>
+                <p><div class="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem, enim quam sapiente earum dolores. Incidunt nesciunt obcaecati enim fugiat vitae, maxime itaque quas omnis et unde odio consequatur porro.</div></p>
+              </div>
+
+        </div>
+
+      </li>
+
+      <li>
+        
+        <div class="card">
+           
               <div class="logo">
                 <img src="" alt="">
               </div>
-            </li>
-
-            <li>
+            
               <div class="name-bar">
-                <h1>F.Totty Valentino Yohanes Rumbiak</h1>
+                <h1>Adhitya Permana</h1>
+                <h2>Universitas Airlangga - Sistem Informasi</h2>
                 <p><div class="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem, enim quam sapiente earum dolores. Incidunt nesciunt obcaecati enim fugiat vitae, maxime itaque quas omnis et unde odio consequatur porro.</div></p>
               </div>
-            </li>
 
-          </div>
         </div>
-      </li>
 
-      <li>
-        <div class="card">SAM</div>
       </li>
       
       <li>
-        <div class="card">ANANTA</div>
+        
+        <div class="card">
+           
+              <div class="logo">
+                <img src="" alt="">
+              </div>
+            
+              <div class="name-bar">
+                <h1>Eryanda Hermanto</h1>
+                <h2>Universitas 17 Agustus Surabaya - Teknik Informatika</h2>
+                <p><div class="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem, enim quam sapiente earum dolores. Incidunt nesciunt obcaecati enim fugiat vitae, maxime itaque quas omnis et unde odio consequatur porro.</div></p>
+              </div>
+
+        </div>
+
       </li>
 
       <li>
-        <div class="card">RYAN</div>
+        
+        <div class="card">
+           
+              <div class="logo">
+                <img src="" alt="">
+              </div>
+            
+              <div class="name-bar">
+                <h1>Ananta Oktavian</h1>
+                <h2>Universitas 17 Agustus Surabaya - Teknik Informatika</h2>
+                <p><div class="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem, enim quam sapiente earum dolores. Incidunt nesciunt obcaecati enim fugiat vitae, maxime itaque quas omnis et unde odio consequatur porro.</div></p>
+              </div>
+
+        </div>
+
       </li>
 
     </ul>

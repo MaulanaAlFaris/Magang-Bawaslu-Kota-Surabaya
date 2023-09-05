@@ -17,16 +17,34 @@ li{
 }
 .card{
     height: 300px;
+    width: 97%;
     background-color: #FFEEC1;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+
 }
 .logo{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: black;
     border-radius: 50%;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    top: 28px;
+}
+img{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
 }
 .name-bar{
-
+width: 500px;
+height: 100%;
+white-space: normal;
+position: relative;
+top: 15%;
 }
