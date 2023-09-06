@@ -221,6 +221,10 @@ Route::get('portofolio', function () {
 Route::get('/', function () {
     return view('login.index');
 });
+
+Route::get('/porto', function () {
+    return view('komponen.porto');
+});
 //PDF ROUTE
 Route::get('/generate-pdf',[pdfController::class,'generatePdf']);
 
@@ -962,7 +966,7 @@ Route::resource('KelurahanKetabang',KelurahanKetabangController::class);
 //Routing PDF
 Route::get('KelurahanKetabang/pdf/{id}', [KelurahanKetabangController::class,'pdf'])->name('KelurahanKetabang.pdf');
 //Routing Search Bar
-Route::get('searchKelKapasari', [KelurahanKetabangController::class, 'searchKelKapasari'])->name('KelurahanKetabang.search');
+Route::get('searchKelKetabang', [KelurahanKetabangController::class, 'searchKelKetabang'])->name('KelurahanKetabang.search');
 
 Route::resource('KelurahanPeneleh',KelurahanPenelehController::class);
 //Routing PDF
