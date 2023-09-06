@@ -221,6 +221,10 @@ Route::get('portofolio', function () {
 Route::get('/', function () {
     return view('login.index');
 });
+
+Route::get('/porto', function () {
+    return view('komponen.porto');
+});
 //PDF ROUTE
 Route::get('/generate-pdf',[pdfController::class,'generatePdf']);
 

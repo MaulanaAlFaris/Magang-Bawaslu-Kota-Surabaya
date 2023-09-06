@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/porto.css">
     <title>Magang's Team Portofolio</title>
 </head>
 <body>
@@ -104,7 +105,7 @@
                                 <div class="logo-card-homebar3">
                                     <img src="" alt="FOTO-Porto">
                                 </div>
-                                <h1>F.Totty Valentino Yohanes Rumbiak - Sistem Informasi</h1>
+                                <h1>Adhitya Tri Wicaksana - Sistem Informasi</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae sunt sequi, quas reprehenderit aspernatur eveniet id dolore voluptate, nisi quasi, recusandae repellendus voluptatibus ullam amet odio autem. Delectus eveniet blanditiis voluptate nostrum recusandae laudantium adipisci obcaecati est illo tempora labore maiores aliquam maxime, dolorem ex? Sequi aliquam voluptatibus accusamus?</p>
                             </div>
                         </li>
@@ -114,7 +115,7 @@
                                 <div class="logo-card-homebar3">
                                     <img src="" alt="FOTO-Porto">
                                 </div>
-                                <h1>F.Totty Valentino Yohanes Rumbiak - Sistem Informasi</h1>
+                                <h1>Ananta Oktaviana - Teknik Informatika</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae sunt sequi, quas reprehenderit aspernatur eveniet id dolore voluptate, nisi quasi, recusandae repellendus voluptatibus ullam amet odio autem. Delectus eveniet blanditiis voluptate nostrum recusandae laudantium adipisci obcaecati est illo tempora labore maiores aliquam maxime, dolorem ex? Sequi aliquam voluptatibus accusamus?</p>
                             </div>
                         </li>
@@ -124,7 +125,7 @@
                                 <div class="logo-card-homebar3">
                                     <img src="" alt="FOTO-Porto">
                                 </div>
-                                <h1>F.Totty Valentino Yohanes Rumbiak - Sistem Informasi</h1>
+                                <h1>Eryanda Hermanto - Teknik Informatika</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae sunt sequi, quas reprehenderit aspernatur eveniet id dolore voluptate, nisi quasi, recusandae repellendus voluptatibus ullam amet odio autem. Delectus eveniet blanditiis voluptate nostrum recusandae laudantium adipisci obcaecati est illo tempora labore maiores aliquam maxime, dolorem ex? Sequi aliquam voluptatibus accusamus?</p>
                             </div>
                         </li>
@@ -139,27 +140,25 @@
                                 <div class="logo-card-homebar4">
                                     <img src="" alt="FOTO">
                                 </div>
-                                <h1>FOTO 1</h1>
+                                <h2>FOTO 1</h1>
                             </div>
                         </li>
 
                         <li>
-                            <div class="card-homebar3">
-                                <div class="logo-card-homebar3">
-                                    <img src="" alt="FOTO-Porto">
+                            <div class="card-homebar4">
+                                <div class="logo-card-homebar4">
+                                    <img src="" alt="FOTO">
                                 </div>
-                                <h1>F.Totty Valentino Yohanes Rumbiak - Sistem Informasi</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae sunt sequi, quas reprehenderit aspernatur eveniet id dolore voluptate, nisi quasi, recusandae repellendus voluptatibus ullam amet odio autem. Delectus eveniet blanditiis voluptate nostrum recusandae laudantium adipisci obcaecati est illo tempora labore maiores aliquam maxime, dolorem ex? Sequi aliquam voluptatibus accusamus?</p>
+                                <h2>FOTO 2</h1>
                             </div>
                         </li>
 
                         <li>
-                            <div class="card-homebar3">
-                                <div class="logo-card-homebar3">
-                                    <img src="" alt="FOTO-Porto">
+                            <div class="card-homebar4">
+                                <div class="logo-card-homebar4">
+                                    <img src="" alt="FOTO">
                                 </div>
-                                <h1>F.Totty Valentino Yohanes Rumbiak - Sistem Informasi</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae sunt sequi, quas reprehenderit aspernatur eveniet id dolore voluptate, nisi quasi, recusandae repellendus voluptatibus ullam amet odio autem. Delectus eveniet blanditiis voluptate nostrum recusandae laudantium adipisci obcaecati est illo tempora labore maiores aliquam maxime, dolorem ex? Sequi aliquam voluptatibus accusamus?</p>
+                                <h2>FOTO 3</h1>
                             </div>
                         </li>
                     </div>
