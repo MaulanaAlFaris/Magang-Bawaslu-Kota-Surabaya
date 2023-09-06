@@ -43,6 +43,8 @@
                         <td>{{ $item->waktu_dan_tempat }}</td>
                         <td>
                             <a href='{{ url('KelurahanBulakBanteng/'.$item->tahapan.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <a href='{{ url("KelurahanBulakBanteng/".$item->tahapan) }}' class="btn btn-success btn-sm">PDF</a>
+
                             <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('KelurahanBulakBanteng'.$item->tahapan) }}" method="post">
                                 @csrf
                                 @method('DELETE')

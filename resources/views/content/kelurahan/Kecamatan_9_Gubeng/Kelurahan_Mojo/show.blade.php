@@ -64,7 +64,7 @@
                         <p class="p">Nomor Surat Perintah Tugas : {{ $data->nomor }}</p>
                         <p class="p">Alamat : {{ $data->alamat }}</p>
                     </li>
-    
+
                     <li>
                         <h1 class="bab">II. Kegiatan Pengawasan:</h1>
                         <p class="p">a. Bentuk : {{ $data->bentuk }}</p>
@@ -72,12 +72,12 @@
                         <p class="p">c. Sasaran : {{ $data->sasaran }}</p>
                         <p class="p">d. Waktu dan Tempat : {{ $data->waktu_dan_tempat }}</p>
                     </li>
-    
+
                     <li>
                         <h1 class="bab">III. Uraian Singkat Hasil Pengawasan</h1>
                         <p class="p uraian-content"> {{ $data->uraian }}</p>
                     </li>
-    
+
                     <li>
                         <h1 class="bab">IV. Informasi Dugaan Pelanggaran</h1>
                         <p class="p">1. Peristiwa</p>
@@ -112,7 +112,7 @@
                         <p class="p uraian-content">7. Analisa : </p>
                         <p class="p">{{ $data->analisa }}</p>
                     </li>
-    
+
                     <li>
                         <h1 class="bab">V. Informasi Potensi Sengketa</h1>
                         <p class="p">1.Peristiwa</p>
@@ -137,7 +137,7 @@
                     </li>
 
                     <div class="buttonPDF">
-                        <a href="{{ route('kotasurabaya.pdf', ['id' => $data->tahapan]) }}" class="btn btn-success btn-sm">Download PDF</a>
+                        <a href="{{ route('KelurahanMojo.pdf', ['id' => $data->tahapan]) }}" class="btn btn-success btn-sm">Download PDF</a>
                     </div>
                 </ul>
             </div>
