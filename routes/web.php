@@ -353,7 +353,7 @@ Route::resource('KecamatanTegalsari',KecamatanTegalsariController::class);
 //Routing PDF
 Route::get('KecamatanTegalsari/pdf/{id}', [KecamatanTegalsariController::class,'pdf'])->name('KecamatanTegalsari.pdf');
 //Routing Search Bar
-Route::get('searchTegalsari', [KecamatanTegalsariController::class, 'searchTegalsari'])->name('KecamatanSimokerto.search');
+Route::get('searchTegalsari', [KecamatanTegalsariController::class, 'searchTegalsari'])->name('KecamatanTegalsari.search');
 
 Route::resource('KecamatanBulak',KecamatanBulakController::class);
 //Routing PDF
