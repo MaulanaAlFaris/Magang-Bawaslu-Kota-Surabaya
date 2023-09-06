@@ -122,7 +122,8 @@ class KelurahanLidahKulonController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_LidahKulon_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Lidah_Kulon.show')->with('data', $data);
     }
 
     /**
@@ -226,16 +227,16 @@ class KelurahanLidahKulonController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Lidah_Kulon.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanLidahKulon_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelLidahKulon(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -254,7 +255,7 @@ class KelurahanLidahKulonController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Lidah_Kulon.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KelurahanLidahKulonController extends Controller
         $data = Kelurahan_LidahKulon_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_27_Lakarsantri.Kelurahan_Lidah_Kulon.index')->with('data', $data);
     }
 }

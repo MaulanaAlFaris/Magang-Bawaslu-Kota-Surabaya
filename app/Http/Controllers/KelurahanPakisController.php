@@ -122,7 +122,8 @@ class KelurahanPakisController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Pakis_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Pakis.show')->with('data', $data);
     }
 
     /**
@@ -226,10 +227,10 @@ class KelurahanPakisController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Pakis.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanPakis_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
@@ -254,7 +255,7 @@ class KelurahanPakisController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Pakis.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KelurahanPakisController extends Controller
         $data = Kelurahan_Pakis_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_5_Sawahan.Kelurahan_Pakis.index')->with('data', $data);
     }
 }

@@ -122,7 +122,8 @@ class KelurahanGebangPutihController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_GebangPutih_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Gebang_Putih.show')->with('data', $data);
     }
 
     /**
@@ -226,10 +227,10 @@ class KelurahanGebangPutihController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Gebang_Putih.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanGebangPutih_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
@@ -254,7 +255,7 @@ class KelurahanGebangPutihController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Gebang_Putih.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KelurahanGebangPutihController extends Controller
         $data = Kelurahan_GebangPutih_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_13_Sukolilo.Kelurahan_Gebang_Putih.index')->with('data', $data);
     }
 }

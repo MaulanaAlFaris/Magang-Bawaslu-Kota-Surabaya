@@ -122,7 +122,8 @@ class KelurahanGayunganController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Gayungan_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Gayungan.show')->with('data', $data);
     }
 
     /**
@@ -226,16 +227,16 @@ class KelurahanGayunganController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Gayungan.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanGayungan_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelGayungan(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -254,7 +255,7 @@ class KelurahanGayunganController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Gayungan.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KelurahanGayunganController extends Controller
         $data = Kelurahan_Gayungan_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_2_Gayungan.Kelurahan_Gayungan.index')->with('data', $data);
     }
 }

@@ -122,7 +122,8 @@ class KelurahanAirlanggaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Airlangga_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_9_Gubeng.Kelurahan_Airlangga.show')->with('data', $data);
     }
 
     /**

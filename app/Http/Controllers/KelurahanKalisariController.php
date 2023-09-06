@@ -123,7 +123,8 @@ class KelurahanKalisariController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Kalisari_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.show')->with('data', $data);
     }
 
     /**
@@ -227,10 +228,10 @@ class KelurahanKalisariController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanKalisari_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
@@ -255,7 +256,7 @@ class KelurahanKalisariController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -263,6 +264,6 @@ class KelurahanKalisariController extends Controller
         $data = Kelurahan_Kalisari_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_11_Mulyorejo.Kelurahan_Kalisari.index')->with('data', $data);
     }
 }

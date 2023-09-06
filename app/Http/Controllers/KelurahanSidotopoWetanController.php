@@ -123,7 +123,8 @@ class KelurahanSidotopoWetanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_SidotopoWetan_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_21_Kenjeran.Kelurahan_Sidotopo_Wetan.show')->with('data', $data);
     }
 
     /**
@@ -227,16 +228,16 @@ class KelurahanSidotopoWetanController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_21_Kenjeran.Kelurahan_Sidotopo_Wetan.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanSidotopoWetan_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelSidotopoWetan(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -255,7 +256,7 @@ class KelurahanSidotopoWetanController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_21_Kenjeran.Kelurahan_Sidotopo_Wetan.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -263,6 +264,6 @@ class KelurahanSidotopoWetanController extends Controller
         $data = Kelurahan_SidotopoWetan_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_21_Kenjeran.Kelurahan_Sidotopo_Wetan.index')->with('data', $data);
     }
 }
