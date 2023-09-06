@@ -434,25 +434,25 @@ Route::resource('KelurahanDukuhKupang',KelurahanDukuhKupangController::class);
 //Routing PDF
 Route::get('KelurahanDukuhKupang/pdf/{id}', [KelurahanDukuhKupangController::class,'pdf'])->name('KelurahanDukuhKupang.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanDukuhKupangController::class, 'search'])->name('KelurahanDukuhKupang.search');
+Route::get('searchKelDukuhKupang', [KelurahanDukuhKupangController::class, 'searchKelDukuhKupang'])->name('KelurahanDukuhKupang.search');
 
 Route::resource('KelurahanDukuhPakis',KelurahanDukuhPakisController::class);
 //Routing PDF
 Route::get('KelurahanDukuhPakis/pdf/{id}', [KelurahanDukuhPakisController::class,'pdf'])->name('KelurahanDukuhPakis.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanDukuhPakisController::class, 'search'])->name('KelurahanDukuhPakis.search');
+Route::get('searchKelDukuhPakis', [KelurahanDukuhPakisController::class, 'searchKelDukuhPakis'])->name('KelurahanDukuhPakis.search');
 
 Route::resource('KelurahanGunungSari',KelurahanGunungSariController::class);
 //Routing PDF
 Route::get('KelurahanGunungSari/pdf/{id}', [KelurahanGunungSariController::class,'pdf'])->name('KelurahanGunungSari.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanGunungSariController::class, 'search'])->name('KelurahanGunungSari.search');
+Route::get('searchKelGunungSari', [KelurahanGunungSariController::class, 'searchKelGunungSari'])->name('KelurahanGunungSari.search');
 
 Route::resource('KelurahanPradahKalikendal',KelurahanPradahKalikendalController::class);
 //Routing PDF
 Route::get('KelurahanPradahKalikendal/pdf/{id}', [KelurahanPradahKalikendalController::class,'pdf'])->name('KelurahanPradahKalikendal.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanPradahKalikendalController::class, 'search'])->name('KelurahanPradahKalikendal.search');
+Route::get('searchKelPradahKaliKendal', [KelurahanPradahKalikendalController::class, 'searchKelPradahKaliKendal'])->name('KelurahanPradahKalikendal.search');
 
 
 //Routingn Login Kecamatan 2 Gayungan Untuk Kelurahan ini
@@ -460,57 +460,57 @@ Route::resource('KelurahanDukuhMenanggal',KelurahanDukuhMenanggalController::cla
 //Routing PDF
 Route::get('KelurahanDukuhMenanggal/pdf/{id}', [KelurahanDukuhMenanggalController::class,'pdf'])->name('KelurahanDukuhMenanggal.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanDukuhMenanggalController::class, 'search'])->name('KelurahanDukuhMenanggal.search');
+Route::get('searchKelDukuhMenanggal', [KelurahanDukuhMenanggalController::class, 'searchKelDukuhMenanggal'])->name('KelurahanDukuhMenanggal.search');
 
 Route::resource('KelurahanGayungan',KelurahanGayunganController::class);
 //Routing PDF
 Route::get('KelurahanGayungan/pdf/{id}', [KelurahanGayunganController::class,'pdf'])->name('KelurahanGayungan.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanGayunganController::class, 'search'])->name('KelurahanGayungan.search');
+Route::get('searchKelGayungan', [KelurahanGayunganController::class, 'searchKelGayungan'])->name('KelurahanGayungan.search');
 
 Route::resource('KelurahanKetintang',KelurahanKetintangController::class);
 //Routing PDF
 Route::get('KelurahanKetintang/pdf/{id}', [KelurahanKetintangController::class,'pdf'])->name('KelurahanKetintang.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanKetintangController::class, 'search'])->name('KelurahanKetintang.search');
+Route::get('searchKelKetintang', [KelurahanKetintangController::class, 'searchKelKetintang'])->name('KelurahanKetintang.search');
 
 Route::resource('KelurahanMenanggal',KelurahanMenanggalController::class);
 //Routing PDF
 Route::get('KelurahanMenanggal/pdf/{id}', [KelurahanMenanggalController::class,'pdf'])->name('KelurahanMenanggal.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanMenanggalController::class, 'search'])->name('KelurahanMenanggal.search');
+Route::get('searchKelMenanggal', [KelurahanMenanggalController::class, 'searchKelMenanggal'])->name('KelurahanMenanggal.search');
 
 //Routingn Login Kecamatan 3 Untuk Kelurahan ini
 Route::resource('KelurahanJambangan',KelurahanJambanganController::class);
 //Routing PDF
 Route::get('KelurahanJambangan/pdf/{id}', [KelurahanJambanganController::class,'pdf'])->name('KelurahanJambangan.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanJambanganController::class, 'search'])->name('kelurahanjambangan.search');
+Route::get('searchKelJambangan', [KelurahanJambanganController::class, 'searchKelJambangan'])->name('kelurahanjambangan.search');
 
 Route::resource('KelurahanKarah',KelurahanKarahController::class);
 //Routing PDF
 Route::get('KelurahanKarah/pdf/{id}', [KelurahanKarahController::class,'pdf'])->name('KelurahanKarah.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanKarahController::class, 'search'])->name('KelurahanKarah.search');
+Route::get('searchKelKarah', [KelurahanKarahController::class, 'searchKalKarah'])->name('KelurahanKarah.search');
 
 Route::resource('KelurahanKebonsari',KelurahanKebonsariController::class);
 //Routing PDF
 Route::get('KelurahanKebonsari/pdf/{id}', [KelurahanKebonsariController::class,'pdf'])->name('KelurahanKebonsari.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanKebonsariController::class, 'search'])->name('KelurahanKebonsari.search');
+Route::get('searchKelKebonsari', [KelurahanKebonsariController::class, 'searchKelKebonsari'])->name('KelurahanKebonsari.search');
 
 Route::resource('KelurahanPagesangan',KelurahanPagesanganController::class);
 //Routing PDF
 Route::get('KelurahanPagesangan/pdf/{id}', [KelurahanPagesanganController::class,'pdf'])->name('KelurahanPagesangan.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanPagesanganController::class, 'search'])->name('KelurahanPagesangan.search');
+Route::get('searchKelPagesangan', [KelurahanPagesanganController::class, 'searchKelPagesangan'])->name('KelurahanPagesangan.search');
 
 //Routingn Login Kecamatan 4 Untuk Kelurahan ini
 Route::resource('KelurahanKarangPilang',KelurahanKarangPilangController::class);
 //Routing PDF
 Route::get('KelurahanKarangPilang/pdf/{id}', [KelurahanKarangPilangController::class,'pdf'])->name('KelurahanKarangPilang.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanKarangPilangController::class, 'search'])->name('KelurahanKarangPilang.search');
+Route::get('searchKelKarangPilang', [KelurahanKarangPilangController::class, 'searchKelKarangPilang'])->name('KelurahanKarangPilang.search');
 
 Route::resource('KelurahanKebraon',KelurahanKebraonController::class);
 //Routing PDF
@@ -665,7 +665,7 @@ Route::resource('KelurahanBaratajaya',KelurahanBaratajayaController::class);
 //Routing PDF
 Route::get('KelurahanBaratajaya/pdf/{id}', [KelurahanBaratajayaController::class,'pdf'])->name('KelurahanBaratajaya.pdf');
 //Routing Search Bar
-Route::get('search', [KelurahanBaratajayaController::class, 'search'])->name('KelurahanBaratajaya.search');
+Route::get('searchKelBaratajaya', [KelurahanBaratajayaController::class, 'searchKelBaratajaya'])->name('KelurahanBaratajaya.search');
 
 Route::resource('KelurahanGubeng',KelurahanGubengController::class);
 //Routing PDF
