@@ -9,3 +9,15 @@ body{
 li{
     list-style: none;
 }
+.navbar{
+    height: 20%;
+    width: 100%;
+}
+.navbar-background{
+    background-color: green;
+}
+.navbar-background li{
+    color: red;
+    display: flex;
+    position: relative;
+}

@@ -489,7 +489,7 @@ Route::resource('KelurahanJambangan',KelurahanJambanganController::class);
 //Routing PDF
 Route::get('KelurahanJambangan/pdf/{id}', [KelurahanJambanganController::class,'pdf'])->name('KelurahanJambangan.pdf');
 //Routing Search Bar
-Route::get('searchKelJambangan', [KelurahanJambanganController::class, 'searchKelJambangan'])->name('kelurahanjambangan.search');
+Route::get('searchKelJambangan', [KelurahanJambanganController::class, 'searchKelJambangan'])->name('KelurahanJambangan.search');
 
 Route::resource('KelurahanKarah',KelurahanKarahController::class);
 //Routing PDF
