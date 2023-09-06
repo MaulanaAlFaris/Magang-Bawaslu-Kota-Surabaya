@@ -6,7 +6,7 @@
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Kelurahan
         </a>
-      
+
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{url('KelurahanDupak') }}">Kelurahan Dupak</a></li>
             <li><a class="dropdown-item" href="{{url('KelurahanKemayoran') }}">Kelurahan Kemayoran</a></li>
@@ -29,7 +29,7 @@
             <div class="pb-3">
             <a href='{{ url('KecamatanKrembangan/create') }}' class="btn btn-primary">+ Tambah Data</a>
 
-            <form action="{{ route('kecamatankrembangan.search') }}" method="GET" class="form-inline mb-3">
+            <form action="{{ route('KecamatanKrembangan.search') }}" method="GET" class="form-inline mb-3">
                 <div class="input-group input-group-sm">
                   <input type="text" name="keyword" class="form-control" placeholder="Cari...">
                   <div class="input-group-append">
@@ -38,7 +38,7 @@
                 </div>
               </form>
             </div>
-    
+
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -68,7 +68,7 @@
                         </td>
                     </tr>
                     <?php $i++ ?>
-                    @endforeach 
+                    @endforeach
                 </tbody>
             </table>
             {{ $data->links() }}
