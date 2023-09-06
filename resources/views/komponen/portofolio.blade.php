@@ -16,7 +16,7 @@
         <div class="card">
            
               <div class="logo">
-                <img src="{{ asset('images/totty.jpg') }}" alt="Porto Totty">
+                <img src="{{ asset('images/totty-porto.jpg') }}" alt="Porto Totty">
               </div>
             
               <div class="name-bar">

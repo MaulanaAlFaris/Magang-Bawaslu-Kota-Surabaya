@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Hash;
 
 class SuperAdminController extends Controller
 {
@@ -102,6 +103,13 @@ class SuperAdminController extends Controller
             'name'=> $request->name,
             'email'=> $request->email,
         ];
+
+        // Cek apakah password baru telah diisi
+        if ($request->filled('password')) {
+            $data['password'] = bcrypt($request->password); // Hash password baru
+        }
+
+
         User::where('username',$id)->update($data);
         return redirect()->to('SuperAdmin')->with('success','berhasil mengupdate Akun');
     }
