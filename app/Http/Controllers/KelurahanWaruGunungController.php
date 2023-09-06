@@ -123,7 +123,8 @@ class KelurahanWaruGunungController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_WaruGunung_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_4_Karang_Pilang.Kelurahan_Waru_Gunung.show')->with('data', $data);
     }
 
     /**
@@ -228,16 +229,16 @@ class KelurahanWaruGunungController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_4_Karang_Pilang.Kelurahan_Waru_Gunung.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanWaruGunung_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelWaruGunung(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -256,7 +257,7 @@ class KelurahanWaruGunungController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_4_Karang_Pilang.Kelurahan_Waru_Gunung.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -264,6 +265,6 @@ class KelurahanWaruGunungController extends Controller
         $data = Kelurahan_WaruGunung_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_4_Karang_Pilang.Kelurahan_Waru_Gunung.index')->with('data', $data);
     }
 }

@@ -122,7 +122,8 @@ class KelurahanKapasariController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Kapasari_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Kapasari.show')->with('data', $data);
     }
 
     /**
@@ -226,16 +227,16 @@ class KelurahanKapasariController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Kapasari.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanKapasari_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelKapasari(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -254,7 +255,7 @@ class KelurahanKapasariController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Kapasari.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KelurahanKapasariController extends Controller
         $data = Kelurahan_Kapasari_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_17_Genteng.Kelurahan_Kapasari.index')->with('data', $data);
     }
 }

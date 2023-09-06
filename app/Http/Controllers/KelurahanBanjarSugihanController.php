@@ -122,7 +122,8 @@ class KelurahanBanjarSugihanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_BanjarSugihan_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Banjar_Sugihan.show')->with('data', $data);
     }
 
     /**
@@ -226,16 +227,16 @@ class KelurahanBanjarSugihanController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Banjar_Sugihan.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanBanjarSugihan_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelBanjarSugihan(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -254,7 +255,7 @@ class KelurahanBanjarSugihanController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Banjar_Sugihan.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -262,6 +263,6 @@ class KelurahanBanjarSugihanController extends Controller
         $data = Kelurahan_BanjarSugihan_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_31_Tandes.Kelurahan_Banjar_Sugihan.index')->with('data', $data);
     }
 }

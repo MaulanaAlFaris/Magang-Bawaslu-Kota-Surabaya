@@ -121,7 +121,8 @@ class KelurahanRomokalisariController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Romokalisari_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_26_Benowo.Kelurahan_Romokalisari.show')->with('data', $data);
     }
 
     /**
@@ -225,16 +226,16 @@ class KelurahanRomokalisariController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_26_Benowo.Kelurahan_Romokalisari.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanRomokalisari_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelRomokalisari(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -253,7 +254,7 @@ class KelurahanRomokalisariController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_26_Benowo.Kelurahan_Romokalisari.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -261,6 +262,6 @@ class KelurahanRomokalisariController extends Controller
         $data = Kelurahan_Romokalisari_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_26_Benowo.Kelurahan_Romokalisari.index')->with('data', $data);
     }
 }

@@ -122,7 +122,8 @@ class KelurahanJeparaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Kelurahan_Jepara_Form::where('tahapan',$id)->first();
+        return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Jepara.show')->with('data', $data);
     }
 
     /**
@@ -225,16 +226,16 @@ class KelurahanJeparaController extends Controller
         $dompdf->setOptions($options);
 
         // Load the view into Dompdf
-        $pdf = Pdf::loadView('content.kota.Kota_Surabaya.pdf', ['data' => $data]);
+        $pdf = Pdf::loadView('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Jepara.pdf', ['data' => $data]);
 
         if ($request->input('download')) {
-            return $pdf->download("KotaSurabaya_{$id}.pdf");
+            return $pdf->download("KelurahanJepara_{$id}.pdf");
         } else {
             return $pdf->stream();
         }
     }
 
-    public function search(Request $request)
+    public function searchKelJepara(Request $request)
     {
         $searchKeyword = $request->input('keyword');
 
@@ -253,7 +254,7 @@ class KelurahanJeparaController extends Controller
             ->paginate(7);
 
         if ($data->isEmpty()) {
-            return view('content.kota.Kota_Surabaya.index')
+            return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Jepara.index')
                 ->with('data', $data)
                 ->with('error', 'Data tidak ditemukan');
         }
@@ -261,6 +262,6 @@ class KelurahanJeparaController extends Controller
         $data = Kelurahan_Jepara_Form::orderBy('tahapan', 'desc')->paginate(7);
     }
 
-    return view('content.kota.Kota_Surabaya.index')->with('data', $data);
+    return view('content.kelurahan.Kecamatan_16_Bubutan.Kelurahan_Jepara.index')->with('data', $data);
     }
 }
