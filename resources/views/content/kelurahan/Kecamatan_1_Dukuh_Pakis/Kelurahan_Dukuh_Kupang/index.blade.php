@@ -13,7 +13,7 @@
             <div class="pb-3">
             <a href='{{ url('KelurahanDukuhKupang/create') }}' class="btn btn-primary">+ Tambah Data</a>
 
-            <form action="{{ route('kelurahandukuhkupang.search') }}" method="GET" class="form-inline mb-3">
+            <form action="{{ route('KelurahanDukuhKupang.search') }}" method="GET" class="form-inline mb-3">
                 <div class="input-group input-group-sm">
                   <input type="text" name="keyword" class="form-control" placeholder="Cari...">
                   <div class="input-group-append">
@@ -22,7 +22,7 @@
                 </div>
               </form>
             </div>
-    
+
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -52,7 +52,7 @@
                         </td>
                     </tr>
                     <?php $i++ ?>
-                    @endforeach 
+                    @endforeach
                 </tbody>
             </table>
             {{ $data->links() }}
