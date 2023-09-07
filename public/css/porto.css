@@ -9,6 +9,13 @@ body{
 li{
     list-style: none;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: blueviolet;
+}
 .navbar{
     height: 70px;
     width: 100%;
@@ -29,8 +36,12 @@ li{
 }
 .li-list-navbar .logo{
     height: 50px;
-    width: 50px;
+    width: 100px;
     background-color: white;
+}
+.logo img{
+    height: 50px;
+    width: 100px;
 }
 .homebarsec1{
     height: 100vh;
@@ -49,6 +60,9 @@ li{
     height: 200px;
     width: 500px;
     white-space: break-spaces;
+}
+.homebar1 p{
+    text-align: justify;
 }
 .homebar1-logo{
     height: 250px;
@@ -95,6 +109,7 @@ li{
     justify-content: center;
     text-align: center;
     padding: 10px;
+    border-radius: 20px;
 }
 .card-homebar2 p{
     font-size: 13px;
@@ -143,6 +158,7 @@ li{
     display: grid;
     justify-content: center;
     text-align: center;
+    border-radius: 30px;
 }
 .logo-card-homebar3{
     justify-content: center;
@@ -240,21 +256,22 @@ li{
 }
 .card-homebar5{
     height:100%;
-    width: 250px;
+    width: 400px;
     background-color: #F5F3FE;
     color: #232E35;;
     display: grid;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     position: relative;
+    border-radius: 40px;
 }
 .logo-card-homebar5{
     justify-content: center;
     display: flex;
-    background-color: white;
 }
 .logo-card-homebar5 img{
-    background-color: white;
+   height: 50px;
+   width: 50px;
 }
 .card-homebar5 h2{
     justify-content: center;

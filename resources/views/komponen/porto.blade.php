@@ -12,25 +12,35 @@
                 <ul>
                     <div class="li-list-navbar">
                         <li>
-                            <div class="logo">
-                                <img src="{{ asset('images/logo-porto.png') }}" alt="#">
-                            </div>
+                            <a href="#homebar-id">
+                                <div class="logo">
+                                    <img src="{{ asset('images/logo-porto.png') }}" alt="#">
+                                </div>
+                            </a>
                         </li>
 
                         <li>
-                            <div class="experience">EXPERIENCE</div>
+                            <a href="#experience-id">
+                                <div class="experience">EXPERIENCE</div>
+                            </a>
                         </li>
 
                         <li>
-                            <div class="portofolio">PORTOFOLIO</div>
+                            <a href="#portofolio-id">
+                                <div class="portofolio">PORTOFOLIO</div>
+                            </a>
                         </li>
 
                         <li>
-                            <div class="photo">PHOTO</div>
+                            <a href="#photo-id">
+                                <div class="photo">PHOTO</div>
+                            </a>
                         </li>
 
                         <li>
-                            <div class="contact">CONTACT</div>
+                            <a href="#contact-id">
+                                <div class="contact">CONTACT</div>
+                            </a>
                         </li>
                     </div>
                 </ul>
@@ -41,11 +51,11 @@
         <div class="main-content">
             <div class="main-content-background">
                 
-                <div class="homebarsec1">
+                <div class="homebarsec1" id="homebar-id">
                     <div class="homebarsec1-bg">
                         <div class="homebar1">
                             <h2>Magang Team</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias enim, maxime non autem dignissimos fuga impedit tenetur distinctio quae temporibus similique. Dignissimos eligendi culpa, repellendus magni possimus quae officiis facere! Itaque, dignissimos deserunt fuga repudiandae mollitia beatae possimus doloremque deleniti recusandae esse labore provident, sapiente non reiciendis aperiam corporis eum!</p>
+                            <p>Magang Team merupakan hasil kerja sama antara Universitas Airlangga dan Universitas 17 Agustus Surabaya dalam mengembangkan situs web proyek Form A yang dimiliki oleh Badan Pengawasan Pemilihan Umum Kota Surabaya. Kolaborasi ini bertujuan untuk meningkatkan pengalaman mahasiswa dalam pengembangan teknologi, khususnya di bidang IT, dalam memberikan dukungan teknis dan inovasi dalam proyek tersebut.</p>
                         </div>
                         <div class="homebar1-logo">
                             <img src="" alt="Logo Team">
@@ -53,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="homebarsec2">
+                <div class="homebarsec2" id="experience-id">
                     <div class="homebarsec2-title-bg">
                         <h2>Experience</h2>
                     </div>
@@ -95,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="homebarsec3">
+                <div class="homebarsec3" id="portofolio-id">
                     <div class="homebarsec3-title-bg">
                         <h2>Team Portofolio</h2>
                     </div>
@@ -109,48 +119,50 @@
                                     <h2>F.Totty Valentino Yohanes Rumbiak</h2>
                                     <h2>Sistem Informasi</h2>
                                     <h2>Universitas Airlangga</h2>
-                                    <p>Saya adalah F. Totty Valentino Yohanes Rumbiak, mahasiswa dari Universitas Airlangga. Saya memiliki minat kuat dalam teknologi dan pengembangan perangkat lunak. Selama studi saya, saya belajar pemrograman, desain aplikasi, dan pengembangan web. Saya aktif berkontribusi dalam proyek pengembangan perangkat lunak yang inovatif. Saya antusias untuk terus belajar dan meningkatkan keterampilan saya di dunia teknologi. Selain itu, saya juga senang berkolaborasi untuk menciptakan solusi bermanfaat dalam bidang teknologi informasi.</p>
+                                    <p>Hai, saya F. Totty Valentino Yohanes Rumbiak, mahasiswa dari Universitas Airlangga. Saya memiliki minat kuat dalam teknologi dan pengembangan perangkat lunak. Selama studi saya, saya belajar pemrograman, desain aplikasi, dan pengembangan web. Saya aktif berkontribusi dalam proyek pengembangan perangkat lunak yang inovatif. Saya antusias untuk terus belajar dan meningkatkan keterampilan saya di dunia teknologi. Selain itu, saya juga senang berkolaborasi untuk menciptakan solusi bermanfaat dalam bidang teknologi informasi.</p>
                                 </div>
                             </li>
 
                             <li>
                                 <div class="card-homebar3">
                                     <div class="logo-card-homebar3">
-                                        <img src="" alt="FOTO-Porto">
+                                        <img src="{{ asset('images/adit-porto.png') }}" alt="FOTO-Porto">
                                     </div>
                                     <h2>Adhitya Tri Wicaksana</h2>
                                     <h2>Sistem Informasi</h2>
                                     <h2>Universitas Airlangga</h2>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste adipisci voluptatum reprehenderit sit perferendis, ut similique, expedita a corrupti qui id mollitia assumenda ipsum modi aut beatae cum laborum unde! Modi ullam rem omnis commodi libero sed possimus optio quisquam impedit, tenetur quidem accusantium fuga odit debitis voluptatum magnam cum! Dolor velit quisquam sequi ratione optio distinctio culpa laboriosam atque, adipisci quae inventore modi doloremque consectetur ab nesciunt.</p>                                </div>
-                            </li>
-
-                            <li>
-                                <div class="card-homebar3">
-                                    <div class="logo-card-homebar3">
-                                        <img src="" alt="FOTO-Porto">
-                                    </div>
-                                    <h2>Ananta Oktaviana</h2>
-                                    <h2>Teknik Informatika</h2>
-                                    <h2>Universitas 17 Agustus Surabaya</h2>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste adipisci voluptatum reprehenderit sit perferendis, ut similique, expedita a corrupti qui id mollitia assumenda ipsum modi aut beatae cum laborum unde! Modi ullam rem omnis commodi libero sed possimus optio quisquam impedit, tenetur quidem accusantium fuga odit debitis voluptatum magnam cum! Dolor velit quisquam sequi ratione optio distinctio culpa laboriosam atque, adipisci quae inventore modi doloremque consectetur ab nesciunt.</p>
+                                    <p>Hai, saya Adhitya Tri Wicaksana Permana, tinggal di Surabaya. Saya selalu bersemangat untuk mengejar peluang-peluang pembelajaran dan pertumbuhan di dunia teknologi informasi (IT). Mengejar pengetahuan dan keterampilan baru dalam IT adalah prioritas saya, dan saya yakin bahwa dengan komitmen dan dedikasi saya, saya dapat mencapai banyak hal yang bermanfaat di bidang ini. Saya sangat antusias untuk terus belajar dan berkembang di dunia IT.</p>
                                 </div>
                             </li>
 
                             <li>
                                 <div class="card-homebar3">
                                     <div class="logo-card-homebar3">
-                                        <img src="" alt="FOTO-Porto">
+                                        <img src="{{ asset('images/ananta-porto.png') }}" alt="FOTO-Porto">
+                                    </div>
+                                    <h2>Ananta Oktaviana</h2>
+                                    <h2>Teknik Informatika</h2>
+                                    <h2>Universitas 17 Agustus Surabaya</h2>
+                                    <p>Hai, saya Ananta Oktavian. Saat ini, saya tengah mengejar pendidikan di Universitas 17 Agustus Surabaya, dengan jurusan Teknik Informatika. Selama perjalanan kuliahku, saya telah mengembangkan minat yang mendalam dalam dunia teknologi dan komputasi. Meskipun saya tinggal dan belajar di Surabaya, saya juga senang berpartisipasi dalam berbagai komunitas IT dan acara-acara teknologi di luar untuk memperluas jaringan dan pengetahuan saya.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="card-homebar3">
+                                    <div class="logo-card-homebar3">
+                                        <img src="{{ asset('images/ryan-porto.png') }}" alt="FOTO-Porto">
                                     </div>
                                     <h2>Eryanda Hermanto</h2>
                                     <h2>Teknik Informatika</h2>
                                     <h2>Universitas 17 Agustus Surabaya</h2>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste adipisci voluptatum reprehenderit sit perferendis, ut similique, expedita a corrupti qui id mollitia assumenda ipsum modi aut beatae cum laborum unde! Modi ullam rem omnis commodi libero sed possimus optio quisquam impedit, tenetur quidem accusantium fuga odit debitis voluptatum magnam cum! Dolor velit quisquam sequi ratione optio distinctio culpa laboriosam atque, adipisci quae inventore modi doloremque consectetur ab nesciunt.</p>                                </div>
+                                    <p>Saya Eryanda Hermanto, asli Surabaya, saat ini tengah mengejar gelar sarjana di Universitas 17 Agustus 1945 Surabaya dengan jurusan Teknik Informatika. Keputusan saya untuk memilih jurusan ini didasari oleh minat mendalam dalam teknologi dan komputasi. Saya percaya bahwa melalui pendidikan ini, saya akan memperoleh pengetahuan dan keterampilan yang kuat dalam pengembangan perangkat lunak, analisis data, dan teknologi informasi secara umum.</p>
+                                </div>
                             </li>
                         </div>
                     </div>
                 </div>
 
-                <div class="homebarsec4">
+                <div class="homebarsec4" id="photo-id">
                     <div class="homebarsec4-title-bg">
                         <h2>Photo's Team</h2>
                     </div>
@@ -186,7 +198,7 @@
                     </div>
                 </div>
 
-                <div class="homebarsec5">
+                <div class="homebarsec5" id="contact-id">
                     <div class="homebarsec5-title-bg">
                         <h2>Contact Person</h2>
                     </div>
@@ -195,36 +207,36 @@
                             <li>
                                 <div class="card-homebar5">
                                     <div class="logo-card-homebar5">
-                                        <img src="" alt="ig">
+                                        <img src="{{ asset('images/ig.png') }}" alt="ig">
                                     </div>
-                                    <h2>@f.totty10</h2>
-                                    <h2>@mamangsam</h2>
-                                    <h2>@anantav21</h2>
-                                    <h2>@_ryaannd</h2>
+                                    <h2 style="font-size: 14px">@f.totty10</h2>
+                                    <h2 style="font-size: 14px">@mamangsam</h2>
+                                    <h2 style="font-size: 14px">@anantav21</h2>
+                                    <h2 style="font-size: 14px">@_ryaannd</h2>
                                 </div>
                             </li>
 
                             <li>
                                 <div class="card-homebar5">
                                     <div class="logo-card-homebar5">
-                                        <img src="" alt="email">
+                                        <img src="{{ asset('images/email.png') }}" alt="email">
                                     </div>
                                     <h3>f.totty.valentino.yohanes-2020@fst.unair.ac.id</h3>
                                     <h3>sam@fst.unair.ac.id</h3>
-                                    <h3>ananta@gmail.com</h3>
-                                    <h3>bayek@gmail.com</h3>
+                                    <h3>anantaoktav21@gmail.com</h3>
+                                    <h3>dioryan79@gmail.com</h3>
                                 </div>
                             </li>
 
                             <li>
                                 <div class="card-homebar5">
                                     <div class="logo-card-homebar5">
-                                        <img src="" alt="phone">
+                                        <img src="{{ asset('images/phone.png') }}" alt="phone">
                                     </div>
-                                    <h2>087762505591</h2>
-                                    <h2>085156644881</h2>
-                                    <h2>081353881019</h2>
-                                    <h2>082231521894</h2>
+                                    <h2 style="font-size: 14px">087762505591</h2>
+                                    <h2 style="font-size: 14px">085156644881</h2>
+                                    <h2 style="font-size: 14px">081353881019</h2>
+                                    <h2 style="font-size: 14px">082231521894</h2>
                                 </div>
                             </li>
                         </div>
