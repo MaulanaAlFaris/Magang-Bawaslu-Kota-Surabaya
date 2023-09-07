@@ -1,4 +1,4 @@
-body{
+*{
     margin: 0;
     padding: 0;
 }
@@ -10,14 +10,257 @@ li{
     list-style: none;
 }
 .navbar{
-    height: 20%;
+    height: 70px;
     width: 100%;
 }
 .navbar-background{
-    background-color: green;
+    background-color: white;
+    height: 70px;
 }
 .navbar-background li{
-    color: red;
+    color: black;
+}
+.li-list-navbar{
     display: flex;
+    justify-content: space-around;
     position: relative;
+    top: 10px;
+    place-items: center;
+}
+.li-list-navbar .logo{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+.homebarsec1{
+    height: 100vh;
+    width: 100%;
+    background-color: #232E35;
+    color: #F1F1F1;
+}
+.homebarsec1-bg{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.homebar1{
+    height: 200px;
+    width: 500px;
+    white-space: break-spaces;
+}
+.homebar1-logo{
+    height: 250px;
+    width: 300px;
+    background-color: white;
+}
+.homebarsec2{
+    height: 100vh;
+    width: 100%;
+    background-color: #232E35;
+    color: #F1F1F1;
+}
+.homebarsec2-title-bg{
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+
+.homebarsec2-title-bg h2{
+    top: 5%;
+    position: absolute;
+}
+.homebarsec2-bg{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.homebar2{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-evenly;
+    top: 25%;
+}
+.card-homebar2{
+    height: 300px;
+    width: 350px;
+    background-color: #F5F3FE;
+    color: #232E35;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.card-homebar2 p{
+    font-size: 13px;
+    text-align: justify;
+}
+.logo-card-homebar2{
+    height: 50px;
+    position: relative;
+    top: 10px;
+}
+.logo-card-homebar2 img{
+    height: 50px;
+    width: 50px;
+}
+.homebarsec3{
+    height: 100vh;
+    width: 100%;
+    background-color: #232E35;
+    color: #F1F1F1;
+}
+.homebarsec3-title-bg{
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+.homebarsec3-bg{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.homebar3{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-evenly;
+    top: 10%;
+}
+.card-homebar3{
+    height:500px;
+    width: 300px;
+    background-color: #F5F3FE;
+    color: #232E35;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.logo-card-homebar3{
+    justify-content: center;
+    display: flex;
+    background-color: white;
+    height: 250px;
+    width: 300px;
+}
+.logo-card-homebar3 img{
+    height: 250px;
+    width: 300px;
+}
+.card-homebar3 h2{
+    font-size: 14px;
+}
+.card-homebar3 p{
+    font-size: 13px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.homebarsec4{
+    height: 100vh;
+    width: 100%;
+    background-color: #232E35;
+    color: #F1F1F1;
+}
+.homebarsec4-title-bg{
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+.homebarsec4-bg{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.homebar4{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-evenly;
+    top: 10%;
+}
+.card-homebar4{
+    height:500px;
+    width: 300px;
+    background-color: #F5F3FE;
+    color: #232E35;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+}
+.logo-card-homebar4{
+    justify-content: center;
+    display: flex;
+    background-color: white;
+}
+.logo-card-homebar4 img{
+    height: 400px;
+    width: 300px;
+}
+.card-homebar4 h2{
+    justify-content: center;
+}
+
+.homebarsec5{
+    height: 35vh;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.homebarsec5-title-bg{
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+.homebarsec5-bg{
+    display: flex;
+    position: absolute;
+    height: 35vh;
+    width: 100%;
+}
+.homebar5{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-evenly;
+    top: 25%;
+}
+.card-homebar5{
+    height:100%;
+    width: 250px;
+    background-color: #F5F3FE;
+    color: #232E35;;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.logo-card-homebar5{
+    justify-content: center;
+    display: flex;
+    background-color: white;
+}
+.logo-card-homebar5 img{
+    background-color: white;
+}
+.card-homebar5 h2{
+    justify-content: center;
+    font-size: 16px;
+}
+.card-homebar5 h3{
+    justify-content: center;
+    font-size: 12px;
 }

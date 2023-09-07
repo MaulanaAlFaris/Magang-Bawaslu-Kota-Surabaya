@@ -216,14 +216,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('admin.tes');
 // });
 Route::get('portofolio', function () {
-    return view('komponen.portofolio');
+    return view('komponen.porto');
 });
 Route::get('/', function () {
     return view('login.index');
-});
-
-Route::get('/porto', function () {
-    return view('komponen.porto');
 });
 //PDF ROUTE
 Route::get('/generate-pdf',[pdfController::class,'generatePdf']);
