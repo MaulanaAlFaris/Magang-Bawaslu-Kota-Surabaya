@@ -222,7 +222,7 @@
                                         <img src="{{ asset('images/email.png') }}" alt="email">
                                     </div>
                                     <h3>f.totty.valentino.yohanes-2020@fst.unair.ac.id</h3>
-                                    <h3>sam@fst.unair.ac.id</h3>
+                                    <h3>adhitya.tri.wicaksana-2020@fst.unair.ac.id</h3>
                                     <h3>anantaoktav21@gmail.com</h3>
                                     <h3>dioryan79@gmail.com</h3>
                                 </div>
