@@ -200,7 +200,7 @@
 
                 <div class="homebarsec5" id="contact-id">
                     <div class="homebarsec5-title-bg">
-                        <h2>Contact Person</h2>
+                        <h2 class="hombarsec5-title">Contact Person</h2>
                     </div>
                     <div class="homebarsec5-bg">
                         <div class="homebar5">
