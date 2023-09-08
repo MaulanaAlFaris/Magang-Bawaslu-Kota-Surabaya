@@ -58,7 +58,7 @@
                             <p>Magang Team merupakan hasil kerja sama antara Universitas Airlangga dan Universitas 17 Agustus Surabaya dalam mengembangkan situs web proyek Form A yang dimiliki oleh Badan Pengawasan Pemilihan Umum Kota Surabaya. Kolaborasi ini bertujuan untuk meningkatkan pengalaman mahasiswa dalam pengembangan teknologi, khususnya di bidang IT, dalam memberikan dukungan teknis dan inovasi dalam proyek tersebut.</p>
                         </div>
                         <div class="homebar1-logo">
-                            <img src="" alt="Logo Team">
+                            <img src="{{ asset('images/foto.png') }}" alt="Logo Team">
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                             <li>
                                 <div class="card-homebar4">
                                     <div class="logo-card-homebar4">
-                                        <img src="" alt="FOTO">
+                                        <img src="{{ asset('images/koor.png') }}" alt="FOTO">
                                     </div>
                                     <h2>Koordinasi</h2>
                                 </div>
@@ -180,7 +180,7 @@
                             <li>
                                 <div class="card-homebar4">
                                     <div class="logo-card-homebar4">
-                                        <img src="" alt="FOTO">
+                                        <img src="{{ asset('images/proyek.png') }}" alt="FOTO">
                                     </div>
                                     <h2>Pengerjaan Proyek</h2>
                                 </div>
@@ -189,7 +189,7 @@
                             <li>
                                 <div class="card-homebar4">
                                     <div class="logo-card-homebar4">
-                                        <img src="" alt="FOTO">
+                                        <img src="{{ asset('images/rapat.png') }}" alt="FOTO">
                                     </div>
                                     <h2>Rapat Proyek</h2>
                                 </div>
