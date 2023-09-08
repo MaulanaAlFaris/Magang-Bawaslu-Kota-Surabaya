@@ -7,7 +7,7 @@
           Kecamatan
         </a>
       
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" id="sortable-list">
           <li><a class="dropdown-item" href="{{url('KecamatanTegalsari') }}">Kecamatan Tegalsari</a></li>
           <li><a class="dropdown-item" href="{{url('KecamatanSimokerto') }}">Kecamatan Simokerto</a></li>
           <li><a class="dropdown-item" href="{{url('KecamatanGenteng') }}">Kecamatan Genteng</a></li>
@@ -49,7 +49,7 @@
               Kelurahan
             </a>
           
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" id="sortkl">
               <li><a class="dropdown-item" href="{{url('KelurahanDukuhKupang') }}">Kelurahan Dukuh Kupang</a></li>
               <li><a class="dropdown-item" href="{{url('KelurahanDukuhPakis') }}">Kelurahan Dukuh Pakis</a></li>
               <li><a class="dropdown-item" href="{{url('KelurahanGunungSari') }}">Kelurahan Gunung Sari</a></li>
@@ -266,4 +266,47 @@
             {{ $data->links() }}
     </div>
 </div>
+
+<script>
+  // Get the list items and convert them to an array
+  const list1 = Array.from(document.querySelectorAll('#sortable-list li'));
+
+  // Sort the list alphabetically based on the text content of the anchor tags
+  list1.sort((a, b) => {
+      const textA = a.textContent.trim().toUpperCase();
+      const textB = b.textContent.trim().toUpperCase();
+      return textA.localeCompare(textB);
+  });
+
+  // Clear the existing list items
+  const parent1 = document.querySelector('#sortable-list');
+  parent1.innerHTML = '';
+
+  // Append the sorted list items back to the parent element
+  list1.forEach(item => {
+      parent1.appendChild(item);
+  });
+</script>
+
+<script>
+  // Get the list items and convert them to an array
+  const list2 = Array.from(document.querySelectorAll('#sortkl li'));
+
+  // Sort the list alphabetically based on the text content of the anchor tags
+  list2.sort((a, b) => {
+      const textA = a.querySelector('a').textContent.trim().toUpperCase();
+      const textB = b.querySelector('a').textContent.trim().toUpperCase();
+      return textA.localeCompare(textB);
+  });
+
+  // Clear the existing list items
+  const parent2 = document.querySelector('#sortkl');
+  parent2.innerHTML = '';
+
+  // Append the sorted list items back to the parent element
+  list2.forEach(item => {
+      parent2.appendChild(item);
+  });
+</script>
+
 @endsection
