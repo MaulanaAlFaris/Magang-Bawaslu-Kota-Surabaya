@@ -14,7 +14,7 @@
                         <li>
                             <a href="#homebar-id">
                                 <div class="logo">
-                                    <img src="{{ asset('images/logo-porto.png') }}" alt="#">
+                                    <img src="{{ asset('images/LogoBawaslu.png') }}" alt="#">
                                 </div>
                             </a>
                         </li>
