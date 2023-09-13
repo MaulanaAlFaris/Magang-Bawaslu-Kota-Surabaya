@@ -14,7 +14,8 @@ a{
     color: black;
 }
 a:hover{
-    color: blueviolet;
+    color: green;
+    background-color: black;
 }
 .navbar{
     height: 70px;
@@ -46,8 +47,8 @@ a:hover{
 .homebarsec1{
     height: 100vh;
     width: 100%;
-    background-color: #232E35;
-    color: #F1F1F1;
+    background-color: #FFF0D2;
+    color: black;
 }
 .homebarsec1-bg{
     display: flex;
@@ -58,7 +59,7 @@ a:hover{
 }
 .homebar1{
     height: 200px;
-    width: 500px;
+    width: 570px;
     white-space: break-spaces;
 }
 .homebar1 p{
@@ -79,9 +80,18 @@ a:hover{
 .homebarsec2{
     height: 100vh;
     width: 100%;
-    background-color: #232E35;
-    color: #F1F1F1;
+    background-color: #FFF0D2;
+    color: black;
 }
+.gambar-struktur{
+    width: 90%;
+    height: 80%;
+}
+.gambar-struktur img{
+    width: 100%;
+    height: 570px;
+}
+
 .homebarsec2-title-bg{
     justify-content: center;
     position: absolute;
@@ -105,12 +115,20 @@ a:hover{
     position: absolute;
     width: 100%;
     justify-content: space-evenly;
-    top: 25%;
+    top: 5%;
+}
+.foto-organisasi{
+    width: 100%;
+    height: 100%;
+}
+.foto-organisasi img{
+    width: 100%;
+    height: 100%;
 }
 .card-homebar2{
     height: 300px;
     width: 350px;
-    background-color: #F5F3FE;
+    background-color: rgb(103, 220, 103);
     color: #232E35;
     display: grid;
     justify-content: center;
@@ -134,8 +152,8 @@ a:hover{
 .homebarsec3{
     height: 100vh;
     width: 100%;
-    background-color: #232E35;
-    color: #F1F1F1;
+    background-color: #FFF0D2;
+    color: black;
 }
 .homebarsec3-title-bg{
     justify-content: center;
@@ -160,7 +178,7 @@ a:hover{
 .card-homebar3{
     height:500px;
     width: 300px;
-    background-color: #F5F3FE;
+    background-color: rgb(103, 220, 103);
     color: #232E35;
     display: grid;
     justify-content: center;
@@ -190,8 +208,8 @@ a:hover{
 .homebarsec4{
     height: 100vh;
     width: 100%;
-    background-color: #232E35;
-    color: #F1F1F1;
+    background-color: #FFF0D2;
+    color: black;
 }
 .homebarsec4-title-bg{
     justify-content: center;
@@ -216,7 +234,7 @@ a:hover{
 .card-homebar4{
     height:500px;
     width: 300px;
-    background-color: #F5F3FE;
+    background-color: rgb(103, 220, 103);
     color: #232E35;
     display: grid;
     justify-content: center;
@@ -265,7 +283,7 @@ a:hover{
 .card-homebar5{
     height:150px;
     width: 400px;
-    background-color: #F5F3FE;
+    background-color: rgb(103, 220, 103);
     color: #232E35;;
     display: grid;
     justify-content: center;
